@@ -123,10 +123,11 @@ Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
   Textures/
+Art/          the showcase sources and the page that engraves the banner
 ```
 
-Everything outside `Mod/` — this file, the changelog, the attribution — stays out of the Steam
-upload by construction. `SteamUGC.SetItemContent` takes the junction's target directory as it
+Everything outside `Mod/` — this file, the changelog, the attribution, `Art/` — stays out of the
+Steam upload by construction. `SteamUGC.SetItemContent` takes the junction's target directory as it
 stands on disk, with no filtering.
 
 ## Credit and removal

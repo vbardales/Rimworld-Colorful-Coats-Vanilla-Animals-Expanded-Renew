@@ -1,0 +1,53 @@
+<!doctype html><meta charset="utf-8">
+<!--
+  Engraving page for Mod/About/Preview.png, per STYLE_RIMWORLD.md.
+
+  Rasterised with headless Chrome at 896x504, so the glyphs are composed at final size and never
+  resampled. The background is Preview-source.png at full resolution, scaled and cropped here
+  rather than beforehand: starting from an already-reduced Preview.png would resample the picture
+  twice.
+
+    chrome --headless --disable-gpu --screenshot=Mod/About/Preview.png \
+           --window-size=896,504 --hide-scrollbars Art/preview.html
+
+  The source is 1374x1145, nearly square, so a third of its height has to go. The crop sits low,
+  at 55%: the five dogs and the bowl are the subject and their paws reach the bottom of the light
+  pool, while the top of the room - a bone shelf, a breed chart, the top of the bookcase - is
+  decor the frame can lose.
+
+  No count is engraved. The rule allows one only when nothing outside this repository can move the
+  number, and this is a patch: the 35 animals belong to Vanilla Animals Expanded, which is alive
+  and still shipping, and five of them arrive only if a second mod is running. A renamed breed
+  would make the number wrong without anyone touching this mod - the Simple FX case.
+-->
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:896px; height:504px; overflow:hidden; background:#000; }
+  .stage { position:relative; width:896px; height:504px;
+           font-family:"Segoe UI",system-ui,sans-serif; }
+
+  /* Low crop, see above. object-position 50% 55% keeps the whole pack and the food bowl. */
+  .shot { position:absolute; inset:0; width:896px; height:504px;
+          object-fit:cover; object-position:50% 55%; }
+
+  /* Repository standard: radial darkening from the top-left, nil at 74%. Here it lands on the
+     unlit floor outside the lamp pool, which is where the title goes, and it also sinks the cat
+     asleep on its chair - the only other face in the frame. */
+  .veil { position:absolute; inset:0;
+    background: radial-gradient(circle at 0% 0%, rgba(6,5,4,.86) 0%, rgba(6,5,4,0) 74%); }
+
+  .text { position:absolute; left:56px; top:66px; width:330px; }
+  h1 { font-size:34px; line-height:1.08; font-weight:700; color:#f2ece1;
+       letter-spacing:-.5px; text-shadow:0 2px 10px rgba(0,0,0,.85); }
+  .rule { width:58px; height:3px; background:#D68F2C; margin:20px 0 18px; }
+  p { font-size:21px; line-height:1.42; color:#d8cfc0; text-shadow:0 1px 6px rgba(0,0,0,.9); }
+</style>
+<div class="stage">
+  <img class="shot" src="Preview-source.png">
+  <div class="veil"></div>
+  <div class="text">
+    <h1>Colorful Coats -<br>Vanilla Animals<br>Expanded! Renew</h1>
+    <div class="rule"></div>
+    <p>Coat variations for the cats, dogs and wildlife of Vanilla Animals Expanded.</p>
+  </div>
+</div>

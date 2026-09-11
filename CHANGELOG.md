@@ -9,6 +9,19 @@ First release. Port of purpleyam's **Colorful Coats - Vanilla Animals Expanded!*
 Nothing in this mod was broken by 1.6 — both of its `PatchOperationFindMod` guards still name
 their targets exactly. The one change to the patches is hardening, not a repair.
 
+### Added
+
+- `About/Preview.png` and `About/ModIcon.png`, the showcase this port draws for itself rather than
+  cutting out of purpleyam's textures. The banner is engraved at exactly 896x504 by a headless
+  browser, so its glyphs are composed at final size and never resampled; `Art/preview.html` is
+  that page and `Art/Preview-source.png` the picture behind it. The icon is a crop of
+  `Art/ModIcon-source.png` at 64% of the frame, keeping the mascot legible at the 32 pixels the
+  mod list actually draws, rather than a plain reduction of the whole crowd. Nothing in `Art/`
+  ships: the Workshop uploader only ever sees `Mod/`.
+- No count is engraved on the banner. The rule allows one only where nothing outside this
+  repository can move the number, and the 35 animals are Vanilla Animals Expanded's, not this
+  mod's: a renamed breed would make the figure wrong with nobody touching the mod.
+
 ### Changed
 
 - `<success>Always</success>` added to the 14 cat and dog `PatchOperationAdd` operations in
