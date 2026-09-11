@@ -84,6 +84,14 @@ one renamed def cannot cost the other four their coats. It is not guarded by
 **The two halves are exclusive by construction**, which is what to check rather than trust: a def
 exists in one folder or the other, never both, so no animal can receive the coats twice.
 
+**One check is deliberately left open, post-MVP.** The five conditionals key on a bare defName -
+`Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` - and those names are generic enough that another
+animal mod could declare one. If it did, that mod's animal would be handed purpleyam's coat. The
+sweep that would settle it is a `grep -rl "<defName>Tiger</defName>"` over the 10,000 Workshop
+folders, ten minutes of disk, and it was parked rather than run: the risk is a mod that both uses
+Ludeon's exact bare name and is running alongside this one, which is unlikely and would show up as
+one wrongly coloured animal, not as a crash. Worth doing before any Workshop release.
+
 It looks right because Vanilla Animals Expanded ships its own art for these five at the same
 texture paths Ludeon uses, from its root `Textures` folder, which loads on every version. The base
 sprite a player sees is therefore already the one purpleyam drew the coats against. What does
