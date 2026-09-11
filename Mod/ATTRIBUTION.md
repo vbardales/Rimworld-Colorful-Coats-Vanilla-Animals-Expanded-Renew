@@ -33,6 +33,12 @@ folder, no assembly and no C# — the mod does one thing and does it in XML.
 
 The 35 animals, their 74 coats and every `alternateGraphicChance` are purpleyam's, unchanged.
 
+**A fourth patch file was added by the port**, `Patches/ColorfulCoats_VAEodyssey.xml`. It carries
+no new coats and no new chances: it aims ten of purpleyam's existing coats at the five animals
+Odyssey turned into vanilla ones - badger, muskox, otter, walrus and tiger - which Vanilla Animals
+Expanded stops declaring when that expansion is active, and whose coats therefore reached nobody
+who owns it. The operations are mine, the content in them is purpleyam's.
+
 **The two most interesting numbers in the mod are the two lowest.** The jaguar and the tiger get
 a single alternate each at `0.05` — one animal in twenty, where everything else sits between 0.3
 and 0.8. That is a deliberate rarity, not an oversight, and it survives the port untouched.

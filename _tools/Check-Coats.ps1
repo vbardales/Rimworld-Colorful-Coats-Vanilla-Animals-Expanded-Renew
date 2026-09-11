@@ -1,15 +1,15 @@
 <#
 .SYNOPSIS
-  Checks the four things about this mod that can be settled without starting the game.
+  Checks the five things about this mod that can be settled without starting the game.
 
 .DESCRIPTION
   The shared checkers under the monorepo's scripts/ cover the general faults - unknown fields,
   unresolved types, dangling def references - and this mod passes all of them. What they cannot
   see is the only thing it actually does: hand 74 texture paths to 35 of another mod's animals.
 
-  So, four checks, and each one is a question the game would otherwise answer by drawing nothing:
+  So, five checks, and each one is a question the game would otherwise answer by drawing nothing:
 
-    1. Every texPath in the three patch files has its three rotation files shipped. RimWorld looks
+    1. Every texPath in the four patch files has its three rotation files shipped. RimWorld looks
        for <path>_east.png, _north.png and _south.png; west is mirrored from east and is not
        shipped. A missing file is one line in the log at load and an invisible animal afterwards.
 
@@ -26,17 +26,23 @@
        Expanded splits its 1.6 defs across two folders and loads the second one only
        IfModNotActive="Ludeon.RimWorld.Odyssey", because Odyssey made five of those animals
        vanilla. A defName that lives only in 1.6NotOdyssey exists for players without the
-       expansion and does not exist for players with it, so its coats reach half the audience.
-       That is reported separately from a defName that is simply gone: the first is a gap to
-       decide about, the second is a fault.
+       expansion and does not exist for players with it. Those five are reported as covered
+       elsewhere rather than as a fault, since ColorfulCoats_VAEodyssey.xml now aims at Ludeon's
+       own defs for them - and the same check runs against Odyssey's data to confirm those five
+       names are still there and still carry no alternateGraphics of their own.
 
     4. The 16 animals that ColorfulCoats_VAEvarious.xml patches a second time carry the same
        chance and the same coats there as in the core file. That equality is what makes a double
        application harmless if one of the eight dead modules is ever revived, and scenario J in
        TESTING.md states it as a fact rather than a hope.
 
-  Checks 3 and 4 are skipped rather than failed when a target mod is not installed: neither is in
-  this repository and their absence says nothing about this one.
+    5. The five animals in the Odyssey file get the same coats and the same chances as their
+       AEXP_ counterparts in the core file. They are matched on their coat lists, since the
+       defNames deliberately differ - Tiger against AEXP_Tiger - so a chance edited on one side
+       and not the other is caught rather than drifting quietly.
+
+  Checks 3, 4 and 5 are skipped rather than failed when a target is not installed: none of them is
+  in this repository and their absence says nothing about this one.
 
   Not published - _tools/ sits outside Mod/, which is the only directory the Workshop uploader
   ever sees.
@@ -47,7 +53,8 @@
 param(
     [string]$ModPath    = (Join-Path $PSScriptRoot '..'),
     [string]$Vae        = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2871933948',
-    [string]$Endangered = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2366589898'
+    [string]$Endangered = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2366589898',
+    [string]$Odyssey    = 'C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Data\Odyssey'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -62,22 +69,38 @@ $texRoot   = Join-Path $ModPath 'Mod\Textures'
 $rotations = 'east', 'north', 'south'
 $problems  = 0
 
-# One entry per operation. Every file here wraps its sequence in a PatchOperationFindMod, so the
-# operations sit under Operation/match/operations/li - one Operation in the core and extras files,
-# eight in the various file, one per dead module.
+# One entry per operation, across the two shapes this mod uses.
+#
+#   PatchOperationFindMod   guards a PatchOperationSequence, so the adds sit under
+#                           Operation/match/operations/li - one guard in the core and extras
+#                           files, eight in the various file, one per dead module. A sequence
+#                           stops at its first false, hence the <success>Always</success> audit.
+#   PatchOperationConditional  guards a single add, which IS the match node - the Odyssey file.
+#                              An xpath that matches nothing is a silent success there, so those
+#                              operations neither need nor carry the flag.
 function Read-Animals($file) {
     [xml]$xml = Get-Content -Raw $file
     foreach ($guard in @($xml.Patch.Operation)) {
-        $mods = @($guard.mods.li)
-        foreach ($op in @($guard.match.operations.li)) {
+        $class = $guard.Class
+        if ($class -eq 'PatchOperationConditional') {
+            $ops = @($guard.match)
+            $inSeq = $false
+            $on = $guard.xpath
+        } else {
+            $ops = @($guard.match.operations.li)
+            $inSeq = $true
+            $on = (@($guard.mods.li) -join ' / ')
+        }
+        foreach ($op in $ops) {
             if ($op.xpath -notmatch 'defName\s*=\s*"([^"]+)"') { throw "xpath with no defName in $file : $($op.xpath)" }
             [pscustomobject]@{
-                File    = Split-Path $file -Leaf
-                Guard   = ($mods -join ' / ')
-                DefName = $Matches[1]
-                Chance  = [double]$op.value.alternateGraphicChance
-                Coats   = @($op.value.alternateGraphics.li.texPath)
-                Flagged = ($op.success -eq 'Always')
+                File       = Split-Path $file -Leaf
+                Guard      = $on
+                DefName    = $Matches[1]
+                Chance     = [double]$op.value.alternateGraphicChance
+                Coats      = @($op.value.alternateGraphics.li.texPath)
+                Flagged    = ($op.success -eq 'Always')
+                InSequence = $inSeq
             }
         }
     }
@@ -86,19 +109,21 @@ function Read-Animals($file) {
 $core    = @(Read-Animals (Join-Path $patchRoot 'ColorfulCoats_VAEcore.xml'))
 $extras  = @(Read-Animals (Join-Path $patchRoot 'ColorfulCoats_VAEextras.xml'))
 $various = @(Read-Animals (Join-Path $patchRoot 'ColorfulCoats_VAEvarious.xml'))
-$all     = $core + $extras + $various
+$odysseyPatch = @(Read-Animals (Join-Path $patchRoot 'ColorfulCoats_VAEodyssey.xml'))
+$all     = $core + $extras + $various + $odysseyPatch
 
 $coats = @($all.Coats | Sort-Object -Unique)
-Write-Host "$($core.Count + $extras.Count) animals patched, $($various.Count) of them a second time for the old modules."
+Write-Host "$($core.Count + $extras.Count) animals patched, $($various.Count) of them a second time for the old modules, $($odysseyPatch.Count) again for the defs Odyssey took over."
 Write-Host "$($coats.Count) coats, $($coats.Count * $rotations.Count) textures expected."
 
-$unflagged = @($all | Where-Object { -not $_.Flagged })
+$sequenced = @($all | Where-Object { $_.InSequence })
+$unflagged = @($sequenced | Where-Object { -not $_.Flagged })
 if ($unflagged.Count -gt 0) {
     $problems++
-    Write-Host "-- $($unflagged.Count) operation(s) without <success>Always</success>, which lets a sequence stop early --"
+    Write-Host "-- $($unflagged.Count) sequenced operation(s) without <success>Always</success>, which lets a sequence stop early --"
     $unflagged | ForEach-Object { Write-Host "   $($_.File)  $($_.DefName)" }
 } else {
-    Write-Host "-- all $($all.Count) operations carry <success>Always</success> --"
+    Write-Host "-- all $($sequenced.Count) sequenced operations carry <success>Always</success>, and the $($odysseyPatch.Count) conditional ones do not need it --"
 }
 
 # 1 - every path has its three rotations.
@@ -137,7 +162,7 @@ if ($orphans) {
 # without the expansion and absent for a player with it.
 function Read-Kinds($root, $folder) {
     $defs = @{}
-    $dir = Join-Path $root (Join-Path $folder 'Defs')
+    if ($folder) { $dir = Join-Path $root (Join-Path $folder 'Defs') } else { $dir = Join-Path $root 'Defs' }
     if (-not (Test-Path $dir)) { return $defs }
     foreach ($f in Get-ChildItem $dir -Recurse -Filter *.xml) {
         [xml]$d = Get-Content -Raw $f.FullName
@@ -157,7 +182,8 @@ function Check-Target($label, $root, $folders, $animals) {
     $always = Read-Kinds $root $folders[0]
     $sometimes = @{}
     if ($folders.Count -gt 1) { $sometimes = Read-Kinds $root $folders[1] }
-    Write-Host "$label : $($always.Count) PawnKindDef in $($folders[0])\Defs, $($sometimes.Count) more in the conditional folder."
+    if ($folders[0]) { $where = "$($folders[0])\Defs" } else { $where = "Defs" }
+    Write-Host "$label : $($always.Count) PawnKindDef in $where, $($sometimes.Count) more in the conditional folder."
 
     $names = @($animals.DefName | Sort-Object -Unique)
 
@@ -172,9 +198,9 @@ function Check-Target($label, $root, $folders, $animals) {
 
     $conditional = @($names | Where-Object { -not $always.ContainsKey($_) -and $sometimes.ContainsKey($_) })
     if ($conditional.Count -gt 0) {
-        # Not counted as a failure: the coats are correct, they simply do not reach an Odyssey
-        # owner, and what to do about that is a decision rather than a bug. See TESTING.md.
-        Write-Host "-- $($conditional.Count) defName(s) exist only in $($folders[1])\Defs, so they are ABSENT for a player running Odyssey --"
+        # Not a failure: these operations are correct for a player without the expansion, and
+        # ColorfulCoats_VAEodyssey.xml covers the same animals for a player with it.
+        Write-Host "-- $($conditional.Count) defName(s) exist only in $($folders[1])\Defs, so they are absent under Odyssey and covered by ColorfulCoats_VAEodyssey.xml instead --"
         $conditional | ForEach-Object { Write-Host "   $_" }
     }
 
@@ -194,6 +220,27 @@ function Check-Target($label, $root, $folders, $animals) {
 
 $problems += Check-Target 'Vanilla Animals Expanded' $Vae @('1.6', '1.6NotOdyssey') $core
 $problems += Check-Target 'Endangered' $Endangered @('1.6') $extras
+$problems += Check-Target 'Odyssey' $Odyssey @('') $odysseyPatch
+
+# 4a - and the Odyssey file says exactly what the core file says for the same five animals,
+# matched on the coats since the defNames deliberately differ: AEXP_Tiger against Tiger.
+$byCoats = @{}
+foreach ($a in $core) { $byCoats[($a.Coats -join '|')] = $a }
+$odrift = foreach ($o in $odysseyPatch) {
+    $key = ($o.Coats -join '|')
+    if (-not $byCoats.ContainsKey($key)) {
+        "$($o.DefName) carries coats no core operation carries"
+    } elseif ($byCoats[$key].Chance -ne $o.Chance) {
+        "$($o.DefName) chance $($o.Chance), against $($byCoats[$key].Chance) on $($byCoats[$key].DefName)"
+    }
+}
+if ($odrift) {
+    $problems++
+    Write-Host "-- the Odyssey file and the core file disagree --"
+    $odrift | ForEach-Object { Write-Host "   $_" }
+} else {
+    Write-Host "-- the $($odysseyPatch.Count) animals Odyssey took over get the same coats and chances as their VAE counterparts --"
+}
 
 # 4 - the second pass over those 16 animals says exactly what the first one says.
 $byName = @{}

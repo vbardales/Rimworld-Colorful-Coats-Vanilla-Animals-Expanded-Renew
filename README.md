@@ -23,8 +23,14 @@ Most sit between a 30% and an 80% chance of an alternate coat. **The jaguar and 
 alternate each, at 5%.** One tiger in twenty. That rarity is purpleyam's design and the best thing
 in the mod, and it survives the port untouched.
 
-Three patch files, 222 textures, no `Defs`, no assembly, no Harmony, no DLC. Safe to add to a save
-in progress and safe to remove from one: it changes how an animal is drawn, nothing else.
+Four patch files, 222 textures, no `Defs`, no assembly, no Harmony, no DLC of its own. Safe to add
+to a save in progress and safe to remove from one: it changes how an animal is drawn, nothing else.
+
+**Five of the 35 arrive by a different route if you own Odyssey.** Badger, muskox, otter, walrus
+and tiger became vanilla animals with that expansion, so Vanilla Animals Expanded stops declaring
+its own and the coats aimed at `AEXP_Tiger` and its four fellows would find nothing. A fourth patch
+file aims the same ten coats at Ludeon's defs instead, at the same chances, so the mod covers all
+35 either way. Before 2026-09-11 it did not, and nothing in the log said so.
 
 ## What it needs
 
@@ -75,6 +81,22 @@ is not, in two different ways.
 One name was **added**: `Vanilla Animals Expanded — Cats and Dogs`, in the same `<mods>` list as
 `Vanilla Animals Expanded`. See above.
 
+### The check the guards do not cover
+
+A matching guard says the target mod is there. It does not say the animals are. The 30 core
+defNames were read back out of Vanilla Animals Expanded as installed, and five of them were not in
+the folder that always loads:
+
+| animal | in `1.6\Defs` | in `1.6NotOdyssey\Defs` |
+|---|---|---|
+| badger, muskox, otter, walrus, tiger | no | yes |
+| the other 25 | yes | — |
+
+`LoadFolders.xml` loads the second folder only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because
+those five became Ludeon's animals with that expansion. So with Odyssey the guard matched, the
+operations ran, and five of them found nothing. `Patches/ColorfulCoats_VAEodyssey.xml` is the
+answer; `_tools/Check-Coats.ps1` is what asked the question, and asks it again on demand.
+
 **The two fields still exist under those names.** Verified by reflection against the 1.6
 `Assembly-CSharp.dll`:
 
@@ -124,11 +146,12 @@ Mod/          published — the junction into RimWorld/Mods points here
   Patches/
   Textures/
 Art/          the showcase sources and the page that engraves the banner
+_tools/       Check-Coats.ps1, the five checks that need no game
 ```
 
-Everything outside `Mod/` — this file, the changelog, the attribution, `Art/` — stays out of the
-Steam upload by construction. `SteamUGC.SetItemContent` takes the junction's target directory as it
-stands on disk, with no filtering.
+Everything outside `Mod/` — this file, the changelog, the attribution, the scenarios, `Art/` and
+`_tools/` — stays out of the Steam upload by construction. `SteamUGC.SetItemContent` takes the
+junction's target directory as it stands on disk, with no filtering.
 
 ## Credit and removal
 

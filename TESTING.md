@@ -1,6 +1,6 @@
 # Test scenarios
 
-Three patch files, 222 textures, no assembly and no def of its own. There is very little here to
+Four patch files, 222 textures, no assembly and no def of its own. There is very little here to
 break, and **everything that can break breaks silently** — twice over, which is more than the
 other mods of this family have to contend with.
 
@@ -10,16 +10,17 @@ their own failures:
 - `PatchOperationFindMod` compares a **display name**. A guard that does not match is not an
   error: the `match` branch is skipped, the operation returns true, and nothing is written. The
   mod installs, loads, says nothing and does nothing.
-- Each of the 51 `PatchOperationAdd` operations carries `<success>Always</success>` — 14 of them
-  added by this port. An operation that finds no animal reports success and writes nothing. That
-  flag buys the other animals their coats when one defName moves, and it buys them by making the
-  loss invisible.
+- Each of the 51 sequenced `PatchOperationAdd` operations carries `<success>Always</success>` — 14
+  of them added by this port. An operation that finds no animal reports success and writes
+  nothing. That flag buys the other animals their coats when one defName moves, and it buys them
+  by making the loss invisible. The five conditional operations of the Odyssey file are silent for
+  the same reason without needing the flag at all.
 
 Only animals on screen settle it.
 
 ## What is settled before the game starts
 
-`_tools/Check-Coats.ps1` answers the four questions that do not need RimWorld running, and exits
+`_tools/Check-Coats.ps1` answers the five questions that do not need RimWorld running, and exits
 non-zero naming the file or the animal when one fails:
 
 ```
@@ -32,12 +33,15 @@ powershell -File _tools/Check-Coats.ps1
    and, separately, whether it exists **only** in a conditionally loaded folder.
 4. The 16 animals patched twice carry the same chance and the same coats in both files, which is
    what makes scenario J harmless.
+5. The five animals of the Odyssey file get the same coats and chances as their `AEXP_`
+   counterparts, matched on their coat lists since the defNames deliberately differ.
 
-It also counts the operations that carry `<success>Always</success>`, since the whole shape of
-this file depends on all 51 of them having it.
+It also counts the sequenced operations that carry `<success>Always</success>`, since the shape of
+those three files depends on all 51 of them having it.
 
 Run on 2026-09-11: 74 coats, 222 textures, nothing missing, nothing orphaned, all 51 flagged, all
-35 defNames present, no `alternateGraphics` on any target, and the two passes in agreement.
+40 defNames present across three targets, no `alternateGraphics` on any of them, and both
+agreement checks clean.
 
 The four shared checkers live in the monorepo this mod was detached from, one directory up, and
 this mod passes all four:
@@ -51,14 +55,14 @@ powershell -File ..\scripts\Check-TypeRefs.ps1   -ModPath .
 
 | Checker | Result |
 |---|---|
-| `Check-XmlFields` | 4 files, every element maps to a 1.6 field |
-| `Check-XmlClasses` | 3 type references, all resolved |
-| `Check-DefRefs` | no dangling reference; the three `Class=` values are vanilla patch operations |
+| `Check-XmlFields` | 5 files, every element maps to a 1.6 field |
+| `Check-XmlClasses` | 4 type references, all resolved |
+| `Check-DefRefs` | no dangling reference, and the four `Class=` values are vanilla patch operations |
 | `Check-TypeRefs` | no reference to a third-party type |
 
-## Five animals the mod cannot reach on an Odyssey install
+## The five animals Odyssey took over
 
-Found by check 3 on 2026-09-11, and it changes what several scenarios below expect.
+Found by check 3 on 2026-09-11, and it is why there is a fourth patch file.
 
 Vanilla Animals Expanded splits its 1.6 content in two. `LoadFolders.xml` loads `1.6` always and
 `1.6NotOdyssey` only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because **Odyssey made five of
@@ -67,15 +71,36 @@ those animals vanilla**: badger, muskox, otter, walrus and tiger are now defined
 and `Tiger`.
 
 So on a copy of the game with Odyssey installed, `AEXP_Badger`, `AEXP_Muskox`, `AEXP_Otter`,
-`AEXP_Walrus` and `AEXP_Tiger` **do not exist**, five of this mod's 35 operations match nothing,
-and their nine coats never appear. Nothing is logged, because those operations carry
-`<success>Always</success>`. The other 30 animals are unaffected.
+`AEXP_Walrus` and `AEXP_Tiger` do not exist, and five of the core file's operations match nothing.
+Ten coats used to go missing there, the tiger's among them, with nothing in the log to say so.
 
-This is a gap to decide about rather than a fault in the port: the patch is correct for the mod it
-names, and covering the vanilla five would mean patching vanilla defs behind a guard on Odyssey,
-with purpleyam's textures drawn on Ludeon's sprites. Nothing has been changed for it yet. What
-matters for testing is that **the tiger, one of the two rarities this mod is known for, is on that
-list**: test the rarity with the jaguar, which lives in `1.6\Defs` and is always there.
+`ColorfulCoats_VAEodyssey.xml` hands those ten coats to Ludeon's five defs instead, with
+purpleyam's chances unchanged. One `PatchOperationConditional` per animal, keyed on the def's own
+existence: true exactly when Odyssey is active, false and silently successful when it is not, and
+one renamed def cannot cost the other four their coats. It is not guarded by
+`PatchOperationFindMod`, which compares a display name, because Odyssey's `About.xml` declares no
+`<name>` at all, and not by `MayRequire`, which an `<Operation>` ignores.
+
+**The two halves are exclusive by construction**, which is what to check rather than trust: a def
+exists in one folder or the other, never both, so no animal can receive the coats twice.
+
+It looks right because Vanilla Animals Expanded ships its own art for these five at the same
+texture paths Ludeon uses, from its root `Textures` folder, which loads on every version. The base
+sprite a player sees is therefore already the one purpleyam drew the coats against. What does
+differ is `drawSize`:
+
+| Animal | Vanilla Animals Expanded | Odyssey |
+|---|---|---|
+| Tiger | 1.3 | 1.05 |
+| Muskox | 1.5 | 1.25 |
+| Badger | 1 | 0.75 |
+| Otter | 1 | 0.75 |
+| Walrus | 1 | 1.05 |
+
+Ludeon draws four of the five a little smaller, so an alternate coat is rendered smaller than it
+was authored. Nothing is stretched: the whole sprite is scaled, base coat included, so a coloured
+animal and a plain one are always the same size as each other. Scenario M is where that gets
+looked at.
 
 ## Load order
 
@@ -110,8 +135,9 @@ scenario H.
 The two at `0.05` are deliberate and are the best thing in the mod. Everything else sits between
 0.3 and 0.8.
 
-**Five of those 35 are out of reach on an Odyssey install** — badger and muskox, otter and walrus,
-and the tiger. Ten coats in all. See the section above before reading a plain animal as a fault.
+**Five of those 35 change hands on an Odyssey install** — badger and muskox, otter and walrus, and
+the tiger. Their ten coats reach Ludeon's defs through `ColorfulCoats_VAEodyssey.xml` instead, at
+the same chances. See the section above.
 
 Order inside `ColorfulCoats_VAEcore.xml` matters for scenario B: giraffe is the first operation,
 the 16 wildlife animals come before the 14 pets, and **shih tzu is the last**.
@@ -188,18 +214,19 @@ cost its coats to every breed listed after it, in silence.
 - If the giraffe has coats and the shih tzu does not, something between them is failing and the
   sequence is stopping there — which should now be impossible, and would mean a flag was lost.
 
-## C — the two rarities, and the one you cannot use
+## C — the two rarities
 
 The jaguar and the tiger have one alternate each at `0.05`. This is the scenario most likely to be
-mistaken for a bug, and half of it only works without Odyssey.
+mistaken for a bug: at one in twenty, absent and rare look identical.
 
-- **Test it with the jaguar.** It is defined in `1.6\Defs` and is there on every install. Spawn
-  **100 jaguars** and expect about **five** in the alternate coat. Seeing none out of 100 happens
-  about one run in 170 (`0.95^100`), so it is worth a second run before concluding anything.
-- **The tiger is the wrong subject on an Odyssey install**, where `AEXP_Tiger` does not exist at
-  all and the operation matches nothing. Spawning a hundred vanilla `Tiger` will show a hundred
-  plain tigers, and that is the expected result, not a failure of the patch. Without Odyssey the
-  tiger behaves exactly like the jaguar.
+- Spawn **100 jaguars** and expect about **five** in the alternate coat. Seeing none out of 100
+  happens about one run in 170 (`0.95^100`), so it is worth a second run before concluding
+  anything.
+- Then the same with **tigers**, and mind which tiger you are looking at. With Odyssey the animal
+  is Ludeon's `Tiger` and its coat comes from `ColorfulCoats_VAEodyssey.xml`; without Odyssey it is
+  `AEXP_Tiger` from the core file. **Both must show roughly five in a hundred**, and the whole
+  point of the fourth patch file is that the answer no longer depends on which of the two the
+  player has.
 - Do not "fix" the rarity by raising the chance. One in twenty is purpleyam's design and the port
   keeps it untouched.
 
@@ -219,7 +246,7 @@ mistaken for a bug, and half of it only works without Odyssey.
 ## E — the 74 coats and the three rotations
 
 - Beyond the poodle and the moa, the three-coat animals are worth a spawn of a dozen each:
-  **kangaroo**, **hedgehog**, **chihuahua**, **pangolin**, **red panda**, **black
+  **kangaroo**, **hedgehog**, **muskox**, **chihuahua**, **pangolin**, **red panda**, **black
   rhinoceros**, **rockhopper penguin**.
 - West is not shipped. RimWorld mirrors `_east` when no `_west` exists, so an animal walking west
   showing its far side reversed is correct.
@@ -309,6 +336,26 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
   weakness is a different one and is recorded here rather than rediscovered: **the animals ringing
   the mascot are not this mod's** — an alpaca, a cow, a chicken, a rabbit, a deer and a wolf, plus
   one cat that does belong. At 32 px they read as coloured fur, which is what the mod is about.
+
+## M — the five Odyssey animals, on both kinds of install
+
+The fourth patch file exists so this scenario has the same answer twice. Run it once with Odyssey
+enabled and once without, on a colony where those animals spawn.
+
+- **With Odyssey**, spawn a dozen each of **badger**, **muskox**, **otter** and **walrus**. They
+  are Ludeon's defs, and their coats come from `ColorfulCoats_VAEodyssey.xml`. Muskox rolls at
+  `0.7` with three coats, the other three at `0.6` with two, so a dozen of each should show
+  several coloured. The tiger belongs to scenario C.
+- **Without Odyssey**, the same animals are `AEXP_*` and their coats come from the core file. The
+  counts should look the same.
+- **Nothing should ever get both.** A def exists in Odyssey or in `1.6NotOdyssey`, never in both,
+  so the two halves cannot overlap - but if an animal ever showed a coat list of four entries
+  where the patch gives two, that is what happened.
+- **Look at the size.** Ludeon draws four of the five smaller than Vanilla Animals Expanded did,
+  most visibly the muskox at 1.25 against 1.5. The coats were authored at the larger size, so
+  check they still read as the animal rather than as a blurred version of it. A coloured animal
+  and a plain one are always the same size as each other, so the comparison to make is against
+  the plain one standing next to it.
 
 ## What no check offline can catch
 

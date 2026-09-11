@@ -18,13 +18,17 @@
   </loadAfter>
   <description>Coat variations for the pets and wildlife of Vanilla Animals Expanded, so a colony's dogs and cats stop being interchangeable and a jaguar is worth stopping to look at. 35 animals, 74 extra coats.
 
-Texture patch only. No DLC, no Harmony, no assembly, no def of its own - three XML patches and 222 textures. Safe to add to a save in progress, and safe to remove from one; animals already on the map simply go back to their original coat.
+Texture patch only. No DLC, no Harmony, no assembly, no def of its own - four XML patches and 222 textures. Safe to add to a save in progress, and safe to remove from one; animals already on the map simply go back to their original coat.
 
 WHAT IS COVERED
 
 From Vanilla Animals Expanded: the nine cat breeds and the five dog breeds, plus badger, beaver, black bear, giraffe, hedgehog, hyena, jaguar, kangaroo, koala, megawolverine, muskox, otter, platypus, red panda, tiger and walrus.
 
 From Vanilla Animals Expanded - Endangered, if you run it: black-footed ferret, black rhinoceros, moa, pangolin and rockhopper penguin.
+
+IF YOU OWN ODYSSEY
+
+Badger, muskox, otter, walrus and tiger became vanilla animals with that expansion, so Vanilla Animals Expanded stops declaring its own and the coats aimed at them would find nothing at all. A fourth patch file aims the same ten coats at Ludeon's five animals instead, at the same chances, so all 35 are covered whether you own Odyssey or not. It is keyed on those animals existing, so nothing fires twice and nothing fires on a copy of the game that does not have them.
 
 Most animals have a 40% to 80% chance of an alternate coat. The two exceptions are deliberate and are the best thing in the mod: the jaguar and the tiger have a single alternate each, at 5%. One tiger in twenty.
 
@@ -42,9 +46,10 @@ Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130 
 
 WHAT CHANGED IN THE PORT
 
-Nothing an animal can see. RimWorld 1.6 still has alternateGraphics and alternateGraphicChance on PawnKindDef under those names; the patch is guarded by PatchOperationFindMod, which matches on a mod's display name, and both names it needs - "Vanilla Animals Expanded" and "Vanilla Animals Expanded - Endangered" - are still exactly right; and all 35 defNames the patch aims at are still there. Two things were made sturdier rather than fixed:
+Nothing was broken by 1.6 itself. RimWorld still has alternateGraphics and alternateGraphicChance on PawnKindDef under those names; the patch is guarded by PatchOperationFindMod, which matches on a mod's display name, and both names it needs - "Vanilla Animals Expanded" and "Vanilla Animals Expanded - Endangered" - are still exactly right; and 30 of the 35 defNames the patch aims at are still there under those names. Three things changed:
 
 - The 14 cats and dogs now report success whether or not they were found, as the other 21 animals already did. They sit in one PatchOperationSequence, and a sequence stops at the first operation that fails, so one renamed breed would have quietly cost every breed listed after it its coats.
+- The five animals Odyssey made vanilla - badger, muskox, otter, walrus and tiger - get their coats from a fourth patch file aimed at Ludeon's defs, since Vanilla Animals Expanded stops declaring its own when that expansion is active. Ten coats that reached nobody who owns Odyssey, the tiger's 5% among them, and nothing in the log ever said so.
 - The five large screenshots left in the About folder were removed. RimWorld reads Preview.png and ModIcon.png and nothing else in there, and those five were 4.4 MB of the mod's 11.
 
 The colours, the chances and the 222 textures are untouched.

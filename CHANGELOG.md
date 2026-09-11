@@ -18,14 +18,27 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   `Art/ModIcon-source.png` at 64% of the frame, keeping the mascot legible at the 32 pixels the
   mod list actually draws, rather than a plain reduction of the whole crowd. Nothing in `Art/`
   ships: the Workshop uploader only ever sees `Mod/`.
-- `TESTING.md`, twelve scenarios for the game plus what is settled before it starts. All four
-  shared checkers pass, every coat ships its three rotations with nothing orphaned, and all 35
-  defNames exist in the targets as installed today with no `alternateGraphics` of their own.
-- `_tools/Check-Coats.ps1`, the four questions that need no game: every `texPath` ships its three
+- `TESTING.md`, thirteen scenarios for the game plus what is settled before it starts. All four
+  shared checkers pass, every coat ships its three rotations with nothing orphaned, and all 40
+  defNames exist in the three target sets as installed today with no `alternateGraphics` of their
+  own.
+- `Patches/ColorfulCoats_VAEodyssey.xml`, the five animals Odyssey took over. Vanilla Animals
+  Expanded loads `1.6NotOdyssey` only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because badger,
+  muskox, otter, walrus and tiger are Ludeon's animals now. With the expansion installed,
+  `AEXP_Badger` and its four fellows do not exist, five of the core file's operations matched
+  nothing, and **ten of purpleyam's coats never appeared** — the tiger's 5% among them — with
+  nothing in the log to say so. This file hands the same ten coats to `Badger`, `Muskox`, `Otter`,
+  `Walrus` and `Tiger`, at purpleyam's chances. One `PatchOperationConditional` per animal, keyed
+  on the def's own existence, because `PatchOperationFindMod` compares a display name and
+  Odyssey's `About.xml` declares none, and because `MayRequire` on an `<Operation>` is read by
+  nothing. The two halves are exclusive: a def lives in one folder or the other, never both.
+- `_tools/Check-Coats.ps1`, the five questions that need no game: every `texPath` ships its three
   rotations, every shipped texture is referenced, every defName still exists in the mod that owns
-  it with no `alternateGraphics` of its own, and the 16 animals patched twice carry the same
-  chance and coats in both files. It also counts the 51 `<success>Always</success>` flags, since
-  the shape of the patch depends on all of them being there. Outside `Mod/`, so it does not ship.
+  it with no `alternateGraphics` of its own, the 16 animals patched twice carry the same chance
+  and coats in both files, and the five Odyssey animals carry the same as their `AEXP_`
+  counterparts. It also counts the 51 `<success>Always</success>` flags on the sequenced
+  operations, since the shape of those three files depends on all of them being there. It was this
+  script that found the five animals above, on its first run. Outside `Mod/`, so it does not ship.
 - No count is engraved on the banner. The rule allows one only where nothing outside this
   repository can move the number, and the 35 animals are Vanilla Animals Expanded's, not this
   mod's: a renamed breed would make the figure wrong with nobody touching the mod.

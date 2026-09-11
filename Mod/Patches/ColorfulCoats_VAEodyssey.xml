@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  The five animals Odyssey took over.
+
+  Vanilla Animals Expanded loads its 1.6 defs from two folders: `1.6` always, and `1.6NotOdyssey`
+  only IfModNotActive="Ludeon.RimWorld.Odyssey". Odyssey made five of its animals vanilla - badger,
+  muskox, otter, walrus and tiger - so with the expansion installed, AEXP_Badger, AEXP_Muskox,
+  AEXP_Otter, AEXP_Walrus and AEXP_Tiger do not exist and the operations aimed at them in
+  ColorfulCoats_VAEcore.xml match nothing. Ten of purpleyam's coats, the tiger's 5% among them,
+  never appeared for anyone who owns Odyssey.
+
+  This file hands the same ten coats to Ludeon's defs, which carry the plain names `Badger`,
+  `Muskox`, `Otter`, `Walrus` and `Tiger`. The chances are purpleyam's, unchanged.
+
+  It is coherent to look at, because Vanilla Animals Expanded ships its own art for these five at
+  the same texture paths Ludeon uses - Things/Pawn/Animal/Tiger/Tiger and so on - from its root
+  Textures folder, which loads on every version. So the base sprite a player sees is already
+  purpleyam's coats' own subject. What does differ is drawSize: Ludeon draws these animals a little
+  smaller than Vanilla Animals Expanded did, 1.05 against 1.3 for the tiger, so an alternate coat
+  is rendered slightly smaller than it was authored. Nothing is stretched; the whole sprite is
+  scaled, base coat included.
+
+  PatchOperationConditional rather than PatchOperationFindMod or MayRequire:
+
+  - MayRequire on an <Operation> is read by nothing. The operation applies whether the mod is
+    loaded or not, and no warning says so.
+  - PatchOperationFindMod compares a display NAME, and Odyssey's About.xml declares no <name> at
+    all, so there is nothing dependable to match on.
+  - A conditional on the def's own existence needs neither. It is true exactly when Odyssey is
+    active, since these defs come with it, and an xpath that finds nothing is a silent success
+    when no <nomatch> is given - so these five need no <success>Always</success> either.
+
+  One conditional per animal, so one renamed def cannot cost the other four their coats.
+-->
+
+<Patch>
+
+	<!-- badger -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Badger"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName = "Badger"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><texPath>Things/Pawn/Animal/VAEXP_Badger/BadgerA</texPath></li>
+					<li><texPath>Things/Pawn/Animal/VAEXP_Badger/BadgerB</texPath></li>
+				</alternateGraphics>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- muskox -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Muskox"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName = "Muskox"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><texPath>Things/Pawn/Animal/AEXP_Muskox/MuskoxA</texPath></li>
+					<li><texPath>Things/Pawn/Animal/AEXP_Muskox/MuskoxB</texPath></li>
+					<li><texPath>Things/Pawn/Animal/AEXP_Muskox/MuskoxC</texPath></li>
+				</alternateGraphics>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- otter -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Otter"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName = "Otter"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><texPath>Things/Pawn/Animal/AEXP_Otter/OtterA</texPath></li>
+					<li><texPath>Things/Pawn/Animal/AEXP_Otter/OtterB</texPath></li>
+				</alternateGraphics>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- walrus -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Walrus"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName = "Walrus"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><texPath>Things/Pawn/Animal/AEXP_Walrus/WalrusA</texPath></li>
+					<li><texPath>Things/Pawn/Animal/AEXP_Walrus/WalrusB</texPath></li>
+				</alternateGraphics>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- tiger - one alternate at 5%, purpleyam's rarest and the reason this file exists -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Tiger"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName = "Tiger"]</xpath>
+			<value>
+				<alternateGraphicChance>0.05</alternateGraphicChance>
+				<alternateGraphics>
+					<li><texPath>Things/Pawn/Animal/AEXP_Tiger/TigerA</texPath></li>
+				</alternateGraphics>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

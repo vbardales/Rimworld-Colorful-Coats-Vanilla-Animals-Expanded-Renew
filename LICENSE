@@ -27,6 +27,9 @@ SCOPE OF THE ABOVE
 The MIT licence above covers only what the 1.6 port added:
 
   - the per-operation success flag on the 14 cat and dog operations
+  - the patch operations in Patches/ColorfulCoats_VAEodyssey.xml, written for this
+    port because Odyssey did not exist when purpleyam stopped. The coats and the
+    chances they carry are purpleyam's, as below; only the aiming is mine
   - the showcase drawn for this port: About/Preview.png, About/ModIcon.png,
     and the Art/ sources and engraving page behind them
   - the test scenarios in TESTING.md and the checker under _tools/
