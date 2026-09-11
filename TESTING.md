@@ -19,9 +19,28 @@ Only animals on screen settle it.
 
 ## What is settled before the game starts
 
-Everything below was run on 2026-09-11 and passed. None of it says the coats appear.
+`_tools/Check-Coats.ps1` answers the four questions that do not need RimWorld running, and exits
+non-zero naming the file or the animal when one fails:
 
-The four shared checkers live in the monorepo this mod was detached from, one directory up:
+```
+powershell -File _tools/Check-Coats.ps1
+```
+
+1. Every `texPath` has its three rotation files shipped.
+2. Every shipped texture is referenced by some `texPath`.
+3. Every defName still exists in the mod that owns it, with no `alternateGraphics` of its own —
+   and, separately, whether it exists **only** in a conditionally loaded folder.
+4. The 16 animals patched twice carry the same chance and the same coats in both files, which is
+   what makes scenario J harmless.
+
+It also counts the operations that carry `<success>Always</success>`, since the whole shape of
+this file depends on all 51 of them having it.
+
+Run on 2026-09-11: 74 coats, 222 textures, nothing missing, nothing orphaned, all 51 flagged, all
+35 defNames present, no `alternateGraphics` on any target, and the two passes in agreement.
+
+The four shared checkers live in the monorepo this mod was detached from, one directory up, and
+this mod passes all four:
 
 ```
 powershell -File ..\scripts\Check-XmlFields.ps1  -ModPath .
@@ -37,15 +56,26 @@ powershell -File ..\scripts\Check-TypeRefs.ps1   -ModPath .
 | `Check-DefRefs` | no dangling reference; the three `Class=` values are vanilla patch operations |
 | `Check-TypeRefs` | no reference to a third-party type |
 
-Three more facts that need no game and were checked by hand, since this mod has no checker script
-of its own the way the Megafauna port does:
+## Five animals the mod cannot reach on an Odyssey install
 
-- **74 coats, 222 textures, every rotation shipped.** Each `texPath` has its `_north`, `_south`
-  and `_east` file. Nothing is missing and nothing is orphaned: the 74 stems on disk are exactly
-  the 74 the patches reference.
-- **All 35 defNames exist in the target mods as they are installed today**, 30 in Vanilla Animals
-  Expanded and 5 in Endangered.
-- **Neither target defines `alternateGraphics` itself**, so nothing is being overwritten.
+Found by check 3 on 2026-09-11, and it changes what several scenarios below expect.
+
+Vanilla Animals Expanded splits its 1.6 content in two. `LoadFolders.xml` loads `1.6` always and
+`1.6NotOdyssey` only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because **Odyssey made five of
+those animals vanilla**: badger, muskox, otter, walrus and tiger are now defined in
+`Data/Odyssey/Defs/ThingDefs_Races`, under the plain names `Badger`, `Muskox`, `Otter`, `Walrus`
+and `Tiger`.
+
+So on a copy of the game with Odyssey installed, `AEXP_Badger`, `AEXP_Muskox`, `AEXP_Otter`,
+`AEXP_Walrus` and `AEXP_Tiger` **do not exist**, five of this mod's 35 operations match nothing,
+and their nine coats never appear. Nothing is logged, because those operations carry
+`<success>Always</success>`. The other 30 animals are unaffected.
+
+This is a gap to decide about rather than a fault in the port: the patch is correct for the mod it
+names, and covering the vanilla five would mean patching vanilla defs behind a guard on Odyssey,
+with purpleyam's textures drawn on Ludeon's sprites. Nothing has been changed for it yet. What
+matters for testing is that **the tiger, one of the two rarities this mod is known for, is on that
+list**: test the rarity with the jaguar, which lives in `1.6\Defs` and is always there.
 
 ## Load order
 
@@ -79,6 +109,9 @@ scenario H.
 
 The two at `0.05` are deliberate and are the best thing in the mod. Everything else sits between
 0.3 and 0.8.
+
+**Five of those 35 are out of reach on an Odyssey install** — badger and muskox, otter and walrus,
+and the tiger. Ten coats in all. See the section above before reading a plain animal as a fault.
 
 Order inside `ColorfulCoats_VAEcore.xml` matters for scenario B: giraffe is the first operation,
 the 16 wildlife animals come before the 14 pets, and **shih tzu is the last**.
@@ -155,15 +188,19 @@ cost its coats to every breed listed after it, in silence.
 - If the giraffe has coats and the shih tzu does not, something between them is failing and the
   sequence is stopping there — which should now be impossible, and would mean a flag was lost.
 
-## C — the two rarities
+## C — the two rarities, and the one you cannot use
 
 The jaguar and the tiger have one alternate each at `0.05`. This is the scenario most likely to be
-mistaken for a bug.
+mistaken for a bug, and half of it only works without Odyssey.
 
-- Spawn **100 tigers**. Expect about **five** in the alternate coat.
-- Seeing none out of 100 happens about one run in 170 (`0.95^100`), so it is worth a second run
-  before concluding anything.
-- Do not "fix" this by raising the chance. One tiger in twenty is purpleyam's design and the port
+- **Test it with the jaguar.** It is defined in `1.6\Defs` and is there on every install. Spawn
+  **100 jaguars** and expect about **five** in the alternate coat. Seeing none out of 100 happens
+  about one run in 170 (`0.95^100`), so it is worth a second run before concluding anything.
+- **The tiger is the wrong subject on an Odyssey install**, where `AEXP_Tiger` does not exist at
+  all and the operation matches nothing. Spawning a hundred vanilla `Tiger` will show a hundred
+  plain tigers, and that is the expected result, not a failure of the patch. Without Odyssey the
+  tiger behaves exactly like the jaguar.
+- Do not "fix" the rarity by raising the chance. One in twenty is purpleyam's design and the port
   keeps it untouched.
 
 ## D — the Endangered half, with and without its mod
@@ -182,7 +219,7 @@ mistaken for a bug.
 ## E — the 74 coats and the three rotations
 
 - Beyond the poodle and the moa, the three-coat animals are worth a spawn of a dozen each:
-  **kangaroo**, **hedgehog**, **muskox**, **chihuahua**, **pangolin**, **red panda**, **black
+  **kangaroo**, **hedgehog**, **chihuahua**, **pangolin**, **red panda**, **black
   rhinoceros**, **rockhopper penguin**.
 - West is not shipped. RimWorld mirrors `_east` when no `_west` exists, so an animal walking west
   showing its far side reversed is correct.
@@ -280,3 +317,8 @@ operation whose animal renamed itself writes nothing either, because the flag th
 so. Together they mean **a renamed mod or a renamed breed produces no log line, no failed
 operation and no visible error** — only animals that quietly stopped having coats. Scenarios A, B
 and D exist because nothing else would ever tell us.
+
+One of them did get caught, though, and it is worth saying which: the five animals Odyssey took
+over were found by `_tools/Check-Coats.ps1`, not in the game. Reading a target's `LoadFolders.xml`
+is cheap and nobody would ever have noticed the tiger by playing — a rarity at `0.05` looks
+exactly the same whether it is rare or absent.

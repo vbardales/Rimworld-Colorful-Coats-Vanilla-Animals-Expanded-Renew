@@ -21,6 +21,11 @@ their targets exactly. The one change to the patches is hardening, not a repair.
 - `TESTING.md`, twelve scenarios for the game plus what is settled before it starts. All four
   shared checkers pass, every coat ships its three rotations with nothing orphaned, and all 35
   defNames exist in the targets as installed today with no `alternateGraphics` of their own.
+- `_tools/Check-Coats.ps1`, the four questions that need no game: every `texPath` ships its three
+  rotations, every shipped texture is referenced, every defName still exists in the mod that owns
+  it with no `alternateGraphics` of its own, and the 16 animals patched twice carry the same
+  chance and coats in both files. It also counts the 51 `<success>Always</success>` flags, since
+  the shape of the patch depends on all of them being there. Outside `Mod/`, so it does not ship.
 - No count is engraved on the banner. The rule allows one only where nothing outside this
   repository can move the number, and the 35 animals are Vanilla Animals Expanded's, not this
   mod's: a renamed breed would make the figure wrong with nobody touching the mod.
