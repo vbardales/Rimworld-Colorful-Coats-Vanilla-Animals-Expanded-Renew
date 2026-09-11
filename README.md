@@ -1,4 +1,4 @@
-# Colorful Coats - Vanilla Animals Expanded! 1.6
+# Colorful Coats - Vanilla Animals Expanded! Renew
 
 Port of **purpleyam's Colorful Coats - Vanilla Animals Expanded!** to RimWorld 1.6.
 

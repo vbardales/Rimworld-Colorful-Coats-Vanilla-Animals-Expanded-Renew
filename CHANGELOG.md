@@ -26,7 +26,11 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   target is revived. The name was read out of that mod's `About.xml` rather than retyped, em dash
   included.
 - `packageId` changed from `purpleyam.colorfulcoats.vaewildlife` to
-  `nelim.colorfulcoats.vaewildlife`.
+  `nelim.colorfulcoats.vaerenew`.
+- `<name>` changed from `Colorful Coats - Vanilla Animals Expanded!` to
+  `Colorful Coats - Vanilla Animals Expanded! Renew`, in line with the Dodos and Megafauna ports of
+  the same family. Nothing has gone to the Workshop under the earlier form of the name, which said
+  1.6 where the repository said Renew, so this replaces it rather than succeeding it.
 - `<supportedVersions>` set to 1.6.
 - `<incompatibleWith>` now names `purpleyam.colorfulcoats.vaecatsdogs` as well as purpleyam's
   original of this mod. Cats and Dogs patches the same 14 breeds; running both would apply the
