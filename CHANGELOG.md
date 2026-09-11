@@ -18,6 +18,9 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   `Art/ModIcon-source.png` at 64% of the frame, keeping the mascot legible at the 32 pixels the
   mod list actually draws, rather than a plain reduction of the whole crowd. Nothing in `Art/`
   ships: the Workshop uploader only ever sees `Mod/`.
+- `TESTING.md`, twelve scenarios for the game plus what is settled before it starts. All four
+  shared checkers pass, every coat ships its three rotations with nothing orphaned, and all 35
+  defNames exist in the targets as installed today with no `alternateGraphics` of their own.
 - No count is engraved on the banner. The rule allows one only where nothing outside this
   repository can move the number, and the 35 animals are Vanilla Animals Expanded's, not this
   mod's: a renamed breed would make the figure wrong with nobody touching the mod.
