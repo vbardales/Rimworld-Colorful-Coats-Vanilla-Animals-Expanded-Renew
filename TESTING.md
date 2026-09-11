@@ -88,25 +88,39 @@ the 16 wildlife animals come before the 14 pets, and **shih tzu is the last**.
 `Player.log` sits in
 `%USERPROFILE%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Player.log`.
 
-Each string below was searched for in 1.6's own `Assembly-CSharp.dll` on 2026-09-11, in its
-UTF-16 string heap, rather than remembered.
+Each string below was searched for in 1.6's own `Assembly-CSharp.dll` on 2026-09-11 rather than
+remembered. The method matters, and getting it wrong cost this file two rows on its first pass:
+**the strings are UTF-16 and not all of them begin on an even byte.** Decoding the whole file from
+offset 0 reads only half the heap, and every string that starts on an odd byte comes out as
+garbage, so `IndexOf` reports it absent. Search both alignments:
+
+```powershell
+$b = [IO.File]::ReadAllBytes($dll)
+foreach ($off in 0,1) { [Text.Encoding]::Unicode.GetString($b, $off, $b.Length-$off).IndexOf($s) }
+```
+
+And a string being in the assembly is **not** the same claim as a code path reaching it. The last
+row of the table is there to make that distinction concrete.
 
 | String in the log | Written by | What it would mean here |
 |---|---|---|
 | `in any active mod or in base resources` | `ContentFinder<T>.Get` | A `texPath` with nothing behind it. The line quotes the path, so it names the coat and the rotation. |
-| `Patch operation` … `failed` | `PatchOperation.Complete` | Expected count from this mod: **zero**, and zero says nothing at all. Every operation carries `<success>Always</success>`. |
+| `Failed to find any textures at … while constructing` | `Graphic_Multi.Init` | The same fault one level up: no rotation at all found for a coat. |
+| `XML error: … doesn't correspond to any field in type` | `DirectXmlToObject` | The failure the port was checked against: it would name `alternateGraphics` or `alternateGraphicChance` and mean 1.6 renamed the field under us. The animals would still load and walk, and simply be the wrong colour. |
+| `Patch operation … failed` | `PatchOperation.Complete` | Expected count from this mod: **zero**, and zero says nothing at all. Every operation carries `<success>Always</success>`. |
 | `Could not find type named` | the XML loader | Only three `Class=` values are used, all vanilla patch operations. This would mean 1.6 renamed one. |
+| `Adding duplicate` | `DefDatabase<T>.Add` | **Never, and not because it is missing.** The string is in the assembly; the path that would reach it is not. `AddAllInMods` removes the previous def before adding the new one, so the error inside `Add` is unreachable and the last mod loaded wins in silence. Disassembled from 1.6, recorded in the repository's own notes. |
 
-**Three things produce no log line at all, and it is worth knowing which:**
+**Two things then produce no log line at all, and it is worth knowing which:**
 
-- A **guard that does not match** writes nothing, by design. There is no string to grep for.
-- A **duplicate defName** between two active mods is not reported either: the last loaded
-  silently overwrites. `<incompatibleWith>` is the only protection against running purpleyam's
-  original alongside this port.
-- The **field-mismatch warning is not in 1.6 under the wording the Megafauna port's notes use.**
-  Neither `doesn't correspond to any field in type` nor `Failed to find any textures at` exists in
-  this build's strings. So do not wait on the log to tell you `alternateGraphics` was renamed —
-  `Check-XmlFields.ps1` answers that question offline, and it is the reason to run it.
+- A **guard that does not match** writes nothing, by design. There is no string to grep for: the
+  `match` branch is skipped and the operation returns true.
+- An **operation that finds no animal** writes nothing either, because `<success>Always</success>`
+  says so. That is the flag this port added, and it is the price of the protection it buys.
+
+Neither of those is reachable from `DefDatabase` at all, incidentally: this mod declares no def of
+its own, so nothing it does can ever collide there. What two conflicting copies of it actually do
+is in scenario K.
 
 Lines naming other mods are not ours to fix, and are worth leaving in whatever gets pasted back.
 
@@ -212,14 +226,15 @@ coat it was born with.
 The core guard names two mods: `Vanilla Animals Expanded` and
 `Vanilla Animals Expanded — Cats and Dogs`. The old standalone module defines the same 14 breeds
 as the merged mod, and `PatchOperationFindMod` **stops at the first name it finds**, so the coats
-arrive whichever of them the cats came from, and arrive once.
+arrive whichever of them the cats came from, and the block runs once.
 
 - Today this is inert: `VanillaExpanded.VAECD` stops at 1.3 and cannot be enabled on 1.6.
-- If it is ever revived, enable both it and the merged mod, then spawn a dozen Bengals. Each must
-  carry at most one `alternateGraphics` list. Two lists would mean the guard applied twice, which
-  would double the chances and duplicate the entries.
+- If it is ever revived, enable both it and the merged mod, then spawn a dozen Bengals. They must
+  carry coats, and the chance must still look like `0.6` rather than anything higher.
+- Two names in one guard is the whole point, and the reason not to split them into two guards
+  sharing an xpath: two matching guards would each run their block.
 
-## J — the eight modular guards, and the double-application risk
+## J — the eight modular guards, and what applying twice actually does
 
 `ColorfulCoats_VAEvarious.xml` patches 16 of the same wildlife animals a second time, guarded on
 the eight standalone Vanilla Animals Expanded modules — Arid Shrubland, Australia, Boreal Forest,
@@ -228,17 +243,24 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
 - On 1.6 the whole file is inert and there is nothing to see. That is the expected result.
 - The reason to keep it is a player on an older game, where it is the only thing giving those 16
   animals their coats.
-- The risk to watch if any module is ever revived: a player running **both** a module and the
-  merged mod gets the same 16 animals patched twice, since the two files guard on different names.
-  The symptom is a doubled `alternateGraphics` list, not an error.
+- If any module is ever revived, a player running **both** it and the merged mod gets those 16
+  animals patched twice, since the two files guard on different names. **Compared today, the two
+  copies are identical** — same chance, same `texPath` list, all 16 animals — so the def ends up
+  with the element twice, the loader assigns the field twice with the same content, and the last
+  one wins. Nothing changes and nothing is logged. It is worth knowing that this is harmless
+  rather than assuming it doubles anything.
 
 ## K — the original enabled alongside
 
 - Try to enable `purpleyam.colorfulcoats.vaewildlife` or `purpleyam.colorfulcoats.vaecatsdogs` at
   the same time as this one.
-- `<incompatibleWith>` should refuse each pair. If one somehow loads anyway, **nothing is logged**:
-  the duplicate defName is resolved silently by load order, and the animals end up with whichever
-  list was applied last.
+- `<incompatibleWith>` should refuse each pair.
+- If one somehow loads anyway, **nothing is logged and nothing visibly breaks**, which is the real
+  argument for the field rather than a crash would be. Neither mod declares a def, so
+  `DefDatabase` is never involved; both simply add an `<alternateGraphics>` element to the same
+  `PawnKindDef`, and the last one read wins. Since the two carry the same textures — purpleyam's,
+  byte for byte — the animals look the same either way. The cost is two copies of 222 textures in
+  memory for one visible result, not an error to grep for.
 
 ## L — the mod list entry itself
 
