@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.colorfulcoats.vaewildlife</packageId>
+  <name>Colorful Coats - Vanilla Animals Expanded! 1.6</name>
+  <author>purpleyam - 1.6 port: nelim</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew</url>
+  <incompatibleWith>
+    <li>purpleyam.colorfulcoats.vaewildlife</li>
+    <li>purpleyam.colorfulcoats.vaecatsdogs</li>
+  </incompatibleWith>
+  <loadAfter>
+    <li>VanillaExpanded.VanillaAnimalsExpanded</li>
+    <li>VanillaExpanded.VAEEndAndExt</li>
+    <li>VanillaExpanded.VAECD</li>
+  </loadAfter>
+  <description>Coat variations for the pets and wildlife of Vanilla Animals Expanded, so a colony's dogs and cats stop being interchangeable and a jaguar is worth stopping to look at. 35 animals, 74 extra coats.
+
+Texture patch only. No DLC, no Harmony, no assembly, no def of its own - three XML patches and 222 textures. Safe to add to a save in progress, and safe to remove from one; animals already on the map simply go back to their original coat.
+
+WHAT IS COVERED
+
+From Vanilla Animals Expanded: the nine cat breeds and the five dog breeds, plus badger, beaver, black bear, giraffe, hedgehog, hyena, jaguar, kangaroo, koala, megawolverine, muskox, otter, platypus, red panda, tiger and walrus.
+
+From Vanilla Animals Expanded - Endangered, if you run it: black-footed ferret, black rhinoceros, moa, pangolin and rockhopper penguin.
+
+Most animals have a 40% to 80% chance of an alternate coat. The two exceptions are deliberate and are the best thing in the mod: the jaguar and the tiger have a single alternate each, at 5%. One tiger in twenty.
+
+The eight old modular Vanilla Animals Expanded mods - Arid Shrubland, Australia, Boreal Forest, Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra - are still recognised for anyone playing an older version on which they still run. They all stopped at 1.3, so on 1.6 those parts of the patch simply never fire.
+
+REPLACES COLORFUL COATS - CATS AND DOGS
+
+purpleyam's separate "Colorful Coats - Cats and Dogs!" mod is not being ported, because there is nothing left to port: its 14 patched animals, its coat chances and its 78 textures are all already inside this mod, identical. It existed because Cats and Dogs used to be a module of its own; Vanilla Animals Expanded has since absorbed it. Run this one and you have both. The two are declared incompatible above, since running them together would patch the same cats twice.
+
+That holds even if you still run the old module. This mod's guard names "Vanilla Animals Expanded - Cats and Dogs" as well as the merged mod, and the two define the same 14 breeds, so the coats arrive whichever of them your cats came from - and only once, because the guard stops at the first name it finds.
+
+I am not the author of this mod. The textures and the whole idea are purpleyam's - all I did was the work needed to run it on 1.6. Credit goes to them; mistakes in the port are mine.
+
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130 - declares 1.4 and nothing further.
+
+WHAT CHANGED IN THE PORT
+
+Nothing an animal can see. RimWorld 1.6 still has alternateGraphics and alternateGraphicChance on PawnKindDef under those names; the patch is guarded by PatchOperationFindMod, which matches on a mod's display name, and both names it needs - "Vanilla Animals Expanded" and "Vanilla Animals Expanded - Endangered" - are still exactly right; and all 35 defNames the patch aims at are still there. Two things were made sturdier rather than fixed:
+
+- The 14 cats and dogs now report success whether or not they were found, as the other 21 animals already did. They sit in one PatchOperationSequence, and a sequence stops at the first operation that fails, so one renamed breed would have quietly cost every breed listed after it its coats.
+- The five large screenshots left in the About folder were removed. RimWorld reads Preview.png and ModIcon.png and nothing else in there, and those five were 4.4 MB of the mod's 11.
+
+The colours, the chances and the 222 textures are untouched.
+
+CREDIT AND REMOVAL
+
+purpleyam declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing in the body of the description on its Steam page. It is republished here under the usual convention for abandoned mods - full credit, a link to the original, and removal on request. If purpleyam would rather this port did not exist, say so and it comes down: no argument, no delay.
+
+Source, changelog and attribution: https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
+
+The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction and in-game testing. Thanks to purpleyam for the coats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+</ModMetaData>
