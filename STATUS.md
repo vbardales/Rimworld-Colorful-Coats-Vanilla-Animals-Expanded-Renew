@@ -14,9 +14,8 @@ tested_on:
 workshop:
 remaining:
   - unverified: never seen running; scenarios A, B, D and M of TESTING.md are the ones that decide
-  - defect: the icon shipped is not the one the repository wanted — it rings the mascot with eight animals, seven of which this mod does not touch
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:      2026-09-12, held by the mod's own thread
+updated:      2026-09-13, held by the mod's own thread
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -55,7 +54,9 @@ held since by this mod's thread, which updates it in the commit that changes wha
 - Visually checked at 896 × 504 and 268 px wide: two-line title, Renew and version
   identifiable, rule visible, cool secondary/warm accent distinct, no clipped text
   or overlapping text blocks. Summary is intended for the full-size view.
-- Local files only; nothing published.
+- Preview approved by the user. Illustration source is in Art/Preview.png.
+  Preview, composition and audit were committed and pushed to GitHub in 60ef536.
+  No Workshop publication performed.
 
 ## Visibility and naming policy rechecked — 2026-09-12
 
@@ -108,7 +109,7 @@ this is an independent repository, not a monorepo checkout or submodule.
   Both scripts run from this repository without monorepo scripts. Neither runs the game engine.
 - Manual: 13 functional scenarios A–M exist in TESTING.md. In-game execution remains
   unverified; tested_on stays empty. Priorities: A, B, D, M.
-- Remaining known defect: icon includes species outside this mod's coverage.
+- Icon: approved replacement optimized to 128 × 128; see the dated update below.
 
 ## Upstream licence recheck — 2026-09-12
 
@@ -167,7 +168,7 @@ the game has been settled and passes — `_tools/Check-Coats.ps1` for the textur
 and the 51 sequenced operations, and the monorepo's four shared checkers, historically recorded as run on 2026-09-12. Those shared scripts are not shipped here and were not rerun in this local audit.
 `done` does not mean tested, which is what `tested_on` is for.
 
-`tested_on` empty: the mod has never run. There is no halfway answer here, because both of this
+`tested_on` empty: no in-game validation has been recorded. There is no halfway answer here, because both of this
 mod's mechanisms swallow their own failures — a `PatchOperationFindMod` that does not match its
 display name logs nothing, and `<success>Always</success>` does the same for an operation that finds
 no animal. **A clean log is therefore not a pass**, and only animals on screen settle it.
@@ -188,11 +189,11 @@ upstream licence or permission found. The maintenance assessment is documented a
 The MIT grant remains limited to the port additions described in LICENSE.
 
 `showcase: complete` — `About/Preview.png` and `About/ModIcon.png` both exist. The banner follows
-its own brief and sits under Steam's hard 1 MB ceiling. The icon is the `defect` above.
+its own brief and sits under Steam's hard 1 MB ceiling. The approved replacement icon is now optimized to 128 × 128.
 
 ## What is left
 
-**Start the game**, and that cannot be done from here. Thirteen scenarios are written; four of them
+**Run the manual in-game checks.** Thirteen scenarios are written; four of them
 decide:
 
 - **A** — whether the coats appear at all. Ten poodles, `0.8`, four coats.
@@ -206,11 +207,15 @@ decide:
 Scenario H gained something to look at on 2026-09-12: the mod list must now warn when Vanilla
 Animals Expanded is off, and the warning must name that mod rather than this one.
 
-**The icon is to be redone**, and the prompt that would redo it is unspent. That is the only thing
-still holding `PROMPT_COLORFULCOATSVAE.md`, which git ignores and which goes away the day the icon
-exists. The fault is known and described in scenario L of `TESTING.md`, and it blocks nothing: the
-icon reads at 32 px, it simply points at species this mod does not touch.
-
+**ModIcon approved and optimized — 2026-09-12.** The user approved the new mascot
+surrounded by VAE animals. `Mod/About/ModIcon.png` is now 128 × 128, indexed PNG
+(256 colours), 12,938 bytes instead of 2,025,578 bytes: a 99.36 percent reduction.
+The original 1254 × 1254 image is preserved in `Art/ModIcon-source-v2.png`.
+Optimized copy: `Art/ModIcon-128.png`; thumbnail QA: `Art/qa/ModIcon-32.png`.
+Visually checked at 128 and 32 px: central mascot remains recognizable; individual
+animal details naturally merge at 32 px. No redesign or crop was applied.
+This replaces the old icon/species defect. Included with its source and thumbnail QA in
+the 2026-09-13 icon commit. The unused output/imagegen variant remains local.
 **The homonym sweep is done.** The five conditionals of the Odyssey file key on bare defNames —
 `Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` — which another animal mod could declare. The sweep
 over the 9,726 Workshop folders and the 240 local ones ran on 2026-09-12: no live conflict. The

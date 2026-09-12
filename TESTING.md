@@ -367,12 +367,10 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
 - The name reads `Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)`.
 - The Workshop banner is `About/Preview.png`, 896x504 and 552 KB, under Steam's hard 1 MB ceiling,
   and it says `Renew` rather than `1.6`.
-- The icon is drawn at about 32 px in the mod list. It is a crop of the source at 64%, which keeps
-  the mascot's wink and ponytail legible at that size where the uncropped image did not. Its
-  weakness is a different one and is recorded here rather than rediscovered: **the animals ringing
-  the mascot are not this mod's** — an alpaca, a cow, a chicken, a rabbit, a deer and a wolf, plus
-  one cat that does belong. At 32 px they read as coloured fur, which is what the mod is about.
-
+- The approved icon is shipped at 128 × 128 (12,938 bytes), from
+  `Art/ModIcon-source-v2.png`. At about 32 px in the mod list, verify the central
+  winking mascot remains recognizable and there is no clipping. The surrounding
+  animals represent this mod's VAE coverage; fine detail is not expected at 32 px.
 ## M — the five Odyssey animals, on both kinds of install
 
 The fourth patch file exists so this scenario has the same answer twice. Run it once with Odyssey
