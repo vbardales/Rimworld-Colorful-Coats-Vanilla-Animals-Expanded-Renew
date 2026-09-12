@@ -20,6 +20,12 @@ Only animals on screen settle it.
 
 ## What is settled before the game starts
 
+Run `powershell -File _tools/Check-Xml.ps1` for standalone XML and metadata checks:
+parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
+unofficial suffix, GitHub description link, dependency and identical licence copies.
+This and Check-Coats passed on 2026-09-12, with no installed-target checks skipped.
+These checks do not execute RimWorld's patch engine or replace scenarios A–M.
+
 `_tools/Check-Coats.ps1` answers the five questions that do not need RimWorld running, and exits
 non-zero naming the file or the animal when one fails:
 
@@ -358,7 +364,7 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
 
 ## L — the mod list entry itself
 
-- The name reads `Colorful Coats - Vanilla Animals Expanded! Renew`.
+- The name reads `Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)`.
 - The Workshop banner is `About/Preview.png`, 896x504 and 552 KB, under Steam's hard 1 MB ceiling,
   and it says `Renew` rather than `1.6`.
 - The icon is drawn at about 32 px in the mod list. It is a crop of the source at 64%, which keeps

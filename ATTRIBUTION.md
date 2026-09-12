@@ -5,16 +5,27 @@ A 1.6 port of **Colorful Coats - Vanilla Animals Expanded!**, by **purpleyam**
 
 ## Status: public
 
-The source mod is **dead** — it declares 1.4 and nothing further — and **no licence is declared
-anywhere**, checked at the four places one could be: no `LICENSE` file in the mod, no mention in
-its `About.xml`, no linked repository (`<url>` is absent entirely), and nothing in the body of
-the description on its Steam page. That last check is the one that matters: it is the one that
-was skipped once on たたら製鉄, whose ban on redistribution turned out to be a sentence in its
-description and nowhere else.
+The source is assessed as **apparently abandoned / no longer maintained**: its last
+listed update is October 2022, supported versions stop at 1.4, and the Odyssey animal
+coverage gap reported in July 2025 remains unaddressed in the original. This is a
+maintenance assessment, not an explicit abandonment announcement.
 
-This is the usual convention for ports on the RimWorld Workshop: republished with **credit by
-name** and **removal on request, without argument**. The `<author>` field reads
-`purpleyam - 1.6 port: nelim`, and the removal clause is in the description.
+Rechecked on 2026-09-12: the original Steam description, all 31 public comments,
+the author's public profile, the installed original's metadata and licence filenames,
+and public GitHub repository searches. No explicit licence, redistribution permission,
+prohibition or attributable source repository was found. This describes the sources
+examined, not every possible private or unindexed statement. The last author comment
+on this mod is dated 17 November 2023.
+
+Under the workspace PUBLISHING.md policy, the decision is **public / silent / (unofficial)**.
+The mod keeps explicit credit, its original-source link and removal-on-request disclaimer.
+This policy does not constitute permission from the original author. MIT covers only the
+port additions specified in LICENSE; inherited assets are excluded. Steam credits the
+underlying textures to Oskar Potocki, Erin and Sarg Bjornson, with recolours by purpleyam.
+
+Evidence: [original Steam page](https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130),
+[all 31 comments](https://steamcommunity.com/comment/PublishedFile_Public/render/76561198342847927/2398446130/?start=0&count=100),
+[author profile](https://steamcommunity.com/profiles/76561198342847927).
 
 purpleyam published four mods under the *Colorful Coats* name. Three are ported, each in its own
 repository; the fourth is not, and this is the mod that makes it redundant — see below.

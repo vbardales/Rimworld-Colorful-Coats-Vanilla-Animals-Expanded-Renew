@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <packageId>nelim.colorfulcoats.vaerenew</packageId>
-  <name>Colorful Coats - Vanilla Animals Expanded! Renew</name>
+  <name>Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)</name>
   <author>purpleyam - 1.6 port: nelim</author>
   <supportedVersions>
     <li>1.6</li>
@@ -23,7 +23,9 @@
     <li>VanillaExpanded.VAEEndAndExt</li>
     <li>VanillaExpanded.VAECD</li>
   </loadAfter>
-  <description>Coat variations for the pets and wildlife of Vanilla Animals Expanded, so a colony's dogs and cats stop being interchangeable and a jaguar is worth stopping to look at. 35 animals, 74 extra coats.
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Coat variations for the pets and wildlife of Vanilla Animals Expanded, so a colony's dogs and cats stop being interchangeable and a jaguar is worth stopping to look at. 35 animals, 74 extra coats.
 
 Texture patch only. No DLC, no Harmony, no assembly, no def of its own - four XML patches and 222 textures. Safe to add to a save in progress, and safe to remove from one; animals already on the map simply go back to their original coat.
 

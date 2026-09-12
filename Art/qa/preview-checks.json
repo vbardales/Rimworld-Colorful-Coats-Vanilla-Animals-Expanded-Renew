@@ -1,0 +1,106 @@
+{
+  "fonts": {
+    "h1": [
+      {
+        "familyName": "Segoe UI Semibold",
+        "postScriptName": "SegoeUI-Semibold",
+        "isCustomFont": false,
+        "glyphCount": 47
+      }
+    ],
+    ".suffix": [
+      {
+        "familyName": "Segoe UI Semibold",
+        "postScriptName": "SegoeUI-Semibold",
+        "isCustomFont": false,
+        "glyphCount": 5
+      }
+    ],
+    ".tag": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI",
+        "isCustomFont": false,
+        "glyphCount": 12
+      }
+    ],
+    "p": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI",
+        "isCustomFont": false,
+        "glyphCount": 75
+      }
+    ],
+    ".version": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 3
+      }
+    ]
+  },
+  "checks": [
+    {
+      "sel": "h1",
+      "x": 50,
+      "y": 48,
+      "w": 477.703125,
+      "h": 62,
+      "color": "rgb(242, 236, 225)",
+      "minContrast": 10.00459268792028
+    },
+    {
+      "sel": "h1",
+      "x": 50,
+      "y": 98.59375,
+      "w": 410.375,
+      "h": 62,
+      "color": "rgb(242, 236, 225)",
+      "minContrast": 10.136917434875787
+    },
+    {
+      "sel": ".suffix",
+      "x": 460.375,
+      "y": 116.59375,
+      "w": 89.65625,
+      "h": 40,
+      "color": "rgb(169, 205, 235)",
+      "minContrast": 6.583805431081335
+    },
+    {
+      "sel": ".tag",
+      "x": 50,
+      "y": 160.1875,
+      "w": 113.875,
+      "h": 32,
+      "color": "rgb(169, 205, 235)",
+      "minContrast": 7.189980825348863
+    },
+    {
+      "sel": "p",
+      "x": 50,
+      "y": 229.578125,
+      "w": 415.953125,
+      "h": 28,
+      "color": "rgb(242, 236, 225)",
+      "minContrast": 9.548331075328194
+    },
+    {
+      "sel": "p",
+      "x": 50,
+      "y": 260.015625,
+      "w": 264.890625,
+      "h": 28,
+      "color": "rgb(242, 236, 225)",
+      "minContrast": 10.151836977958169
+    }
+  ],
+  "badgeContrast": 8.985009923950322,
+  "dimensions": [
+    896,
+    504
+  ],
+  "bytes": 551050
+}
