@@ -1,20 +1,21 @@
 ---
-mod:        Colorful Coats - Vanilla Animals Expanded! Renew
-packageId:  nelim.colorfulcoats.vaerenew
-repo:       Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
-visibility: public
-detached:   yes
-stage:      done
-licence:    silent
-licence_at: four places, the About and the Steam page among them
-showcase:   complete
+mod:          Colorful Coats - Vanilla Animals Expanded! Renew
+packageId:    nelim.colorfulcoats.vaerenew
+repo:         Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
+visibility:   public
+detached:     yes
+stage:        done
+licence:      silent
+licence_at:   four places, the About and the Steam page among them
+dependencies: to check
+showcase:     complete
 tested_on:
 workshop:
 remaining:
   - unverified: never seen running; scenarios A, B, D and M of TESTING.md are the ones that decide
   - defect: the icon shipped is not the one the repository wanted — it rings the mascot with eight animals, seven of which this mod does not touch
-session:    local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:    2026-09-12, held by the mod's own thread
+session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
+updated:      2026-09-12, held by the mod's own thread
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -73,7 +74,14 @@ over the 9,726 Workshop folders and the 240 local ones ran on 2026-09-12: no liv
 record is in `TESTING.md`, with the reason for each of the five mods that carry one of those names.
 
 `licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
-`alive` no licence but a living source, `forbidden` a written refusal, `original` nothing reused.
+`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
+to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
 `stage` vocabulary: `port`, `showcase`, `preTest`, `done`, `tested`, `published`.
 `remaining` vocabulary: `feature` for something missing from a first release, `defect` for a known
 fault left unfixed, `unverified` for what could not be checked.
+
+- **`dependencies`** — `declared` when every mod this one needs is named in the About's
+  `modDependencies`, `to check` when a non-vanilla `loadAfter` suggests a dependency that is not
+  declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
+  2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because
+  the class it injects belongs to a mod that was not declared and not loaded.
