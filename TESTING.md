@@ -39,9 +39,9 @@ powershell -File _tools/Check-Coats.ps1
 It also counts the sequenced operations that carry `<success>Always</success>`, since the shape of
 those three files depends on all 51 of them having it.
 
-Run on 2026-09-11: 74 coats, 222 textures, nothing missing, nothing orphaned, all 51 flagged, all
-40 defNames present across three targets, no `alternateGraphics` on any of them, and both
-agreement checks clean.
+Run on 2026-09-11 and again on 2026-09-12, same result: 74 coats, 222 textures, nothing missing,
+nothing orphaned, all 51 flagged, all 40 defNames present across three targets, no
+`alternateGraphics` on any of them, and both agreement checks clean.
 
 The four shared checkers live in the monorepo this mod was detached from, one directory up, and
 this mod passes all four:
@@ -84,13 +84,32 @@ one renamed def cannot cost the other four their coats. It is not guarded by
 **The two halves are exclusive by construction**, which is what to check rather than trust: a def
 exists in one folder or the other, never both, so no animal can receive the coats twice.
 
-**One check is deliberately left open, post-MVP.** The five conditionals key on a bare defName -
-`Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` - and those names are generic enough that another
-animal mod could declare one. If it did, that mod's animal would be handed purpleyam's coat. The
-sweep that would settle it is a `grep -rl "<defName>Tiger</defName>"` over the 10,000 Workshop
-folders, ten minutes of disk, and it was parked rather than run: the risk is a mod that both uses
-Ludeon's exact bare name and is running alongside this one, which is unlikely and would show up as
-one wrongly coloured animal, not as a crash. Worth doing before any Workshop release.
+**The sweep was run on 2026-09-12, and nothing conflicts.** The five conditionals key on a bare
+defName - `Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` - and those names are generic enough that
+another animal mod could declare one, which would hand that mod's animal purpleyam's coat. One
+`grep -rInE --include='*.xml'` for `<defName>(Tiger|Badger|Otter|Walrus|Muskox)</defName>` over the
+9,726 Workshop folders and the 240 local ones answers it: 41 matching lines, all of them in the
+Workshop, spread over five mods, and not one of them a live conflict.
+
+| Mod | Declares | Why it cannot take a coat |
+|---|---|---|
+| Duck's Funbox | `PawnKindDef` `Tiger` | 1.0 only, and a duplicate of Odyssey's own defName |
+| Zoo-动物（Animal） | `PawnKindDef` `Otter` | `targetVersion` 0.15.1284, Alpha 15, same duplicate |
+| Legacy Ark (Continued) | `PawnKindDef` `Badger`, in `1.0` through `1.5` | its `1.6` folder renamed it `EuropeanBadger` |
+| Dogs mate (Continued) | `Revolus.DogsMate.AnimalGroupDef` named for four of the five | not a `PawnKindDef`, so the xpath cannot reach it |
+| Vehicle Framework | `Vehicles.PatternDef` `Tiger` | a vehicle livery |
+
+Nothing declares `Muskox` or `Walrus` as a `PawnKindDef` at all. Legacy Ark's `LoadFolders` loads
+exactly one version folder, so under 1.6 its `Badger` is gone, renamed for the very reason this
+file exists. **The two real duplicates already duplicate Odyssey's own defNames**, which is what
+settles them: RimWorld keeps one def per defName and reports the other, so an install running
+either of those mods is broken before this one patches anything. Duck's tiger even draws from
+`Things/Pawn/Animal/Tiger/Tiger`, the path purpleyam's coats were drawn against, so the coat would
+land on the sprite it was made for.
+
+**The conditionals were left as they are.** No field separates the two tigers: Duck's carries the
+same `<race>Tiger</race>` and the same texture path as Ludeon's, so a narrowing predicate would be
+a guess dressed as a guard.
 
 It looks right because Vanilla Animals Expanded ships its own art for these five at the same
 texture paths Ludeon uses, from its root `Textures` folder, which loads on every version. The base
@@ -175,7 +194,7 @@ row of the table is there to make that distinction concrete.
 | `Failed to find any textures at … while constructing` | `Graphic_Multi.Init` | The same fault one level up: no rotation at all found for a coat. |
 | `XML error: … doesn't correspond to any field in type` | `DirectXmlToObject` | The failure the port was checked against: it would name `alternateGraphics` or `alternateGraphicChance` and mean 1.6 renamed the field under us. The animals would still load and walk, and simply be the wrong colour. |
 | `Patch operation … failed` | `PatchOperation.Complete` | Expected count from this mod: **zero**, and zero says nothing at all. Every operation carries `<success>Always</success>`. |
-| `Could not find type named` | the XML loader | Only three `Class=` values are used, all vanilla patch operations. This would mean 1.6 renamed one. |
+| `Could not find type named` | the XML loader | Only four `Class=` values are used, all vanilla patch operations. This would mean 1.6 renamed one. |
 | `Adding duplicate` | `DefDatabase<T>.Add` | **Never, and not because it is missing.** The string is in the assembly; the path that would reach it is not. `AddAllInMods` removes the previous def before adding the new one, so the error inside `Add` is unreachable and the last mod loaded wins in silence. Disassembled from 1.6, recorded in the repository's own notes. |
 
 **Two things then produce no log line at all, and it is worth knowing which:**
