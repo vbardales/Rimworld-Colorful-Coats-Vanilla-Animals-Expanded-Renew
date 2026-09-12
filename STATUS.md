@@ -7,7 +7,7 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   four places, the About and the Steam page among them
-dependencies: to check
+dependencies: declared
 showcase:     complete
 tested_on:
 workshop:
@@ -38,6 +38,13 @@ display name logs nothing, and `<success>Always</success>` does the same for an 
 no animal. **A clean log is therefore not a pass**, and only animals on screen settle it.
 `TESTING.md` is written around that.
 
+`dependencies: declared` since 2026-09-12, and `to check` before that. `<modDependencies>` now names
+`VanillaExpanded.VanillaAnimalsExpanded`, which `<loadAfter>` already named. Nothing here could ever
+break the way Reequilibrage animaux did: this mod injects no class and declares no def, so the game
+loads clean with or without its target. What the declaration buys is the one thing the mod could not
+say for itself — **a player who enables it alone now reads why nothing happened.** Endangered
+stays undeclared on purpose, since 30 of the 35 animals never needed it.
+
 `workshop` empty: there is no `Mod/About/PublishedFileId.txt`, so nothing has gone to the Workshop.
 The repository itself is public, and detached from the monorepo since 2026-09-11.
 
@@ -63,6 +70,9 @@ decide:
 - **M** — the five animals Odyssey took over, on both kinds of install. The fourth patch file
   exists so that the answer is the same on either side.
 
+Scenario H gained something to look at on 2026-09-12: the mod list must now warn when Vanilla
+Animals Expanded is off, and the warning must name that mod rather than this one.
+
 **The icon is to be redone**, and the prompt that would redo it is unspent. That is the only thing
 still holding `PROMPT_COLORFULCOATSVAE.md`, which git ignores and which goes away the day the icon
 exists. The fault is known and described in scenario L of `TESTING.md`, and it blocks nothing: the
@@ -79,9 +89,8 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 `stage` vocabulary: `port`, `showcase`, `preTest`, `done`, `tested`, `published`.
 `remaining` vocabulary: `feature` for something missing from a first release, `defect` for a known
 fault left unfixed, `unverified` for what could not be checked.
-
-- **`dependencies`** — `declared` when every mod this one needs is named in the About's
-  `modDependencies`, `to check` when a non-vanilla `loadAfter` suggests a dependency that is not
-  declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
-  2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because
-  the class it injects belongs to a mod that was not declared and not loaded.
+`dependencies` vocabulary: `declared` when every mod this one needs is named in the About's
+`modDependencies`, `to check` when a non-vanilla `loadAfter` suggests a dependency that is not
+declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
+2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because
+the class it injects belongs to a mod that was not declared and not loaded.

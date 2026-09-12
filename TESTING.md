@@ -137,10 +137,11 @@ VanillaExpanded.VAEEndAndExt            Vanilla Animals Expanded — Endangered 
 nelim.colorfulcoats.vaerenew            this mod                                        after both
 ```
 
-`<loadAfter>` names both, plus `VanillaExpanded.VAECD`. **There is no `<modDependencies>`**, which
-is the difference from the Megafauna port: nothing warns a player who enables this mod without
-Vanilla Animals Expanded. The guards simply find no mod by that name and do nothing at all. See
-scenario H.
+`<loadAfter>` names both, plus `VanillaExpanded.VAECD`. **`<modDependencies>` names Vanilla Animals
+Expanded alone**, added on 2026-09-12 to match the Megafauna port: a player who enables this mod
+without its target now sees the red line in the mod list, where before nothing said a word.
+Endangered stays out of it on purpose — the mod works without it and 30 of the 35 animals never
+needed it. See scenario H.
 
 `purpleyam.colorfulcoats.vaewildlife` and `purpleyam.colorfulcoats.vaecatsdogs` are both named in
 `<incompatibleWith>` and must stay off.
@@ -306,11 +307,13 @@ coat it was born with.
 ## H — the mod alone, with no Vanilla Animals Expanded at all
 
 - Enable this mod with Vanilla Animals Expanded switched off.
-- **No warning appears in the mod list**, because no `<modDependencies>` is declared. All three
-  guards find no mod by their names, skip their sequences, report success, and write nothing.
-- The game must still load and the log must stay clean. This is the intended behaviour of a
-  texture patch, and it is also the reason a player can install this mod and see nothing happen
-  without any clue why.
+- **RimWorld now warns**, because `<modDependencies>` names Vanilla Animals Expanded. Check the
+  wording names that mod and not this one, and that the warning goes away once the target is on.
+  This is what changed on 2026-09-12; before it the mod list said nothing at all.
+- Behind the warning, nothing else changed: all three guards find no mod by their names, skip
+  their sequences, report success, and write nothing.
+- The game must still load and the log must stay clean. That is the intended behaviour of a
+  texture patch. The warning is the only thing now telling a player why they see no coats.
 
 ## I — the old Cats and Dogs module, and the guard that stops at the first name
 

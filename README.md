@@ -34,9 +34,10 @@ file aims the same ten coats at Ludeon's defs instead, at the same chances, so t
 
 ## What it needs
 
-**Vanilla Animals Expanded** — https://steamcommunity.com/workshop/filedetails/?id=2871933948 —
-and optionally **Vanilla Animals Expanded — Endangered**. Neither is declared as a hard dependency,
-because the mod does something useful with either one alone.
+**Vanilla Animals Expanded** — https://steamcommunity.com/workshop/filedetails/?id=2871933948 — and
+optionally **Vanilla Animals Expanded — Endangered**. The first is declared as a dependency, so the
+mod list tells you if it is missing. The second is not: five animals come from it and the other 30
+do not, so the mod is worth running either way.
 
 ## It replaces Colorful Coats - Cats and Dogs!
 

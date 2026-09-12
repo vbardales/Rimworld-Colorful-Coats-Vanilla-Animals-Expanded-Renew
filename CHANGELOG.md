@@ -39,6 +39,12 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   counterparts. It also counts the 51 `<success>Always</success>` flags on the sequenced
   operations, since the shape of those three files depends on all of them being there. It was this
   script that found the five animals above, on its first run. Outside `Mod/`, so it does not ship.
+- `<modDependencies>` naming `VanillaExpanded.VanillaAnimalsExpanded`, so the mod list says what
+  this mod needs. Without it a player could enable the mod alone and see nothing happen with no
+  clue why: the three guards compare display names, find none, report success and write nothing,
+  which is a patch mod behaving correctly and looking broken. Endangered is deliberately left out
+  — 30 of the 35 animals do not need it and the mod is complete without it. This is what the
+  Megafauna port already did, and the difference between the two is now closed.
 - No count is engraved on the banner. The rule allows one only where nothing outside this
   repository can move the number, and the 35 animals are Vanilla Animals Expanded's, not this
   mod's: a renamed breed would make the figure wrong with nobody touching the mod.

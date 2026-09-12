@@ -11,6 +11,13 @@
     <li>purpleyam.colorfulcoats.vaewildlife</li>
     <li>purpleyam.colorfulcoats.vaecatsdogs</li>
   </incompatibleWith>
+  <modDependencies>
+    <li>
+      <packageId>VanillaExpanded.VanillaAnimalsExpanded</packageId>
+      <displayName>Vanilla Animals Expanded</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2871933948</steamWorkshopUrl>
+    </li>
+  </modDependencies>
   <loadAfter>
     <li>VanillaExpanded.VanillaAnimalsExpanded</li>
     <li>VanillaExpanded.VAEEndAndExt</li>
