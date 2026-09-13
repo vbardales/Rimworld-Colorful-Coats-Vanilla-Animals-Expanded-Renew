@@ -1,10 +1,15 @@
 ---
+settings_audit: not_applicable
+localization: not_applicable
+translation_en: not_applicable
+translation_fr: not_applicable
 mod:          Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)
 packageId:    nelim.colorfulcoats.vaerenew
 repo:         Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
 visibility:   public
 detached:     yes
 stage:        done
+stage_workflow: done
 licence:      silent
 port_licence: MIT (port additions only)
 licence_at:   Steam description, public profile, local original files, GitHub repository search
@@ -13,9 +18,9 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: never seen running; scenarios A, B, D and M of TESTING.md are the ones that decide
+  - unverified: execute applicable TESTING.md scenarios A-H and K-M in game, including logs, English/French mod-list UI, new game and existing save; I-J are conditional on revived legacy modules
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:      2026-09-13, held by the mod's own thread
+updated:      2026-09-13, audit reservations corrected and offline checks rerun
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -23,6 +28,236 @@ updated:      2026-09-13, held by the mod's own thread
 Read by a sweep across every mod, rather than by asking each thread in turn. It lives at the
 root, never inside `Mod/`, so Steam never receives it. Dropped here by the sweep of 2026-09-12 and
 held since by this mod's thread, which updates it in the commit that changes what it describes.
+
+## Audit follow-up corrections — 2026-09-13
+
+At the user's request, corrected the documentary reservations and the description
+gate found in the ordered audit below. This section supersedes that audit's open
+documentary findings and stage decision, while preserving its historical evidence.
+
+**Decision: showcase (Preview generated) -> done.** The required final labelled
+Steam-format GitHub link now closes Mod/About/About.xml's English description.
+The earlier independent settings, localization, dependency, image and test-scenario
+validations remain applicable: no patches, textures, images or UI were changed.
+`done` maps directly to the requested workflow: ready for final in-game validation,
+not a claim of completed game tests. `tested_on` remains empty.
+
+- README.md and About.xml now explicitly say that offline checks passed and final
+  in-game validation of this delivery remains unverified. The unsupported wording
+  claiming in-game testing has been removed, without asserting that historical
+  tests never occurred.
+- README.md, About.xml and both LICENSE copies now qualify the upstream licence
+  investigation by its date and examined sources, consistent with ATTRIBUTION.md.
+  They distinguish the workspace policy from permission. The MIT grant and its
+  exclusion of inherited assets are unchanged. Removed the unsupported categorical
+  README assertion that the original item was not withdrawn.
+- Removed the obsolete, ignored PROMPT_COLORFULCOATSVAE.md as required by the
+  publishing cleanup rule. Art sources and historical audit/test records remain.
+- Executed Check-Xml.ps1: PASS for all five shipped XML files, metadata and matching
+  licence copies. Executed Check-Coats.ps1: all checks passed, no installed-target
+  checks skipped (35 animals, 74 coats, 222 textures, 40 target defNames).
+- Explicitly asserted the description ends with the exact labelled GitHub link
+  and that the obsolete prompt no longer exists: PASS. `git diff --check`: PASS.
+
+Validated working tree: base revision
+`b923e6f1cbea438561654aa478035d0ff5d2715e` plus this follow-up's README.md, LICENSE,
+Mod/LICENSE and Mod/About/About.xml edits; STATUS.md already had local audit edits,
+which were preserved and extended. No commit or publication performed.
+All documentary reservations from this audit are resolved. Only the in-game
+execution listed in `remaining` is still unverified; no runtime success is invented.
+
+## Ordered workflow audit — 2026-09-13
+
+This section and the front matter supersede the historical stage conclusions below;
+historical results and the pre-existing uncommitted translation audit are preserved.
+Audit time: approximately 01:48 CEST (Europe/Paris).
+Revision: `b923e6f1cbea438561654aa478035d0ff5d2715e`.
+At entry, `git status --short` showed only ` M STATUS.md` (translation fields and
+translation audit added locally). No delivered files differed from HEAD. This audit
+changes only STATUS.md; no implementation, artwork, publication or commit was performed.
+
+References read: `../AGENTS.md`, `../PUBLISHING.md`, `../STYLE_RIMWORLD.md`,
+`../MOD_SETTINGS.md`, `../TRANSLATIONS.md`, and the user's ordered audit workflow.
+The user's clarifications take precedence, particularly source-based validation of
+the no-settings case and keeping in-game checks at the final transition.
+
+**Decision: done -> showcase.** In this project's existing stage vocabulary,
+`showcase` here maps precisely to **Preview generated / Preview générée**;
+`stage_workflow: preview_generated` removes the ambiguity. The next transition is
+Preview generated -> preOptions. `done` in the requested workflow means all earlier
+gates plus written/passing offline tests, ready for final in-game validation;
+`tested` additionally requires actual successful in-game execution.
+
+| Transition | Result in this audit | Evidence / limitation |
+| --- | --- | --- |
+| dansMonoRepo -> horsMonoRepo | Validated | Own `.git`, repository root confirmed, no superproject; GitHub PUBLIC repository exists and remote HEAD equals audited HEAD. English README, CHANGELOG, ATTRIBUTION and scoped LICENSE present. |
+| horsMonoRepo -> ModIcon generated | Validated; build not applicable | Data-only implementation: four patches and 222 coat textures, no source assembly/project or DLL. Offline checks pass. Installed icon is PNG, 128 x 128, 12,938 bytes. |
+| ModIcon generated -> Preview generated | Validated | Direct image inspection; PNG, 896 x 504, 551,050 bytes, below 1 MB. |
+| Preview generated -> preOptions | Observed defect in description convention | Description is English, naming and visual palette pass, but its GitHub URL is bare and is not the final labelled link explicitly required by PUBLISHING.md. |
+| preOptions -> options | Independently validated; settings not applicable | Settings audit below; no useful settings contract, empty page or shortcut. No game verification is claimed. |
+| options -> l10n | Independently validated; owned localization not applicable | All 56 patch payloads inventoried again after settings review; no owned in-game text, keys, parameters or DefInjected fields. |
+| l10n -> preTest | Independently validated | Installed dependency metadata, exact guard names, target defs and conditional load folders checked; details below. |
+| preTest -> done | Offline criteria independently validated | Both existing test scripts executed successfully on the shipped revision; functional scenarios are written in TESTING.md. This does not override the earlier description gate. |
+| done -> tested | Not verified | No game scenarios or game logs checked in this audit; no successful run tied to this delivery established. |
+
+### Repository, packaging and rights evidence
+
+- Repository: `C:\Users\nelim\Documents\rimworld\ColorfulCoatsVAERenew`.
+  Delivered root: its `Mod/` folder. The installed
+  `RimWorld/Mods/ColorfulCoatsVAERenew` junction targets that exact folder.
+- `git rev-parse --show-toplevel --show-superproject-working-tree`, `git remote -v`,
+  `git log -1 --format=fuller`, `git diff -- STATUS.md` and `git status --short` read.
+- `git ls-remote origin HEAD` returned the full audited revision;
+  `gh repo view vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
+  --json name,visibility,url,defaultBranchRef` returned PUBLIC and main.
+  Initial sandbox network/config access failed; the read-only retry outside the
+  sandbox succeeded. No GitHub access criterion remains unverified.
+- `nelim.colorfulcoats.vaerenew`, the About name, repository and directory identify
+  the same continuation. About.xml uses native `name`; no invented `packageName`
+  element or literal equality between all identifiers is required.
+- Retain public / silent / unofficial under the documented workspace policy and
+  the dated upstream investigation in ATTRIBUTION.md. That investigation remains
+  historical evidence, not a newly repeated Steam search or an upstream permission.
+  The MIT scope excludes inherited coats/textures. This audit certifies consistency
+  of the recorded decision, not an additional legal grant.
+- SHA-256 equality verified for LICENSE / Mod/LICENSE and ATTRIBUTION.md /
+  Mod/ATTRIBUTION.md. Mod contains exactly 5 XML, 224 PNG, LICENSE and ATTRIBUTION.md;
+  no build outputs, source code, version folders, Languages or LoadFolders.xml.
+
+### Settings audit
+
+`settings_audit: not_applicable`, justified after inspecting all patch payloads and
+the delivered inventory. The sole behavior is an authored set of alternate coats
+and per-species probabilities, applied to PawnKindDefs at load time. These are
+content/balance values, not a promised player configuration mechanism or settings
+currently requiring XML edits. No concrete missing player setting was identified.
+The port intentionally preserves these probabilities, including the 5% rarities.
+Optional animal-pack presence is handled by patch guards; it is not a settings UI.
+
+All payload fields are `alternateGraphicChance`, `alternateGraphics`, `li`, `texPath`.
+There are no other owned Defs, assemblies, ModSettings implementation, UI resources,
+MainButtonDef or shortcut registration. Therefore neither an empty mod-options page
+nor a settings shortcut can be supplied by this package. Adding one is unwarranted.
+Input limits, defaults/reset, settings persistence, shared access routes and RIMMSQOL
+tests are not applicable. No customization integration was tested or claimed.
+The animal coat persistence tests F/G remain applicable to game behavior, separately.
+
+### Localization and dependencies
+
+- Reparsed all four XML patch files with PowerShell XML DOM. `//value` counts:
+  core 30, extras 5, Odyssey 5, various 16. Enumerated `//value//*` and
+  `//*[not(*)]`; remaining leaves are selectors, success flags and guard names.
+  No player-facing strings, dynamic keys, text parameters or translated fields.
+  Animal text remains owned by the game/dependencies; About metadata is excluded
+  by TRANSLATIONS.md. EN/FR resources and Check-DefInjected are not applicable.
+- Read installed VAE (Workshop 2871933948) and Endangered (2366589898) About.xml
+  and LoadFolders.xml. Both support 1.6. Exact case-sensitive guard/display-name
+  comparisons passed, including Endangered's em dash. VAE is the required pack;
+  Endangered and Odyssey remain optional. VAE's Harmony/VEF requirements are
+  declared by VAE itself; this texture-only mod has no direct API dependency on them.
+- About.xml orders this mod after VAE, Endangered and the legacy Cats and Dogs
+  module. Installed VAE selects 1.6NotOdyssey only without Odyssey. The five
+  bare-name Odyssey conditionals match the installed targets and copy the same
+  chances/coats. Endangered's extra conditional NotOdyssey folder was inspected
+  in its load map; the five owned targets are found in its normal 1.6 Defs.
+- Legacy various branches preserve the same 16 animals/coats/chances. The earlier
+  legacy-module and corpus homonym investigations are retained as historical;
+  they were not a newly executed corpus sweep or engine integration test here.
+
+### Executed tests and visual review
+
+- `& .\_tools\Check-Coats.ps1`: PASS, no installed-target checks skipped.
+  35 animals, 74 coats, all 222 directional textures present and referenced;
+  51 sequence operations protected; 5 conditional operations;
+  30 VAE + 5 Endangered + 5 Odyssey target defNames found, no existing
+  alternateGraphics on those target definitions. Legacy and Odyssey parity pass.
+- `& .\_tools\Check-Xml.ps1`: PASS for all 5 delivered XML files, patch classes,
+  XPath syntax, chance range [0,1], nonempty coats/paths, metadata and licence copies.
+  Read both scripts: these are offline data/contract checks, not RimWorld engine runs.
+  In particular, its GitHub-link assertion checks URL presence, not the newer
+  mandatory footer format; its PASS does not refute the description defect.
+- Read TESTING.md A-M: actions and expected results cover coat appearance,
+  probabilities, rotations, reload, existing-save add/remove, dependencies,
+  incompatible originals, mod-list artwork and Odyssey variants, with relevant
+  dev-mode/load-order prerequisites. I/J are conditional future integration
+  scenarios for legacy modules; do not report them as tests passed on 1.6.
+- Opened the actual Mod/About/Preview.png and ModIcon.png, plus existing QA
+  thumbnails at 268 px and 32 px. Read dimensions/format through System.Drawing.
+  Title and version remain identifiable, no clipped text/overlap; cool blue
+  secondary ink is distinct from amber accent. Renew is reduced and secondary,
+  unofficial is on its own line. No reducible liaison word occurs in the title.
+  No concrete camera defect found; a separately documented screenshot comparison
+  is not a mandatory additional proof. Icon mascot remains recognizable at 32 px.
+- Read Art/preview.html, preview-palette.json and qa/preview-checks.json.
+  HTML loads the palette and derives the version from About.xml. Recorded font/
+  contrast measurements are historical and were not rerendered in this audit;
+  the directly inspected final image is unchanged in Git.
+
+### Required next action and later verification
+
+For Preview generated -> preOptions, change the final paragraph of the shipped
+About.xml description to the explicit link required by PUBLISHING.md:
+`[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew]Source code on GitHub[/url]`.
+Then recheck the description/footer and XML. No new image, feature, settings UI,
+translation file or game run is needed to correct that specific gate. The other
+independent validations above remain valid unless their relevant inputs change.
+
+For final tested status, execute and record applicable scenarios A-H and K-M on
+RimWorld 1.6, including a new game, an existing save, persistence, optional packs,
+logs and mod-list presentation in English and French. There is no owned translated
+UI or settings shortcut to exercise. No controllable native game session was
+available through this audit's tools; the installed data enabled offline checks only.
+Do not treat missing execution as an observed runtime failure.
+
+Separate documentary reservations, not extra blockers for the next transition:
+About.xml and README say "under human direction and in-game testing", while no
+matching test results are established. Supply the actual dated evidence or qualify
+that claim; this audit cannot assert that no historical test ever happened.
+The ignored PROMPT_COLORFULCOATSVAE.md also remains after artwork completion despite
+PUBLISHING.md's cleanup instruction; it is outside the delivered folder and was
+preserved under this audit's non-development/preservation scope. Several older
+source/licence statements in README/LICENSE are categorical compared with the
+qualified ATTRIBUTION investigation; aligning that wording is recommended without
+inventing permissions. No visual correction or regeneration is requested.
+
+## Translation audit — 2026-09-13
+
+Applied the mandatory gate in `../PUBLISHING.md` and `../TRANSLATIONS.md` to
+revision `b923e6f1cbea438561654aa478035d0ff5d2715e`; published files are unchanged
+by this audit. All three fields are `not_applicable`: this mod adds or changes
+no in-game text. This conclusion follows the patch payload inventory, not merely
+the absence of a Languages folder.
+
+- Scope: all of `Mod/`, including core, optional Endangered, conditional Odyssey
+  and the eight legacy module integrations. The published inventory contains five
+  XML files, 224 PNGs, LICENSE and ATTRIBUTION.md. There are no Defs, assemblies,
+  C# sources, language resources, version folders or LoadFolders.xml.
+- Parsed every `//value` and enumerated `//value//*` in the four patch files using
+  PowerShell's XML DOM: core has 30 payloads, extras 5, Odyssey 5 and various 16.
+  All 56 payloads contain only `alternateGraphicChance`, `alternateGraphics`,
+  `li` and `texPath`. They inject probabilities and texture paths, with no labels,
+  descriptions, custom text fields, grammar or generated strings.
+- Also enumerated `//*[not(*)]`: remaining leaves are XPath selectors, success
+  flags and mod display names used by FindMod guards. These are lookup data,
+  not text to translate. Translating guard names would break matching.
+- Animal names and descriptions remain supplied by RimWorld and the originating
+  animal mods; this mod neither overrides those fields nor calls dependency
+  translation keys. There are no owned Keyed keys, DefInjected paths or text
+  parameters requiring English/French resources. Check-DefInjected is therefore
+  not applicable, and no empty language folders were added.
+- About.xml metadata, licences and repository documentation are excluded by the
+  protocol and remain in English. Preview and icon are publication artwork.
+- Validation: `Get-ChildItem Mod -Recurse -File` for the content inventory,
+  XML DOM enumeration above for every conditional branch, and
+  `./_tools/Check-Xml.ps1` passed for all five shipped XML files.
+- No in-game translation checks apply to this inventory. No game session was
+  run; the existing functional checks A, B, D and M remain unverified in
+  `remaining`, and `tested_on` stays empty. The historical `stage: done` is retained.
+
+Repeat this audit after changes to patches, Defs, UI code or language resources;
+reset affected translation fields to `unchecked` until revalidated. Any future
+owned text needs English/French coverage before `preTest` and separate runtime
+checks tracked in `remaining` until exercised in both languages.
 
 ## Preview overlay recomposed — 2026-09-12
 

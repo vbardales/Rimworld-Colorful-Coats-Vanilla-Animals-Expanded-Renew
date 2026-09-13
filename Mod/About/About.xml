@@ -65,11 +65,11 @@ The colours, the chances and the 222 textures are untouched.
 
 CREDIT AND REMOVAL
 
-purpleyam declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing in the body of the description on its Steam page. It is republished here under the usual convention for abandoned mods - full credit, a link to the original, and removal on request. If purpleyam would rather this port did not exist, say so and it comes down: no argument, no delay.
+The investigation recorded in ATTRIBUTION.md on 2026-09-12 found no explicit licence, redistribution permission or prohibition in the sources examined. This does not cover every possible private or unindexed statement. The source is assessed as apparently abandoned, not explicitly declared abandoned by its author. The workspace policy retains public / silent / unofficial status, with full credit, a link to the original and removal on request; that policy does not establish the original author's permission. If purpleyam would rather this port did not exist, say so and it comes down: no argument, no delay.
 
-Source, changelog and attribution: https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
+The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction. Offline checks have passed; final in-game validation of this delivery remains unverified. The repository's STATUS.md and TESTING.md record the checks and outstanding scenarios. Thanks to purpleyam for the coats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals.
 
-The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction and in-game testing. Thanks to purpleyam for the coats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals.
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew]Source code on GitHub[/url]</description>
 </ModMetaData>

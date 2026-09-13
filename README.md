@@ -8,7 +8,9 @@ Port of **purpleyam's Colorful Coats - Vanilla Animals Expanded!** to RimWorld 1
 the work needed to run it on 1.6. Credit goes to them; mistakes in the port are mine.
 
 Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130 — declares 1.4 and
-nothing further. The page is still online; the mod is abandoned, not withdrawn.
+nothing further in the sources reviewed on 2026-09-12. The source is assessed as apparently
+abandoned, not explicitly declared abandoned by its author. See ATTRIBUTION.md for the
+dated investigation and its limits; the item's current availability is not established here.
 
 ## What the mod does
 
@@ -158,13 +160,16 @@ junction's target directory as it stands on disk, with no filtering.
 
 ## Credit and removal
 
-purpleyam declared no licence, checked at all four places one could be: no `LICENSE` file, nothing
-in `About.xml`, no linked repository, and nothing in the body of the Steam description. Republished
-under the usual convention for abandoned mods — full credit, a link to the original, removal on
-request. If purpleyam would rather this did not exist, say so and it comes down.
+The investigation recorded in ATTRIBUTION.md on 2026-09-12 found no explicit licence,
+redistribution permission or prohibition in the sources examined. This is not a claim about
+every possible private or unindexed statement. The workspace policy retains public / silent /
+unofficial status, with full credit, a link to the original and removal on request. That policy
+does not establish the original author's permission. If purpleyam would rather this did not
+exist, say so and it comes down.
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for what was taken and what was changed, [LICENSE](LICENSE)
 for what the MIT grant does and does not cover, and [CHANGELOG.md](CHANGELOG.md).
 
 The port work was done with the help of an AI assistant (Claude, by Anthropic), under human
-direction and in-game testing.
+direction. Offline checks have passed; final in-game validation of this delivery remains
+unverified. See STATUS.md and TESTING.md for the checks and outstanding scenarios.
