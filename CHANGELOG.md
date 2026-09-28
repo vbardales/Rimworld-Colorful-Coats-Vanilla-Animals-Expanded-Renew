@@ -2,7 +2,12 @@
 
 All notable changes to this mod are documented here.
 
-## [1.0.0] — 2026-09-05
+## [Unreleased]
+
+Everything below was written as `1.0.0`, dated `2026-09-05`, before this repository adopted the
+publishing chain's version discipline: `1.0.0` is the version that ships with `published`, not
+with the port work being finished, and it stays `Unreleased` until that tag and its GitHub release
+exist. Renamed on 2026-09-28 rather than rewritten; nothing below changed except its heading.
 
 First release. Port of purpleyam's **Colorful Coats - Vanilla Animals Expanded!** to RimWorld 1.6.
 
@@ -124,3 +129,15 @@ in folder name (`CatBengal/` there, `AEXP_CatBengal/` here). It existed because 
 Expanded — Cats and Dogs* used to be a module of its own; the merged mod defines all 14 breeds now,
 and purpleyam had already folded the pets into this mod's core patch. Its own target,
 `VanillaExpanded.VAECD`, stops at 1.3.
+
+## [0.1.0] — 2026-09-23
+
+Creation of a publishIdFile. First envoi to the Steam Workshop, private by default, made to
+obtain `Mod/About/PublishedFileId.txt`. What it sent was `Mod/` as it stood at commit `0bae1a2`
+(`ColorfulCoatsVAERenew: capitalise the copyright holder's name in both LICENSE copies`), the
+commit already at HEAD when the envoi happened and unchanged since — with one defect found
+afterwards and corrected before this entry was written: 222 stray `.dds` files, byproducts left
+in `Mod/Textures` beside their PNGs, most likely by the game or the uploader importing them,
+went out with that same envoi. They carried no content the game reads and are gone from disk;
+see `.gitignore`. This entry does not say the mod is public or tested — the item stays private
+until its owner switches it herself, and `tested` is a separate step of the publishing chain.

@@ -16,11 +16,13 @@ licence_at:   Steam description, public profile, local original files, GitHub re
 dependencies: declared
 showcase:     complete
 tested_on:
-workshop:
+workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
   - unverified: execute applicable TESTING.md scenarios A-H and K-M in game, including logs, English/French mod-list UI, new game and existing save; I-J are conditional on revived legacy modules
+  - feature: TESTING.md does not yet name a Pickle/Gherkin pass count (even zero, with why) as AUDIT.md's preTest gate requires; the 13 scenarios are all manual
+  - feature: PUBLICATION.md does not exist yet; due before the real 1.0.0 publish (tested -> prepublished), not before
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:      2026-09-13, audit reservations corrected and offline checks rerun
+updated:      2026-09-28, AUDIT.md re-run: 0.1.0 prepublication recorded, two Explorer-artifact leaks into Mod/ fixed
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -28,6 +30,52 @@ updated:      2026-09-13, audit reservations corrected and offline checks rerun
 Read by a sweep across every mod, rather than by asking each thread in turn. It lives at the
 root, never inside `Mod/`, so Steam never receives it. Dropped here by the sweep of 2026-09-12 and
 held since by this mod's thread, which updates it in the commit that changes what it describes.
+
+## Audit re-run — 2026-09-28
+
+Re-applied `../AUDIT.md` end to end against the working tree at HEAD `0bae1a2` plus what had
+accumulated on disk since: `Mod/About/PublishedFileId.txt` (untracked), and 222 stray `.dds`
+files under `Mod/Textures`, both dated 2026-09-23. Verified files and results directly rather
+than trusting the 2026-09-13 record alone; nothing in `Mod/` had changed since that audit besides
+what is listed here, so its stage conclusion (offline criteria complete, `done`) still holds.
+
+- **A `0.1.0` prepublication happened.** `Mod/About/PublishedFileId.txt` holds `3806766686`.
+  Its own mtime (2026-09-23 16:43) and the absence of any tracked change since HEAD confirm the
+  envoi sent commit `0bae1a2`'s `Mod/` — plus, unfortunately, the two defects below, which sat on
+  disk in `Mod/` at the time and were not yet caught. Recorded in `CHANGELOG.md` under `[0.1.0]`,
+  with `About/PublishedFileId.txt` committed in the same commit as this update, per AUDIT.md's
+  naming convention. The item is private; nothing here changes that, and nothing here claims it
+  is tested — `tested_on` stays empty and `stage` stays `done`, not `prepublished`: AUDIT.md is
+  explicit that a `0.1.0` prepublication is an act, not a step of the chain by itself.
+- **Two Explorer-artifact leaks into `Mod/`, both found and fixed today.** 222 `.dds` files sat
+  in `Mod/Textures` beside their PNGs, dated 2026-09-23 — most likely written by the game or the
+  Workshop uploader importing the PNGs, not by any tool in this repository; nothing here creates
+  `.dds`. They carry no content the game reads. Separately, `Mod/desktop.ini` pointed at
+  `..\Art\Preview.ico`, **outside** `Mod/`, which Steam ships as-is with no filtering — the exact
+  defect `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` recorded one day earlier at A Certain
+  Series (2026-09-27). Neither was ever tracked by git, so nothing to remove from history; both
+  are deleted from disk and now blocked by path in `.gitignore` (`Mod/desktop.ini`,
+  `Mod/**/*.ico`, plus a blanket `*.dds`). The root `desktop.ini` and `Art/ModIcon.ico` /
+  `Art/Preview.ico` are unaffected: they sit outside `Mod/` by the convention `AUDIT.md`
+  describes, and are now committed alongside their `*.ico binary` `.gitattributes` entry.
+- **Upstream repository re-checked, unchanged.** A fresh GitHub search for `purpleyam` and for
+  `"Colorful Coats" rimworld` still returns only this repository's own four `Renew` forks and
+  nothing under any name traceable to the original author. There is no upstream repository to
+  base a pull request on; the 2026-09-12 conclusion in `ATTRIBUTION.md`'s licence investigation
+  stands, and nothing here changes `licence: silent`.
+- **Two gaps found and left open, listed in `remaining` rather than fixed silently.**
+  `TESTING.md` never names a Pickle/Gherkin pass count the way `AUDIT.md`'s `preTest` gate
+  expects, even to say zero and why; its thirteen scenarios are all manual. `PUBLICATION.md`
+  does not exist; it is due at `tested -> prepublished` for the real `1.0.0`, not at this stage,
+  so its absence is not a defect of `done` — recorded so a later session does not have to
+  rediscover it from nothing.
+- `docs/PROTOCOLS-READ.md` is new: which protocol/tooling documents this mod's sessions have
+  read, at which revision, and which are not yet useful here (chiefly everything Pickle-shaped,
+  since this mod has no owned code or UI for a Gherkin suite to exercise — see the gap above).
+
+No feature was added, no image regenerated, no test invented to fill a gate: the stage decision
+is unchanged from 2026-09-13 because nothing that decision depended on has changed. What moved is
+what is now correctly recorded on disk and in `STATUS.md`/`CHANGELOG.md`.
 
 ## Audit follow-up corrections — 2026-09-13
 

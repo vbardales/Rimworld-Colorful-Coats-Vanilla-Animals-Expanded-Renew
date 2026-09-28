@@ -19,6 +19,13 @@
 Source/obj/
 Source/bin/
 
+# DDS byproducts: RimWorld (or its Workshop uploader) drops a compressed .dds beside every
+# .png it imports, inside the same folder — found on 2026-09-28, 222 of them dated
+# 2026-09-23, all in Mod/Textures next to the shipped PNGs. Steam publishes whatever sits on
+# disk in Mod/ with no filtering, so an uncleaned .dds is dead weight in the Workshop item,
+# not a second copy of anything the game reads. Never commit one; delete on sight before a publish.
+*.dds
+
 # Claude Code session worktrees and local settings: each worktree is a full copy of a repository,
 # and they are never shared.
 .claude/
@@ -38,3 +45,11 @@ PROMPT_*.md
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Explorer artifact leak into the published folder: found live here on 2026-09-28, a
+# Mod/desktop.ini pointing at ..\Art\Preview.ico (root desktop.ini and Art/*.ico stay fine,
+# they sit outside Mod/, which Steam sends as-is). git never tracked it - desktop.ini above
+# already covers that - but it still sat on disk where a publish would have picked it up.
+# Same precedent at A Certain Series, 2026-09-27. Belt and suspenders: block it by path too.
+Mod/desktop.ini
+Mod/**/*.ico
