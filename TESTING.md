@@ -41,11 +41,11 @@ or listed as not applicable with its reason. State on 2026-09-28, nothing yet ru
 |---|---|---|
 | A coats appear | Automated, written | `coats.feature`, poodles. |
 | B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first and shih tzu last. |
-| C the two rarities | Open | 5% coats need about 100 large animals placed; not written. Stays a manual check until then. |
+| C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`, `rare-tiger-plain`: 100 animals each, at least one carries the 5% coat. Placement of 100 large animals is the risk. |
 | D Endangered | Automated, written | `endangered.feature`; the guard name is proven by the animals being patched. |
 | E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; the north view is a capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
-| G added to, removed from a save | Open | Needs a restart chain without the mod (`-Then`, `-ThenWithout`); not written. |
+| G added to, removed from a save | Not written | Removal: nothing of this mod is stored in a save (no def, no `ExposeData`), so no state can outlive it; the game's reaction to a missing mod is not ours. A restart chain needs a custom step to hand the save to a companion (see Housebroken), which does not exist here. Addition: `coats.feature` loads the mod on a fixed save. **The scenario G text says animals already in a save keep their coat; the Megafauna session's decompile says the coat is computed on demand from the animal id, so they would gain one. Unverified: check by eye before trusting either.** |
 | H no Vanilla Animals Expanded | Not applicable | The warning is the game's reaction to a declaration; the declaration is checked in sources (`Check-Xml.ps1`). |
 | I, J legacy modules | Not applicable | Both target 1.3 and cannot load on 1.6. |
 | K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` is checked in sources. |
