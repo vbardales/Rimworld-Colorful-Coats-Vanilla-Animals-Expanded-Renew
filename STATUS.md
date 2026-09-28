@@ -20,7 +20,7 @@ workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-
 remaining:
   - unverified: execute applicable TESTING.md scenarios A-H and K-M in game, including logs, English/French mod-list UI, new game and existing save; I-J are conditional on revived legacy modules
   - unverified: run the three Pickle passes named in Tests/Pickle/README.md and TESTING.md; written 2026-09-28, never executed
-  - feature: PUBLICATION.md does not exist yet; due before the real 1.0.0 publish (tested -> prepublished), not before
+  - feature: PUBLICATION.md drafted 2026-09-28; open: gallery order, adult-content check on images, thank-you messages (owner voice)
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
 updated:      2026-09-28, packageId dropped its Renew suffix; Pickle suite written for the preTest gap
 ---
