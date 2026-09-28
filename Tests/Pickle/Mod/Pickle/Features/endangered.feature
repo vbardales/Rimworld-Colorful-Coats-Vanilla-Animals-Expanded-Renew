@@ -6,9 +6,9 @@
 Feature: Colorful Coats - Vanilla Animals Expanded! Renew: the Endangered animals
 
   Scenario: with Endangered, its five animals exist and are patched
-    Then def "AEXP_BlackFootedFerret" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_BlackRhino" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Moa" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Pangolin" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_RockhopperPenguin" was patched by mod "nelim.colorfulcoats.vae"
+    Then def "AEXP_BlackFootedFerret" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_BlackRhino" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Moa" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Pangolin" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_RockhopperPenguin" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
     Then no errors were logged

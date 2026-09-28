@@ -79,3 +79,12 @@ Each pass writes `summary.md`/`junit.xml`/`messages.ndjson` to its own `-Evidenc
 the latest per pass, per the repository's evidence-retention rule in `AGENTS.md`. There is no
 `@review` scenario here — every assertion is structural, not a capture — so there is nothing to
 open and look at beyond `exitReason` and the pass/fail counts themselves.
+
+## Attribution is matched by display name
+
+`def {string} was patched by mod {string}` compares the mod's **display name**, case-insensitively,
+against the list of names that patched the def (`DefSteps.cs`, `AssertDefPatchedBy`), although
+Pickle's step catalogue says "name or packageId" for the other mod steps. The first three runs of
+2026-09-28 failed on exactly this: the assertions gave `nelim.colorfulcoats.vae`, and the failure
+message listed the display name. The features now carry `Colorful Coats - Vanilla Animals
+Expanded! Renew (unofficial)`, so **renaming the mod breaks them**; change both together.

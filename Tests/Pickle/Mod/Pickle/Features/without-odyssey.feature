@@ -8,11 +8,11 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: the five Odyssey anim
 
   Scenario: without Odyssey, the AEXP_ defs exist and are patched, the bare names do not exist
     Given mod "Ludeon.RimWorld.Odyssey" is not loaded
-    Then def "AEXP_Badger" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Muskox" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Otter" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Tiger" was patched by mod "nelim.colorfulcoats.vae"
-    And def "AEXP_Walrus" was patched by mod "nelim.colorfulcoats.vae"
+    Then def "AEXP_Badger" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Muskox" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Otter" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Tiger" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "AEXP_Walrus" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
     And no def "Badger" exists
     And no def "Muskox" exists
     And no def "Otter" exists

@@ -7,11 +7,11 @@
 Feature: Colorful Coats - Vanilla Animals Expanded! Renew: the five Odyssey animals, DLC present
 
   Scenario: with Odyssey, the bare defs are patched, the AEXP_ names no longer exist
-    Then def "Badger" was patched by mod "nelim.colorfulcoats.vae"
-    And def "Muskox" was patched by mod "nelim.colorfulcoats.vae"
-    And def "Otter" was patched by mod "nelim.colorfulcoats.vae"
-    And def "Tiger" was patched by mod "nelim.colorfulcoats.vae"
-    And def "Walrus" was patched by mod "nelim.colorfulcoats.vae"
+    Then def "Badger" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "Muskox" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "Otter" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "Tiger" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
+    And def "Walrus" was patched by mod "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)"
     And no def "AEXP_Badger" exists
     And no def "AEXP_Muskox" exists
     And no def "AEXP_Otter" exists
