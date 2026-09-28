@@ -13,6 +13,7 @@ stage_workflow: done
 licence:      silent
 port_licence: MIT (port additions only)
 licence_at:   Steam description, public profile, local original files, GitHub repository search
+upstream_mod_remotes: N/A
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -499,6 +500,12 @@ The repository itself is public, and detached from the monorepo since 2026-09-11
 `licence: silent` follows PUBLISHING.md: source assessed as abandoned, with no explicit
 upstream licence or permission found. The maintenance assessment is documented above.
 The MIT grant remains limited to the port additions described in LICENSE.
+
+`upstream_mod_remotes: N/A` — purpleyam's own source has no git repository found: GitHub search
+for `purpleyam`, for `"Colorful Coats" rimworld`, the author's Steam profile, and the installed
+original's `About.xml` all turned up nothing (`ATTRIBUTION.md`, upstream licence recheck,
+rechecked 2026-09-28, unchanged). Distinct from `repo` (this port's own repository) and `origin`
+(its remote). Nothing to base a pull request on.
 
 `showcase: complete` — `About/Preview.png` and `About/ModIcon.png` both exist. The banner follows
 its own brief and sits under Steam's hard 1 MB ceiling. The approved replacement icon is now optimized to 128 × 128.
