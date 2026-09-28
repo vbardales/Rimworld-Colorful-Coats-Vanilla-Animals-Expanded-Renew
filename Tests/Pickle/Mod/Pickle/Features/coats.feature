@@ -21,10 +21,12 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: coats are drawn
     Then Nelim's Pickle Tools: each animal of kind "AEXP_Poodle" still has the coat noted for it
     And no errors were logged
 
+  # 3 not 8: only 3 poodles fit within 4 cells of the map centre in test-colony (run bccc).
+  # With a 0.8 chance, 3 poodles all plain is under 1%.
   @review
   Scenario: poodles with a coat are drawn with that coat's own texture
     Given the save "test-colony" is loaded
-    When Nelim's Pickle Tools: 8 adult animals of kind "AEXP_Poodle" are spawned close together
+    When Nelim's Pickle Tools: 3 adult animals of kind "AEXP_Poodle" are spawned close together
     Then Nelim's Pickle Tools: each animal of kind "AEXP_Poodle" that carries an extra coat is drawn with that coat's own texture
     When Nelim's Pickle Tools: I frame the animals of kind "AEXP_Poodle"
     And I take a screenshot "poodle-coats"
