@@ -32,6 +32,28 @@ applicable: this mod owns no in-game text.
 | Minimal, Odyssey present | The same 25, plus the same five now patched under Ludeon's own bare names instead. |
 | Optional integration: Endangered | The five Endangered-only animals, on top of either Odyssey state. |
 
+## Manual scenarios: what remains to look at
+
+`AUDIT.md` asks that no manual test stay to validate at `tested`: each is automated and green,
+or listed as not applicable with its reason. State on 2026-09-28, nothing yet run green:
+
+| Scenario | Status | Reason |
+|---|---|---|
+| A coats appear | Automated, written | `coats.feature`, poodles. |
+| B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first and shih tzu last. |
+| C the two rarities | Open | 5% coats need about 100 large animals placed; not written. Stays a manual check until then. |
+| D Endangered | Automated, written | `endangered.feature`; the guard name is proven by the animals being patched. |
+| E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; the north view is a capture a person looks at. |
+| F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
+| G added to, removed from a save | Open | Needs a restart chain without the mod (`-Then`, `-ThenWithout`); not written. |
+| H no Vanilla Animals Expanded | Not applicable | The warning is the game's reaction to a declaration; the declaration is checked in sources (`Check-Xml.ps1`). |
+| I, J legacy modules | Not applicable | Both target 1.3 and cannot load on 1.6. |
+| K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` is checked in sources. |
+| L mod list entry | Offline plus a look | Name and metadata are checked offline; the banner and icon were inspected as images. |
+| M five Odyssey animals | Automated, written | `with-odyssey.feature`, `without-odyssey.feature`. The smaller draw size is a `@review` look at the `coats.feature` capture. |
+
+Written is not run: none of this is a pass until the passes return green.
+
 ## What is settled before the game starts
 
 Run `powershell -File _tools/Check-Xml.ps1` for standalone XML and metadata checks:
