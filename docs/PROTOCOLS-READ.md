@@ -26,11 +26,11 @@ moved. Re-read anything whose commit below is now behind the file's current one.
 
 ## Not useful yet, and why
 
-`PickleTools/docs/steps.md` (PickleTools' own companion steps: RIMMSQOL, filming, xenotype
-colonists) and the Ticket-Dispatcher's `SUBMIT.md`: this suite uses only Pickle's built-in steps,
-and no run has been submitted yet. Reopen `SUBMIT.md` when the three passes of `Tests/Pickle/`
-are filed. `OPERATIONS.md` matters only from the real `1.0.0` CI publish onward: the `0.1.0`
-prepublication went through the game's own button, not the CI.
+`PickleTools/docs/steps.md`: PickleTools' own companion steps (RIMMSQOL, filming, xenotype
+colonists); this suite uses only Pickle's built-in steps, none of these. `OPERATIONS.md` matters
+only from the real `1.0.0` CI publish onward: the `0.1.0` prepublication went through the game's
+own button, not the CI. Several Pickle runs have been submitted and returned by 2026-09-28 (see
+`docs/runs/2026-09-28.md`), which is what made `SUBMIT.md` above worth reading in full.
 
 ## This mod's own documents
 

@@ -20,17 +20,20 @@ Only animals on screen settle it.
 
 ## Pickle passes
 
-Three passes, all structural — they prove a patch *landed*, not that a coat *renders*; see
-`Tests/Pickle/README.md` for why the split falls there. A fourth family, one pass per
-`incompatibleWith` entry, is not stageable today: both named originals cap their
-`supportedVersions` at 1.3 and cannot load on 1.6 at all (scenario K). English/French is not
-applicable: this mod owns no in-game text.
+Two families. Structural: prove a patch *landed*, not that a coat *renders* (`Tests/Pickle/README.md`).
+Coats: prove a coat is actually drawn and read back, using the shared CoatSteps companion. A
+third family, one pass per `incompatibleWith` entry, is not stageable today: both named originals
+cap their `supportedVersions` at 1.3 and cannot load on 1.6 at all (scenario K). English/French is
+not applicable: this mod owns no in-game text.
 
 | Pass | Covers |
 |---|---|
 | Minimal, Odyssey absent | The 25 DLC-independent animals, plus the five Odyssey could take over, patched under `AEXP_*`. |
 | Minimal, Odyssey present | The same 25, plus the same five now patched under Ludeon's own bare names instead. |
 | Optional integration: Endangered | The five Endangered-only animals, on top of either Odyssey state. |
+| Coats drawn | Poodles draw and keep an extra coat, drawn with its own texture (`@review`). |
+| Rare coats, Odyssey present | 100 jaguars, 100 Odyssey tigers: each draws the 5% coat at least once. |
+| Rare coats, Odyssey absent | 100 `AEXP_Tiger`: draws the 5% coat at least once. |
 
 ## Manual scenarios: what remains to look at
 
