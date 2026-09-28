@@ -33,30 +33,45 @@ Two pass families apply; two do not.
 | Pass | `-DepMap` | Feature file(s) that matter | What it establishes |
 |---|---|---|---|
 | Minimal, Odyssey absent | `wsl-deps.no-odyssey.map` | `always-patched.feature`, `without-odyssey.feature` | The 25 DLC-independent animals plus the five Odyssey could take over, all patched under `AEXP_*`; the bare Ludeon names do not exist to be confused with them. |
-| Minimal, Odyssey present | *(none — Odyssey is an owned DLC staged by default)* | `always-patched.feature`, `with-odyssey.feature` | Same 25, plus the same five now patched under Ludeon's own bare names; `AEXP_Badger` and its four fellows no longer exist. |
+| Minimal, Odyssey present | `wsl-deps.odyssey.map` | `always-patched.feature`, `with-odyssey.feature` | Same 25, plus the same five now patched under Ludeon's own bare names; `AEXP_Badger` and its four fellows no longer exist. |
 | Optional integration: Endangered | `wsl-deps.endangered.map` | `always-patched.feature`, `endangered.feature` | The five Endangered-only animals exist and are patched, on top of whichever Odyssey state the pass also has. |
 | Declared incompatibility | — | — | **Not stageable today.** `incompatibleWith` names `purpleyam.colorfulcoats.vaewildlife` and `purpleyam.colorfulcoats.vaecatsdogs`; both cap their `supportedVersions` at 1.3 and cannot be loaded on 1.6 at all (`TESTING.md`, scenario K). There is nothing to look at until one of them is revived — recorded here rather than invented as a pass that could not run. |
 | English and French | — | — | **Not applicable.** This mod owns no in-game text (`STATUS.md`, localization: `not_applicable`); there is nothing a language switch could change here. |
 
 `with-odyssey.feature` and `endangered.feature` are tagged `@requires:` their DLC/mod and so
 skip themselves outside the pass that has it: they can stay in the suite's default selection.
-`without-odyssey.feature` cannot self-select the same way — there is no negated `@requires:` —
+`without-odyssey.feature` cannot self-select the same way (no negated `@requires:`), so the filter above carries it:
 so it is **only** correct in a pass that explicitly excludes Odyssey; select it by name
 (`-Filter 'without-odyssey'`) rather than relying on the suite default in that pass.
 
 ## Commands
 
-Filed as a request, never launched directly (`AUDIT.md`, "Déposer un run au lieu de le lancer"):
+Filed as requests through `Submit-PickleRun.ps1`, never launched directly (`AUDIT.md`, "Déposer un
+run au lieu de le lancer"). One pass is one request and one `-DepMap`; `-Then` is not used, since
+every pass is a single launch. Put the commit SHA in `-Label`: the request carries none, and the
+mod is staged when its ticket is played, from the working tree of that moment.
+
+| Pass | `-DepMap` | `-Filter` |
+|---|---|---|
+| Odyssey absent | `wsl-deps.no-odyssey.map` | `'always-patched,without-odyssey'` |
+| Odyssey present | `wsl-deps.odyssey.map` | `'always-patched,with-odyssey'` |
+| Endangered | `wsl-deps.endangered.map` | `'always-patched,with-odyssey,endangered'` |
+
+The filter names feature files, comma meaning OR. It is required, not cosmetic: no negated
+`@requires:` exists, so `without-odyssey.feature` would fail by design in any pass that has the
+DLC. A term that names no file makes Pickle exit 2 (the launcher returns 8) and play nothing.
+Every pass has a map, including the Odyssey-present one, because Vanilla Animals Expanded needs
+Vanilla Expansion Framework, and the staging copies only this mod's direct dependencies: the bare
+pass could not activate it. Each map lists it first, then Vanilla Animals Expanded, so the order
+is the one Vanilla Animals Expanded's own `loadAfter` asks for. Whether the staging then stages
+Vanilla Animals Expanded twice is untested; the request's log lists what was activated.
 
 ```powershell
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher\scripts\Submit-PickleRun.ps1 `
-  -Mod ColorfulCoatsVAERenew -Owner local_<session id> -Label "ColorfulCoatsVAERenew local_<session id> minimal, Odyssey absent" `
-  -DepMap wsl-deps.no-odyssey.map -EvidenceDir ColorfulCoatsVAERenew/Tests/Pickle/Evidence/no-odyssey
+powershell.exe -ExecutionPolicy Bypass -File C:\Users\nelim\Documents\rimworld\Rimworld-Ticket-Dispatcher\scripts\Submit-PickleRun.ps1 `
+  -Mod ColorfulCoatsVAERenew -Owner local_<session id> -Label "no-odyssey <sha>" `
+  -DepMap wsl-deps.no-odyssey.map -Filter 'always-patched,without-odyssey' `
+  -EvidenceDir ColorfulCoatsVAERenew/Tests/Pickle/Evidence/no-odyssey
 ```
-
-and again with no `-DepMap` for the Odyssey-present pass, and with
-`-DepMap wsl-deps.endangered.map` for the Endangered pass. Three requests, three tickets, one
-process if run back to back (`AUDIT.md`, "Un seul processus pour toutes les passes d'une tâche").
 
 ## Evidence
 
