@@ -30,7 +30,7 @@ foreach ($file in $files) {
 }
 [xml]$about = Get-Content (Join-Path $root 'Mod/About/About.xml') -Raw
 $meta = $about.ModMetaData
-Assert ($meta.packageId -eq 'nelim.colorfulcoats.vaerenew') 'Unexpected packageId'
+Assert ($meta.packageId -eq 'nelim.colorfulcoats.vae') 'Unexpected packageId'
 Assert ($meta.name.EndsWith(' (unofficial)')) 'Missing unofficial suffix'
 Assert ($meta.description.Contains([string]$meta.url) -and $meta.url -eq 'https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew') 'Missing GitHub link in description'
 Assert ('VanillaExpanded.VanillaAnimalsExpanded' -in @($meta.modDependencies.li.packageId)) 'Missing VAE dependency'

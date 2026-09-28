@@ -71,7 +71,7 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   target is revived. The name was read out of that mod's `About.xml` rather than retyped, em dash
   included.
 - `packageId` changed from `purpleyam.colorfulcoats.vaewildlife` to
-  `nelim.colorfulcoats.vaerenew`.
+  `nelim.colorfulcoats.vae`.
 - `<name>` changed from `Colorful Coats - Vanilla Animals Expanded!` to
   `Colorful Coats - Vanilla Animals Expanded! Renew`, in line with the Dodos and Megafauna ports of
   the same family. Nothing has gone to the Workshop under the earlier form of the name, which said

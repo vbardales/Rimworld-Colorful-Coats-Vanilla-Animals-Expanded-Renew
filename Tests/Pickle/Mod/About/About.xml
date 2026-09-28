@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Colorful Coats - Vanilla Animals Expanded! - Pickle tests</name>
+  <author>Nelim</author>
+  <packageId>nelim.colorfulcoats.vae.pickletests</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Pickle suite for Colorful Coats - Vanilla Animals Expanded! Renew: development only, no gameplay content, never published. Uses only Pickle's built-in def/mod steps; no companion assembly. See Tests/Pickle/README.md in the mod's own repository.</description>
+  <modDependencies>
+    <li>
+      <packageId>rimworks.pickle</packageId>
+      <displayName>Pickle</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>nelim.colorfulcoats.vae</packageId>
+      <displayName>Colorful Coats - Vanilla Animals Expanded! Renew</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>rimworks.pickle</li>
+    <li>VanillaExpanded.VanillaAnimalsExpanded</li>
+    <li>nelim.colorfulcoats.vae</li>
+  </loadAfter>
+</ModMetaData>

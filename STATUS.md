@@ -4,7 +4,7 @@ localization: not_applicable
 translation_en: not_applicable
 translation_fr: not_applicable
 mod:          Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)
-packageId:    nelim.colorfulcoats.vaerenew
+packageId:    nelim.colorfulcoats.vae
 repo:         Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
 visibility:   public
 detached:     yes
@@ -19,10 +19,10 @@ tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
   - unverified: execute applicable TESTING.md scenarios A-H and K-M in game, including logs, English/French mod-list UI, new game and existing save; I-J are conditional on revived legacy modules
-  - feature: TESTING.md does not yet name a Pickle/Gherkin pass count (even zero, with why) as AUDIT.md's preTest gate requires; the 13 scenarios are all manual
+  - unverified: run the three Pickle passes named in Tests/Pickle/README.md and TESTING.md; written 2026-09-28, never executed
   - feature: PUBLICATION.md does not exist yet; due before the real 1.0.0 publish (tested -> prepublished), not before
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:      2026-09-28, AUDIT.md re-run: 0.1.0 prepublication recorded, two Explorer-artifact leaks into Mod/ fixed
+updated:      2026-09-28, packageId dropped its Renew suffix; Pickle suite written for the preTest gap
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -76,6 +76,35 @@ what is listed here, so its stage conclusion (offline criteria complete, `done`)
 No feature was added, no image regenerated, no test invented to fill a gate: the stage decision
 is unchanged from 2026-09-13 because nothing that decision depended on has changed. What moved is
 what is now correctly recorded on disk and in `STATUS.md`/`CHANGELOG.md`.
+
+## packageId dropped its Renew suffix, and a Pickle suite closes the preTest gap — 2026-09-28
+
+At the user's request. Two independent changes, same session:
+
+- **`packageId` is now `nelim.colorfulcoats.vae`**, matching the pattern already used by the
+  Megafauna and Cats and Dogs ports (`nelim.colorfulcoats.megafauna`,
+  `nelim.colorfulcoats.catsanddogs`) rather than the Dodos port, which still carries the suffix.
+  Safe to do now rather than after a real publish: `PUBLISHING.md`'s "UN SEUL COUP" warning
+  applies once a mod has real subscribers, and this one has none — the Workshop item the
+  2026-09-23 prepublication created is still private, and packageId is not what identifies a
+  Workshop item to Steam. Changed in `Mod/About/About.xml` and every mention in `CHANGELOG.md`,
+  `TESTING.md` and `_tools/Check-Xml.ps1`'s own identity assertion. The repository name and
+  folder name keep `Renew`, per `AUDIT.md`'s own point that literal identity across all four is
+  not required.
+- **`Tests/Pickle/` is new**, closing the gap the 2026-09-28 audit above logged: `TESTING.md`
+  never named a Pickle/Gherkin pass count. Three passes, four feature files, all built on
+  Pickle's stock `def`/`mod` steps — no companion assembly, no fixture, needs no save. What they
+  check is exactly what `_tools/Check-Coats.ps1` cannot: whether this mod's patches actually
+  *land* on Vanilla Animals Expanded's and Odyssey's real `PawnKindDef`s once a game has loaded,
+  across every DLC/optional-pack combination that changes which defs exist. This directly closes
+  the structural half of scenario B's risk — one renamed def silently dropping every coat listed
+  after it in the sequence — for all 30 animals of the core file, not just the giraffe and shih
+  tzu a manual spawn would sample. `Tests/Pickle/README.md` carries the full pass matrix and the
+  reasoning for what stays manual (rendering, rotations, rarity distributions) and what does not
+  apply at all (the two `incompatibleWith` originals, both capped below 1.6; English/French,
+  since this mod owns no in-game text). Written only — not executed, and `remaining` says so
+  rather than claiming a pass. Running it is a `preTest -> done` criterion already met by the
+  writing; reading its result is `done -> tested`, same gate as the manual scenarios.
 
 ## Audit follow-up corrections — 2026-09-13
 
@@ -160,7 +189,7 @@ gates plus written/passing offline tests, ready for final in-game validation;
   --json name,visibility,url,defaultBranchRef` returned PUBLIC and main.
   Initial sandbox network/config access failed; the read-only retry outside the
   sandbox succeeded. No GitHub access criterion remains unverified.
-- `nelim.colorfulcoats.vaerenew`, the About name, repository and directory identify
+- `nelim.colorfulcoats.vae`, the About name, repository and directory identify
   the same continuation. About.xml uses native `name`; no invented `packageName`
   element or literal equality between all identifiers is required.
 - Retain public / silent / unofficial under the documented workspace policy and
@@ -371,7 +400,7 @@ Git reports this folder as its root, with its own `.git` and no superproject:
 this is an independent repository, not a monorepo checkout or submodule.
 
 - Mod: **Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)**.
-- packageId: `nelim.colorfulcoats.vaerenew`.
+- packageId: `nelim.colorfulcoats.vae`.
 - Origin (fetch/push): https://github.com/vbardales/Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew.git
 - Visibility: **public**, verified through the GitHub repository API (`private: false`).
 - Suffix: `(unofficial)` already exists and should remain for this unofficial continuation.

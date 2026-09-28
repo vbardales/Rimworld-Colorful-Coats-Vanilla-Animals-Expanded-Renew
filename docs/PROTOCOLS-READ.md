@@ -15,21 +15,22 @@ moved. Re-read anything whose commit below is now behind the file's current one.
 | `../STYLE_RIMWORLD.md` | `90d51374` (2026-09-25) | Partially | Preview/ModIcon review criteria used in 2026-09-13's audit; nothing new checked 2026-09-28. |
 | `../WORKSHOP_COMMENTS.md` | `d438141c` (2026-09-27) | Not yet | Only matters once thank-you comments are written, at `tested -> prepublished`. Not there yet. |
 | `../scripts/SEARCHING.md` | `90d51374` (2026-09-25) | Not yet | Homonym-sweep method; this mod's sweep already ran (2026-09-12) and found nothing live. |
-| `../PickleTools/README.md` | `90836e7` (2026-09-27) | Not yet | This mod ships no owned UI/behaviour Pickle would exercise; TESTING.md's scenarios are manual. Revisit if any scenario is ever converted to Gherkin (see `remaining`). |
-| `../PickleTools/Headless/README.md` | `90836e7` (2026-09-27) | Not yet | Same reason; no Pickle suite exists for this mod to run headless. |
-| `../PickleTools/docs/steps.md` | `90836e7` (2026-09-27) | Not yet | Same reason. |
+| `../PickleTools/README.md` | `90836e7` (2026-09-27) | Yes | Read in full 2026-09-28: layout and pass-family conventions used to write `Tests/Pickle/`. |
+| `../PickleTools/Authoring/README.md` | `90836e7` (2026-09-27) | Yes | The template this mod's suite follows: pass matrix, `@requires:`, `wsl-ids.map`/`wsl-deps.<pass>.map` syntax, companion `About.xml`. |
+| `../PickleTools/docs/steps.md` | `90836e7` (2026-09-27) | Not yet | PickleTools' own companion steps (RIMMSQOL, filming, xenotype colonists); this suite uses only Pickle's built-in steps, none of these. |
+| `../PickleTools/Headless/README.md` | `90836e7` (2026-09-27) | Yes | Read in full 2026-09-28: launcher options (`-Filter`, `-DepMap`, `-Then`), exit codes, and the `wsl-ids.map`/`wsl-deps.<pass>.map` split used to write `Tests/Pickle/`'s maps. |
+| `Rimworld-Pickle`'s own `Docs/steps.md` | `286e74e` (2026-09-21, `pickle-local/anima-film`, a feature branch — not confirmed as main) | Yes | The authoritative built-in step catalogue; `def`/`mod` steps quoted verbatim into `Tests/Pickle/`'s feature files. Not the same file as `PickleTools/docs/steps.md` above. |
 | `../Rimworld-Release-Admin/docs/OPERATIONS.md` | `851a155` (2026-09-27) | Not yet | Matters once a real (1.0.0) CI publish is dispatched. This mod is still at a manual 0.1.0 prepublication done in-game, not by CI. |
 | `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | `77ca9d7` (2026-09-27) | **Yes** | Its 2026-09-27 addition on Explorer-artifact leaks into `Mod/` directly named this mod's own defect (`Mod/desktop.ini`), found and fixed 2026-09-28. |
 | `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | not opened | Not yet | No Pickle run has ever been submitted for this mod; nothing here to submit against yet. |
 
 ## Not useful yet, and why
 
-Everything under `PickleTools/` and the Ticket-Dispatcher's `SUBMIT.md`: this mod has no owned
-code, UI or def, so nothing in `TESTING.md`'s thirteen manual scenarios has been written as a
-Pickle/Gherkin suite. `AUDIT.md` requires the count and scope of Pickle passes to be named in
-`TESTING.md` even when the answer is zero; that line is missing today (see `remaining` in
-`STATUS.md`). `OPERATIONS.md` matters only from the real `1.0.0` CI publish onward — the
-`0.1.0` prepublication already done for this mod went through the game's own button, not the CI.
+`PickleTools/docs/steps.md` (PickleTools' own companion steps: RIMMSQOL, filming, xenotype
+colonists) and the Ticket-Dispatcher's `SUBMIT.md`: this suite uses only Pickle's built-in steps,
+and no run has been submitted yet. Reopen `SUBMIT.md` when the three passes of `Tests/Pickle/`
+are filed. `OPERATIONS.md` matters only from the real `1.0.0` CI publish onward: the `0.1.0`
+prepublication went through the game's own button, not the CI.
 
 ## This mod's own documents
 

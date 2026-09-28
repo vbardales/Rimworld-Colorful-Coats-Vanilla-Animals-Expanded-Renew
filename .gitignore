@@ -53,3 +53,7 @@ desktop.ini
 # Same precedent at A Certain Series, 2026-09-27. Belt and suspenders: block it by path too.
 Mod/desktop.ini
 Mod/**/*.ico
+
+# Pickle evidence stays on disk, never in git (AGENTS.md): captures and Player.log grow without limit.
+Tests/Pickle/Evidence/
+evidence/
