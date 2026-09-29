@@ -26,10 +26,16 @@ a file name does not say what it contains.
 
 ## Gallery order
 
-Steam shows the first image large. **Open:** the captures come from `coats.feature`
-(`@review`, poodles drawn with their coat), not yet run. Plan: 1. poodles with different coats,
-close up; 2. a second species, for range; 3. the rare coat if a capture of it exists. Each image
-is opened and looked at before it is chosen; a green scenario does not prove its image shows a coat.
+Steam shows the first image large. **Owner's rule, 2026-09-29: image 0 is a copy of
+`Mod/About/Preview.png`** — the same banner, reused as the first gallery screenshot rather than
+being the header alone. `Art/Gallery/00-preview.png` is that copy, regenerated whenever
+`Preview.png` changes; not committed automatically, kept in step by hand.
+
+Plan for the rest, **open**: the captures come from `coats.feature`
+(`@review`, poodles drawn with their coat), not yet run. 1. `00-preview.png`; 2. poodles with
+different coats, close up; 3. a second species, for range; 4. the rare coat if a capture of it
+exists. Each image is opened and looked at before it is chosen; a green scenario does not prove
+its image shows a coat.
 
 ## Thank-you messages
 

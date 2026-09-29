@@ -16,6 +16,11 @@ their targets exactly. The one change to the patches is hardening, not a repair.
 
 ### Added
 
+- The mascot from `About/ModIcon.png` now also sits in the bottom-left corner of
+  `About/Preview.png`, cut out of its near-black background and rotated 15° (owner's rule,
+  2026-09-29: left corner tilts +15°, right corner -15°). `Art/ModIcon-corner.png` is the reusable
+  cutout, and `Art/Gallery/00-preview.png` a copy of the banner for the Workshop gallery's first
+  slot, per the same rule.
 - `About/Preview.png` and `About/ModIcon.png`, the showcase this port draws for itself rather than
   cutting out of purpleyam's textures. The banner is engraved at exactly 896x504 by a headless
   browser, so its glyphs are composed at final size and never resampled; `Art/preview.html` is
