@@ -14,7 +14,7 @@ async function main() {
   const rhMeta = await sharp(rotTrimmedHi).metadata();
   console.log('rotated hi-res trimmed', rhMeta.width, rhMeta.height);
 
-  const targetW = 150;
+  const targetW = 210;
   const targetH = Math.round(rhMeta.height * targetW / rhMeta.width);
   const rotated = await sharp(rotTrimmedHi)
     .resize(targetW, targetH, { kernel: 'lanczos3' })
