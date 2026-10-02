@@ -4,7 +4,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   # Captures for the Workshop page, not assertions: a person opens each image (AUDIT.md, "Captures destinees a la
   # publication"). Image 0 is Preview.png (PUBLICATION.md); these are images 1-4. Developer mode is turned off so
   # the toolbar stays out of the shot, animals are packed close together and framed. Play them in the gallery pass
-  # only (-DepMap wsl-deps.gallery.map -Filter '@gallery'), Odyssey absent, no other coat mod.
+  # only (-DepMap wsl-deps.gallery.map -Filter 'gallery'), Odyssey PRESENT, no other coat mod. Odyssey must stay: the test-colony fixture was saved with it and does not load without (run 0c69: 4/4 red at the save load, 175s). The four kinds exist with or without Odyssey, so the images are the same.
   #
   # Three animals each: only 3 poodles fit within 4 cells of the map centre in test-colony (run bccc). There is no
   # "different coats" assertion on purpose: three animals at 0.6-0.8 can all draw the same coat, which would fail a
