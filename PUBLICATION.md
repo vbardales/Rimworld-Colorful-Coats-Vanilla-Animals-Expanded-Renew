@@ -21,8 +21,7 @@ owner. Item `3806766686` exists, private, from the `0.1.0` prepublication; the r
 
 ## Adult content boxes
 
-No adult content: textures are animal coats only. **Open:** open every image before answering,
-a file name does not say what it contains.
+No adult content: textures are animal coats only. **Checked 2026-10-02:** the 74 coats (south views, two contact sheets, all 222 textures share the same art) opened and looked at: cartoon animals only, nothing adult. Answer the Steam box accordingly. Gallery captures to be checked again once they exist.
 
 ## Gallery order
 

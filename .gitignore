@@ -57,3 +57,6 @@ Mod/**/*.ico
 # Pickle evidence stays on disk, never in git (AGENTS.md): captures and Player.log grow without limit.
 Tests/Pickle/Evidence/
 evidence/
+
+# Reproducible Preview diagnostics generated locally by the shared renderer.
+Art/.render/

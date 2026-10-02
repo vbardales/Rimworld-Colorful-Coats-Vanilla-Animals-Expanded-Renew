@@ -2,12 +2,30 @@
   "title": "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)",
   "titleSize": 34,
   "titleParts": [
-    { "text": "Colorful Coats", "scale": 1 },
-    { "break": true },
-    { "text": "Vanilla Animals", "scale": 1 },
-    { "break": true },
-    { "text": "Expanded!", "scale": 1 },
-    { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary" }
+    {
+      "text": "Colorful Coats",
+      "scale": 1
+    },
+    {
+      "break": true
+    },
+    {
+      "text": "Vanilla Animals",
+      "scale": 1
+    },
+    {
+      "break": true
+    },
+    {
+      "text": "Expanded!",
+      "scale": 1
+    },
+    {
+      "text": "Renew",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary"
+    }
   ],
   "suffix": "",
   "tag": "(unofficial)",
@@ -17,7 +35,7 @@
   ],
   "layout": "panel",
   "panelAnchor": "top-left",
-  "backgroundFile": "Preview.png",
+  "backgroundFile": "Preview-source.png",
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
@@ -34,7 +52,7 @@
     "flipX": true
   },
   "iconBadge": {
-    "file": "ModIcon-hires-cutout.png",
+    "file": "ModIcon-source.png",
     "corner": "bottom-left",
     "width": 180,
     "outline": false,
@@ -42,5 +60,12 @@
     "veilSize": 275,
     "veilLeft": -55,
     "veilBottom": -61
+  },
+  "palette": {
+    "veil": "#293746",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#A9CDEB",
+    "accent": "#F2A43A",
+    "badgeInk": "#17120E"
   }
 }
