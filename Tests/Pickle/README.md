@@ -77,10 +77,9 @@ powershell.exe -ExecutionPolicy Bypass -File C:\Users\nelim\Documents\rimworld\R
 
 ## Evidence
 
-Each pass writes `summary.md`/`junit.xml`/`messages.ndjson` to its own `-EvidenceDir`; keep only
-the latest per pass, per the repository's evidence-retention rule in `AGENTS.md`. There is no
-`@review` scenario here — every assertion is structural, not a capture — so there is nothing to
-open and look at beyond `exitReason` and the pass/fail counts themselves.
+On disk only (`Tests/Pickle/Evidence/`, gitignored). Per scenario keep the latest report for the revision in the repository, plus an older one only when it is the sole proof of something the latest did not repeat. Minified form: `summary.md`, `summary.json`, `evidence-complete.txt`, `junit.xml` when small, `Player.log` when under ~200K (else a `log-excerpt.txt` of the distinct error lines). Drop `report.html` and `messages.ndjson` (5M each). Keep a screenshot only for an `@review` scenario (the capture a person must open) or the one image that explains a red. Delete the rest once a newer report replaces it; never delete a report `STATUS.md` or `docs/runs/` still names.
+
+Kept at 2026-10-02: `coats` (poodle coats and reload, sole proof, scenario since edited), `coats-texture` (scenario 3 plus its `@review` capture), `no-odyssey-v2`, `odyssey-v2`, `endangered-v2`, `rare-odyssey` (all green), `rare-plain-3` (the only red, summary and excerpt). Only the `@review` captures need opening; every other assertion is structural.
 
 ## Attribution is matched by display name
 

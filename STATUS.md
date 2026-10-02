@@ -9,7 +9,7 @@ repo:         Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew
 visibility:   public
 detached:     yes
 stage:        done
-stage_workflow: done
+workflow_stage: done
 licence:      silent
 port_licence: MIT (port additions only)
 licence_at:   Steam description, public profile, local original files, GitHub repository search
@@ -19,11 +19,13 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - unverified: execute applicable TESTING.md scenarios A-H and K-M in game, including logs, English/French mod-list UI, new game and existing save; I-J are conditional on revived legacy modules
-  - unverified: three structural passes and rare-coats-with-Odyssey (110d) passed 2026-09-28; coats-texture retry (8c5d) and rare-coats-without-Odyssey retry (a2ae, after a startup crash) still queued; see docs/runs/2026-09-28.md; manual scenario G not yet green
+  - defect: rare-tiger-plain (coats-no-odyssey pass) fails at step `the save "test-colony" is loaded`, not at placement: the `__pickle_fixture` save references Odyssey defs and loads with 912 reference errors in a pass without Odyssey; red 2026-10-01 (rare-plain-3, docs/runs/2026-09-28.md). Needs a fixture save that loads without Odyssey. Not fixed by this audit
+  - unverified: scenarios without a green run on current logic: coats.feature scenarios 1-2 (edited by 286d589 after their only green run) and rare-tiger-plain (red). Green on current logic: always-patched, without/with-odyssey, endangered (c3750ca), rare-jaguar and rare-tiger-odyssey (571b688), coats-texture (286d589)
+  - unverified: manual scenario G (added to / removed from a save in progress) has no automated form and an unresolved question (do animals already in a save gain a coat?); until it is automated or listed not applicable with its reason, done -> tested stays closed
+  - unverified: English/French mod-list UI, new game and existing save, log read, and the non-regression pass of the whole suite on the final revision (deposited last, per AUDIT.md ordering)
   - feature: PUBLICATION.md drafted 2026-09-28; open: gallery order, adult-content check on images, thank-you messages (owner voice)
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
-updated:      2026-09-28, packageId dropped its Renew suffix; Pickle suite written for the preTest gap
+updated:      2026-10-02, audit re-run: tested criteria checked, evidence trimmed, rare-plain cause found
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -77,6 +79,36 @@ what is listed here, so its stage conclusion (offline criteria complete, `done`)
 No feature was added, no image regenerated, no test invented to fill a gate: the stage decision
 is unchanged from 2026-09-13 because nothing that decision depended on has changed. What moved is
 what is now correctly recorded on disk and in `STATUS.md`/`CHANGELOG.md`.
+
+## Audit re-run — 2026-10-02
+
+Re-applied `../AUDIT.md` (read in full) against HEAD `251ab7b`, working tree clean at entry.
+**Stage unchanged: `done`, `workflow_stage: done`.** The field was spelt `stage_workflow`; renamed to
+the name AUDIT.md specifies. Session title: `colorfulcoats.vae / done`.
+
+- **Prepublication:** `Mod/About/PublishedFileId.txt` holds `3806766686` and is tracked (commit
+  `2d1e793`). `CHANGELOG.md` already carries `## [0.1.0] — 2026-09-23`, "Creation of a publishIdFile".
+  Nothing to add. Item private, not claimed tested.
+- **`.dds`:** 0 on disk, 0 tracked, none ever added to history (`git log --all`); `*.dds` is in `.gitignore`.
+- **Upstream repository:** a GitHub search for the mod name and for `purpleyam` returns only this
+  repository's own fork and unrelated accounts. No upstream git to base a PR on;
+  `upstream_mod_remotes: N/A` stands.
+- **New `tested` criteria** (AUDIT.md step 9), none met yet:
+  - no `@wip`: met, none in `Tests/Pickle`.
+  - every conditional scenario ran: Odyssey, Endangered and CoatSteps scenarios all had their pass,
+    green except rare-tiger-plain (red, see `remaining`).
+  - no manual test left: scenario G is still manual and unresolved; E and L keep an `@review` look.
+- **Finding:** the rare-tiger-plain failure is a save load, not a placement timeout. The earlier
+  reading (a2ae, 1f75) was a guess made without reading the source; the one kept report
+  (`rare-plain-3`) names the failing step. Details in `docs/runs/2026-09-28.md`. Recorded as a
+  defect, not fixed: this audit edits no test.
+- **Evidence trimmed on disk** (gitignored, 46M to 6.5M); the rule is in `Tests/Pickle/README.md`.
+  `pickle-reports-archive/` holds none of this mod's runs: nothing taken, nothing deleted there.
+- **`@review` capture opened:** `coats-texture/screenshots/manual--poodle-coats--step0.png` shows three
+  poodles (cream, pink, white) reading as three coats. HUD and colonist bar are visible: test proof,
+  not a gallery image.
+- **Protocol docs:** `docs/PROTOCOLS-READ.md` rewritten today.
+- No Pickle run launched or deposited; no ticket of this mod is queued.
 
 ## packageId dropped its Renew suffix, and a Pickle suite closes the preTest gap — 2026-09-28
 

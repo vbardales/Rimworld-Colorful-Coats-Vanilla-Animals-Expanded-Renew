@@ -1,3 +1,5 @@
+# CORRECTION 2026-10-02: the kept 2026-10-01 report fails at `the save "test-colony" is loaded` (fixture save references Odyssey defs, loaded without Odyssey), not at placement.
+# The placement explanation below was never confirmed; see docs/runs/2026-09-28.md.
 # 100 timed out twice, identically ("PickleDriver.WaitUntil timed out after 175s", ~177s both
 # times, docs/runs/2026-09-28.md): AEXP_Tiger's drawSize is 1.3, the largest of the five
 # Odyssey-contested animals, and 100 of it apparently cannot be placed/scanned in time near

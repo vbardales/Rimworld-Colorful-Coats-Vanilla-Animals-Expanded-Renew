@@ -1,56 +1,42 @@
 # Protocols read
 
-What this mod's sessions have read from the shared protocol/tooling repositories, at which
-revision, and whether it changed anything for this mod. Kept so a session that resumes after a
-context compaction, or picks the mod up cold, does not have to reopen every file if none of them
-moved. Re-read anything whose commit below is now behind the file's current one.
+Which shared protocol/tooling documents this mod's sessions have read, at which revision, and
+whether they helped here. Re-read a file only if its last-commit date below is now behind the
+file's current one. Revisions are `git log -1 --format='%h %ad'` of the file, run from
+`Documents\rimworld` for the monorepo-root files and inside each tool repository for the others.
+Caveat: since commit `90d51374` (2026-09-25) a root `git log` of a protocol file may return that
+commit, which moved them; treat a `90d51374` below as "unchanged since 2026-09-25", not as a blob id.
 
-| File | Read at | Useful here | Why / why not |
-| --- | --- | --- | --- |
-| `../AGENTS.md` | `3a1d2cb` (2026-09-24) | Yes | Sets the ordered gate workflow and the Pickle/publishing absolute rules this mod's audit follows. |
-| `../AUDIT.md` | `c5ca0c0` (2026-09-26) | Yes | The audit script itself; re-read in full on 2026-09-28. |
-| `../MOD_SETTINGS.md` | `b83933b` (2026-09-23) | Yes, briefly | Confirms the `not_applicable` vocabulary this mod already used; no owned settings to test. |
-| `../PUBLISHING.md` | read at an older revision; now `95c6dfd` (2026-09-28), moved after the read, re-read before the real publish | Yes | Description footer format, CI publish rules, `tested -> prepublished -> published` gates. |
-| `../TRANSLATIONS.md` | `f5c2d9d` (2026-09-25) | Yes, briefly | Confirms `not_applicable`: no owned in-game text, all payloads are selectors/paths/numbers. |
-| `../STYLE_RIMWORLD.md` | `7311308` (2026-09-25) | Partially | Preview/ModIcon review criteria used in 2026-09-13's audit; nothing new checked 2026-09-28. |
-| `../WORKSHOP_COMMENTS.md` | now `dea856b` (2026-09-28), not read | Not yet | Only matters once thank-you comments are written, at `tested -> prepublished`. Not there yet. |
-| `../scripts/SEARCHING.md` | `372c447` (2026-09-23) | Not yet | Homonym-sweep method; this mod's sweep already ran (2026-09-12) and found nothing live. |
-| `../PickleTools/README.md` | `90836e7` (2026-09-27) | Yes | Read in full 2026-09-28: layout and pass-family conventions used to write `Tests/Pickle/`. |
-| `../PickleTools/Authoring/README.md` | `90836e7` (2026-09-27) | Yes | The template this mod's suite follows: pass matrix, `@requires:`, `wsl-ids.map`/`wsl-deps.<pass>.map` syntax, companion `About.xml`. |
-| `../PickleTools/docs/steps.md` | `90836e7` (2026-09-27) | Not yet | PickleTools' own companion steps (RIMMSQOL, filming, xenotype colonists); this suite uses only Pickle's built-in steps, none of these. |
-| `../PickleTools/Headless/README.md` | `90836e7` (2026-09-27) | Yes | Read in full 2026-09-28: launcher options (`-Filter`, `-DepMap`, `-Then`), exit codes, and the `wsl-ids.map`/`wsl-deps.<pass>.map` split used to write `Tests/Pickle/`'s maps. |
-| `Rimworld-Pickle`'s own `Docs/steps.md` | `286e74e` (2026-09-21, `pickle-local/anima-film`, a feature branch — not confirmed as main) | Yes | The authoritative built-in step catalogue; `def`/`mod` steps quoted verbatim into `Tests/Pickle/`'s feature files. Not the same file as `PickleTools/docs/steps.md` above. |
-| `../Rimworld-Release-Admin/docs/OPERATIONS.md` | `851a155` (2026-09-27) | Not yet | Matters once a real (1.0.0) CI publish is dispatched. This mod is still at a manual 0.1.0 prepublication done in-game, not by CI. |
-| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | `77ca9d7` (2026-09-27) | **Yes** | Its 2026-09-27 addition on Explorer-artifact leaks into `Mod/` directly named this mod's own defect (`Mod/desktop.ini`), found and fixed 2026-09-28. |
-| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | `d07b2b8` (2026-09-26) | Yes | Read in full 2026-09-28 at the dispatcher's request: options, `-DepMap` name-only rule, exit codes. |
+Last full pass: 2026-10-02 (audit re-run). "Read" = opened in full that day; "diff" = only what changed
+since the previous read; "not reopened" = unchanged since the recorded read, so skipped.
 
-## Not useful yet, and why
+| File | Revision / date | 2026-10-02 | Useful here | Note |
+| --- | --- | --- | --- | --- |
+| `../AGENTS.md` | `90d51374` 2026-09-25 | in session context | Yes | Gate order, evidence-retention rule, CI publishing guardrails. |
+| `../AUDIT.md` | `90d51374` 2026-09-25 | read in full | Yes | The audit script. New this time: `tested` needs no `@wip`, every `@requires` pass run, no manual test left; WSL cleanup at hibernation. |
+| `../MOD_SETTINGS.md` | `90d51374` 2026-09-25 | not reopened | Briefly | `settings_audit: not_applicable` stands; no owned UI. |
+| `../PUBLISHING.md` | `c770fd1e` 2026-10-02 | diff only | Yes | New since the earlier read: Preview line-art protocol, gallery pawn-capture rule (apparel/hair mods; this mod has no pawn content). Re-read in full before the real publish. |
+| `../TRANSLATIONS.md` | `90d51374` 2026-09-25 | not reopened | Briefly | `not_applicable`: no owned in-game text. |
+| `../STYLE_RIMWORLD.md` | `f7e23d33` 2026-10-01 | not reopened | Partly | Preview/ModIcon criteria; the 2026-10-01 preview-generation protocol arrived after this mod's Preview, nothing regenerated. |
+| `../WORKSHOP_COMMENTS.md` | `08878789` 2026-09-29 | not reopened | Not yet | Only at `tested -> prepublished`, when thank-you comments are written. |
+| `../scripts/SEARCHING.md` | `90d51374` 2026-09-25 | not reopened | No | Homonym sweep already run 2026-09-12, nothing live. |
+| `../PickleTools/README.md` | `ff20d89` 2026-09-29 | not reopened | Yes | Tool table; this suite uses CoatSteps only. |
+| `../PickleTools/Authoring/README.md` | `a47799f` 2026-09-29 | not reopened | Yes | Suite template followed. |
+| `../PickleTools/Headless/README.md` | `ed4e73a` 2026-09-26 | not reopened | Yes | Launcher, maps, exit codes. |
+| `../PickleTools/docs/steps.md` | `da7c3b0` 2026-09-28 | not reopened | Not yet | Companion steps; only CoatSteps matters and it is read at its source. |
+| `Rimworld-Pickle` `Docs/steps.md` | `286e74e` 2026-09-21 (branch, unconfirmed main) | not reopened | Yes | Built-in `def`/`mod` steps used by the features. |
+| `../Rimworld-Release-Admin/docs/OPERATIONS.md` | `3c03f51` 2026-09-26 | not reopened | Not yet | Needed from the real `1.0.0` CI publish on. |
+| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | `77ca9d7` 2026-09-27 | not reopened | Yes | Named this mod's `Mod/desktop.ini` leak class. |
+| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | `d07b2b8` 2026-09-26 | not reopened | Yes | `Submit-PickleRun.ps1` options. |
 
-`PickleTools/docs/steps.md`: PickleTools' own companion steps (RIMMSQOL, filming, xenotype
-colonists); this suite uses only Pickle's built-in steps, none of these. `OPERATIONS.md` matters
-only from the real `1.0.0` CI publish onward: the `0.1.0` prepublication went through the game's
-own button, not the CI. Several Pickle runs have been submitted and returned by 2026-09-28 (see
-`docs/runs/2026-09-28.md`), which is what made `SUBMIT.md` above worth reading in full.
+## Not useful yet
+
+`WORKSHOP_COMMENTS.md`, `OPERATIONS.md`, `PickleTools/docs/steps.md`: matter only at `prepublished` or later, or
+for steps this suite does not use. `scripts/SEARCHING.md`: its sweep is done.
 
 ## This mod's own documents
 
-`STATUS.md`, `README.md`, `CHANGELOG.md`, `ATTRIBUTION.md`, `LICENSE`, `TESTING.md` and
-`Mod/About/About.xml` are read at the repository's own HEAD each session, not pinned to a
-revision here: they change with this mod's own commits, and `STATUS.md` already carries its own
-dated history of what was checked and when. `PUBLICATION.md`, `BACKLOG.md`, `NOTES.md`, `BUGS.md`
-and `docs/runs/` do not exist for this mod: nothing has been drafted yet (`PUBLICATION.md` is
-due before the real publish, not before), and there is no separate backlog, running notes or bug
-list kept outside `STATUS.md`'s own `remaining` field.
-
-## Revisions of the shared protocol documents
-
-Since commit `90d51374` the protocol documents belong to `vbardales/Rimworld-protocols`. A
-`git log` run from the monorepo returns the commit that removed them, a plausible hash for the
-opposite of what is wanted (`WELCOME.md`). The first table above briefly carried that hash for
-seven files; it was wrong and is corrected. The true revisions come from the protocols repository:
-
-```
-git --git-dir=../rimworld-protocols.git --work-tree=. log -1 --format='%h %ad' --date=short -- AUDIT.md
-```
-
-run from the monorepo root, `Documents\rimworld`.
+Read at the repository's HEAD each session, not pinned: `STATUS.md`, `README.md`, `CHANGELOG.md`,
+`ATTRIBUTION.md`, `LICENSE`, `PUBLICATION.md`, `TESTING.md`, `Mod/About/About.xml`, `docs/runs/`,
+`Tests/Pickle/`. Absent by design: `BACKLOG.md`, `NOTES.md`, `BUGS.md` (open work lives in
+`STATUS.md` `remaining`).
