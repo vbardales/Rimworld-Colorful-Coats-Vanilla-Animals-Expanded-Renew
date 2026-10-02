@@ -45,7 +45,7 @@ or listed as not applicable with its reason. State on 2026-09-28, nothing yet ru
 |---|---|---|
 | A coats appear | Automated, written | `coats.feature`, poodles. |
 | B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first and shih tzu last. |
-| C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries the 5% coat. `rare-tiger-plain`: 50, halved after 100 timed out twice placing `AEXP_Tiger` (drawSize 1.3, largest of the five); weaker guarantee, ~7.7% odds of a false red against under 1% at 100. **Red 2026-10-01 at the step that loads the fixture save without Odyssey (912 reference errors on Odyssey defs), not at placement: the halving fixed nothing; see `docs/runs/2026-09-28.md`.** |
+| C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries the 5% coat. `rare-tiger-plain`: 100 on a new colony (NewColony, map 150) since 2026-10-02; the fixture save does not play without Odyssey (red 2026-10-01 at the save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
 | D Endangered | Automated, written | `endangered.feature`; the guard name is proven by the animals being patched. |
 | E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; the north view is a capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
