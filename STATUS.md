@@ -110,6 +110,15 @@ the name AUDIT.md specifies. Session title: `colorfulcoats.vae / done`.
 - **Protocol docs:** `docs/PROTOCOLS-READ.md` rewritten today.
 - No Pickle run launched or deposited; no ticket of this mod is queued.
 
+## Art layout — 2026-10-02
+
+Current `Art/` (tracked): `Gallery/0-preview.png` (copy of the banner, gallery slot 0), `ModIcon-source.png`,
+`ModIcon-original.png`, `Preview-source.png`, `Preview-original.png`, `Preview.config.json` (input of the shared
+renderer, `scripts/Render-Preview.cjs` of the monorepo, protocol in `PUBLISHING.md`), `echo.png` (line-art), `ModIcon.ico`,
+`Preview.ico` (Explorer folder icons, kept out of `Mod/`). The 2026-09-12/28 sections below name files that no longer
+exist (`preview.html`, `render-preview.cjs`, `preview-palette.json`, `qa/`, `ModIcon-source-v2.png`, `ModIcon-corner.png`,
+`Preview-dogs-archived.png`): the shared renderer replaced them, they remain in git history. They are history, not instructions.
+
 ## packageId dropped its Renew suffix, and a Pickle suite closes the preTest gap — 2026-09-28
 
 At the user's request. Two independent changes, same session:

@@ -150,7 +150,7 @@ Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
   Textures/
-Art/          the showcase sources and the page that engraves the banner
+Art/          the showcase sources: icon and Preview sources, echo.png, Preview.config.json (read by the shared Preview renderer), the .ico files, Gallery/
 _tools/       Check-Coats.ps1, the five checks that need no game
 ```
 

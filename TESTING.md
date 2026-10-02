@@ -410,7 +410,7 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
 - The Workshop banner is `About/Preview.png`, 896x504 and 552 KB, under Steam's hard 1 MB ceiling,
   and it says `Renew` rather than `1.6`.
 - The approved icon is shipped at 128 × 128 (12,938 bytes), from
-  `Art/ModIcon-source-v2.png`. At about 32 px in the mod list, verify the central
+  `Art/ModIcon-source.png`. At about 32 px in the mod list, verify the central
   winking mascot remains recognizable and there is no clipping. The surrounding
   animals represent this mod's VAE coverage; fine detail is not expected at 32 px.
 ## M — the five Odyssey animals, on both kinds of install
