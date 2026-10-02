@@ -98,13 +98,13 @@
     }
   },
   "iconBadgeAlpha": {
-    "width": 1182,
-    "height": 1168,
+    "width": 1197,
+    "height": 1178,
     "bounds": {
       "x": 0,
       "y": 0,
-      "width": 1182,
-      "height": 1168
+      "width": 1197,
+      "height": 1178
     }
   }
 }
