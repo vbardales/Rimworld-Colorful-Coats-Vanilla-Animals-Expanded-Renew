@@ -32,6 +32,7 @@ not applicable: this mod owns no in-game text.
 | Minimal, Odyssey present | The same 25, plus the same five now patched under Ludeon's own bare names instead. |
 | Optional integration: Endangered | The five Endangered-only animals, on top of either Odyssey state. |
 | Coats drawn | Poodles draw and keep an extra coat, drawn with its own texture (`@review`). |
+| Gallery captures (`@gallery`, `wsl-deps.gallery.map`) | Four `@review` captures for the Workshop page: poodles, kangaroos, red pandas, Bengal cats. Not played yet. |
 | Rare coats, Odyssey present | 100 jaguars, 100 Odyssey tigers: each draws the 5% coat at least once. |
 | Rare coats, Odyssey absent | 100 `AEXP_Tiger`: draws the 5% coat at least once. |
 
@@ -48,7 +49,7 @@ or listed as not applicable with its reason. State on 2026-09-28, nothing yet ru
 | D Endangered | Automated, written | `endangered.feature`; the guard name is proven by the animals being patched. |
 | E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; the north view is a capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
-| G added to, removed from a save | Not written | Removal: nothing of this mod is stored in a save (no def, no `ExposeData`), so no state can outlive it; the game's reaction to a missing mod is not ours. A restart chain needs a custom step to hand the save to a companion (see Housebroken), which does not exist here. Addition: `coats.feature` loads the mod on a fixed save. **The scenario G text says animals already in a save keep their coat; the Megafauna session's decompile says the coat is computed on demand from the animal id, so they would gain one. Unverified: check by eye before trusting either.** |
+| G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in the other Colorful Coats ports: existing animals recolour on adding and revert on removing; nothing is stored in a save; the game's reaction to a missing mod is not ours. |
 | H no Vanilla Animals Expanded | Not applicable | The warning is the game's reaction to a declaration; the declaration is checked in sources (`Check-Xml.ps1`). |
 | I, J legacy modules | Not applicable | Both target 1.3 and cannot load on 1.6. |
 | K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` is checked in sources. |
@@ -338,6 +339,8 @@ goes into the save under that same name. The field is present in 1.6's assembly.
   pets.
 
 ## G — added to a save in progress, then removed from one
+
+**Not applicable** (Virginie, 2026-10-02, same decision as the other Colorful Coats ports, tested there): existing animals recolour on adding the mod and revert on removing it; nothing of this mod is stored in a save, so no state outlives it, and the game's reaction to a missing mod is not ours (AUDIT.md, "On ne teste pas le jeu"). The text below is kept as original intent only and is wrong on one point: animals already in the save do gain a coat.
 
 The description says both are safe. What "safe" means is worth pinning down, because the index is
 stored per animal: an animal generated before the mod was added has none, and no index means the

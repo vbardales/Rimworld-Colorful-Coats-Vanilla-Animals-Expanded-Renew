@@ -31,11 +31,7 @@ Steam shows the first image large. **Owner's rule, 2026-09-29: image 0 is a copy
 being the header alone. `Art/Gallery/00-preview.png` is that copy, regenerated whenever
 `Preview.png` changes; not committed automatically, kept in step by hand.
 
-Plan for the rest, **open**: the captures come from `coats.feature`
-(`@review`, poodles drawn with their coat), not yet run. 1. `00-preview.png`; 2. poodles with
-different coats, close up; 3. a second species, for range; 4. the rare coat if a capture of it
-exists. Each image is opened and looked at before it is chosen; a green scenario does not prove
-its image shows a coat.
+Images 1-4 come from `Tests/Pickle/Mod/Pickle/Features/gallery.feature` (written 2026-10-02, not yet played; pass `wsl-deps.gallery.map`, filter `@gallery`, Odyssey absent): 1. three poodles; 2. three kangaroos; 3. three red pandas; 4. three Bengal cats. Dog, marsupial, wild small animal, cat: range over species. Three animals each because few fit near the map centre. No coat assertion, so the reviewer checks each image shows at least two coats and replays otherwise. Each image is opened and looked at before it is chosen; a green scenario does not prove its image shows a coat. **Open:** order is provisional until the images exist; the strongest goes first after the banner.
 
 ## Thank-you messages
 

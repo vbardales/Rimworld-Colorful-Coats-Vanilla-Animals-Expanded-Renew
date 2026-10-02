@@ -21,7 +21,7 @@ workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-
 remaining:
   - defect: rare-tiger-plain (coats-no-odyssey pass) fails at step `the save "test-colony" is loaded`, not at placement: the `__pickle_fixture` save references Odyssey defs and loads with 912 reference errors in a pass without Odyssey; red 2026-10-01 (rare-plain-3, docs/runs/2026-09-28.md). Needs a fixture save that loads without Odyssey. Not fixed by this audit
   - unverified: scenarios without a green run on current logic: coats.feature scenarios 1-2 (edited by 286d589 after their only green run) and rare-tiger-plain (red). Green on current logic: always-patched, without/with-odyssey, endangered (c3750ca), rare-jaguar and rare-tiger-odyssey (571b688), coats-texture (286d589)
-  - unverified: manual scenario G (added to / removed from a save in progress) has no automated form and an unresolved question (do animals already in a save gain a coat?); until it is automated or listed not applicable with its reason, done -> tested stays closed
+  - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TESTING.md
   - unverified: English/French mod-list UI, new game and existing save, log read, and the non-regression pass of the whole suite on the final revision (deposited last, per AUDIT.md ordering)
   - feature: PUBLICATION.md drafted 2026-09-28; open: gallery order, adult-content check on images, thank-you messages (owner voice)
 session:      local_bd47cda2-a14e-4c5c-83b4-d538829c4475
