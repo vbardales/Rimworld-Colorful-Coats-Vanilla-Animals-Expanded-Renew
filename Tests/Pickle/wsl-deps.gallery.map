@@ -1,4 +1,7 @@
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
 VanillaExpanded.VanillaAnimalsExpanded 2871933948
 nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
 nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
