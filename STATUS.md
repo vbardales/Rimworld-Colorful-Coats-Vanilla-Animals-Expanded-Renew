@@ -19,7 +19,7 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - unverified: rare-tiger-plain rewritten 2026-10-02 on a new colony (fixture save does not load without Odyssey); ticket to replay
+  - unverified: coats (e7e4) and gallery (0c69) tickets queued at b3b1611; rare-tiger-plain green 2026-10-02 (rare-plain-4)
   - unverified: scenarios without a green run on current logic: coats.feature scenarios 1-2 (edited by 286d589 after their only green run) and rare-tiger-plain (red). Green on current logic: always-patched, without/with-odyssey, endangered (c3750ca), rare-jaguar and rare-tiger-odyssey (571b688), coats-texture (286d589)
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TESTING.md
   - unverified: English/French mod-list UI, new game and existing save, log read, and the non-regression pass of the whole suite on the final revision (deposited last, per AUDIT.md ordering)
