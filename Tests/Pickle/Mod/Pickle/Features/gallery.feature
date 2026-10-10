@@ -1,4 +1,4 @@
-@requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom
+@requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.sanctuarybacklot
 Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery captures
 
   # Staged photographs, not assertions (owner's rule 2026-10-02; AUDIT.md, "Captures destinees a la publication"): a
@@ -9,7 +9,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   # kind's alternateGraphics, -1 the original), so every image shows distinct coats by construction. Subjects: kinds
   # with 2 to 4 extra coats (counted in ColorfulCoats_VAEcore.xml): poodle 4, kangaroo 3, red panda 3, Bengal cat 2.
   # Play in the gallery pass only (wsl-deps.gallery.map, -Filter gallery), Odyssey present, no other coat mod.
-  # Replayed 2026-10-11 on the Sanctuary after the studio fixture "nelim-zen-meadow-studio" vanished (run d06b, 0/4).
+  # Replayed 2026-10-11 in Nelim's Sanctuary (SanctuaryBacklot, named place "flower-garden", docs/SANCTUAIRE-LIEUX.md) after the studio fixture vanished (run d06b, 0/4).
 
   Background:
     Given the save "Nelims-tribe" is loaded
@@ -21,8 +21,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   @review @gallery
   Scenario: poodles in the glade, each in its own coat
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 4 adult animals of kind "AEXP_Poodle" are spawned around (154, 98)
+    And Nelim's Pickle Tools: 4 adult animals of kind "AEXP_Poodle" are spawned around (154, 105)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
@@ -35,8 +36,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   @review @gallery
   Scenario: kangaroos in the glade, each in its own coat
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_Kangaroo" are spawned around (154, 98)
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_Kangaroo" are spawned around (154, 105)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
@@ -48,8 +50,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   @review @gallery
   Scenario: red pandas in the glade, each in its own coat
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned around (154, 98)
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned around (154, 105)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
@@ -61,8 +64,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   @review @gallery
   Scenario: Bengal cats in the glade, the original and both coats
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned around (154, 98)
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned around (154, 105)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
