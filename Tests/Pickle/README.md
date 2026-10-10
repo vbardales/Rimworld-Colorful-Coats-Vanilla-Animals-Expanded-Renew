@@ -10,7 +10,7 @@ This mod ships no assembly, no owned Def and no UI: four XML patches and 222 tex
 `PickleTools/Authoring/README.md` step 1, a running game only proves what an offline check
 cannot — here, that is exactly one thing: **which of Vanilla Animals Expanded's or Odyssey's
 `PawnKindDef`s this mod's patches actually reached**, at the load order and DLC/optional-pack
-combination a real player has. `_tools/Check-Coats.ps1` already proves the *authored* content
+combination a real player has. `scripts/Check-Coats.ps1` already proves the *authored* content
 is internally consistent (74 coats, 222 textures, no orphan, no gap); it cannot prove a patch
 *landed*, because that only exists once a game has loaded and RimWorld has built and discarded
 its own patch tree. That is the one thing these four feature files check, using only Pickle's

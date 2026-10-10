@@ -60,17 +60,17 @@ Written is not run: none of this is a pass until the passes return green.
 
 ## What is settled before the game starts
 
-Run `powershell -File _tools/Check-Xml.ps1` for standalone XML and metadata checks:
+Run `powershell -File scripts/Check-Xml.ps1` for standalone XML and metadata checks:
 parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
 unofficial suffix, GitHub description link, dependency and identical licence copies.
 This and Check-Coats passed on 2026-09-12, with no installed-target checks skipped.
 These checks do not execute RimWorld's patch engine or replace scenarios A–M.
 
-`_tools/Check-Coats.ps1` answers the five questions that do not need RimWorld running, and exits
+`scripts/Check-Coats.ps1` answers the five questions that do not need RimWorld running, and exits
 non-zero naming the file or the animal when one fails:
 
 ```
-powershell -File _tools/Check-Coats.ps1
+powershell -File scripts/Check-Coats.ps1
 ```
 
 1. Every `texPath` has its three rotation files shipped.
@@ -442,6 +442,6 @@ operation and no visible error** — only animals that quietly stopped having co
 and D exist because nothing else would ever tell us.
 
 One of them did get caught, though, and it is worth saying which: the five animals Odyssey took
-over were found by `_tools/Check-Coats.ps1`, not in the game. Reading a target's `LoadFolders.xml`
+over were found by `scripts/Check-Coats.ps1`, not in the game. Reading a target's `LoadFolders.xml`
 is cheap and nobody would ever have noticed the tiger by playing — a rarity at `0.05` looks
 exactly the same whether it is rare or absent.

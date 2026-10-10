@@ -44,11 +44,11 @@
   Checks 3, 4 and 5 are skipped rather than failed when a target is not installed: none of them is
   in this repository and their absence says nothing about this one.
 
-  Not published - _tools/ sits outside Mod/, which is the only directory the Workshop uploader
+  Not published - scripts/ sits outside Mod/, which is the only directory the Workshop uploader
   ever sees.
 
 .EXAMPLE
-  powershell -File _tools/Check-Coats.ps1
+  powershell -File scripts/Check-Coats.ps1
 #>
 param(
     [string]$ModPath    = (Join-Path $PSScriptRoot '..'),
@@ -60,7 +60,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 # Resolved, not joined as given. Check 2 measures a texture's full path against the length of
-# $texRoot, and a $texRoot still carrying the `_tools\..` hop is longer than the path it is
+# $texRoot, and a $texRoot still carrying the `scripts\..` hop is longer than the path it is
 # measuring into - which cuts the relative name short and reports all 222 textures as orphans.
 $ModPath = (Resolve-Path $ModPath).Path
 
