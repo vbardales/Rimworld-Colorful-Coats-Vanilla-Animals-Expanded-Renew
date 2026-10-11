@@ -1,0 +1,13 @@
+{
+  "templateStamp": "82de20b8aa50",
+  "workshopId": "3806766686",
+  "packageId": "nelim.colorfulcoats.vae",
+  "releaseTitle": "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial) {version}",
+  "requirePaths": [
+    "Patches",
+    "Textures"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery"
+}
