@@ -28,6 +28,10 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-4" is given coat 2
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (150, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (152, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (154, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-4" stands at (156, 109) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-1-poodles"
@@ -42,6 +46,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (151, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (153, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (155, 109) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-2-kangaroos"
@@ -56,6 +63,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (151, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (153, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (155, 109) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-3-red-pandas"
@@ -70,6 +80,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (151, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (153, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (155, 109) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-4-bengal-cats"
