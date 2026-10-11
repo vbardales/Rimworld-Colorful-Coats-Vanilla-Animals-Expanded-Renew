@@ -50,7 +50,7 @@ or listed as not applicable with its reason. State on 2026-09-28, nothing yet ru
 | E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; the north view is a capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
 | G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in the other Colorful Coats ports: existing animals recolour on adding and revert on removing; nothing is stored in a save; the game's reaction to a missing mod is not ours. |
-| H no Vanilla Animals Expanded | Not applicable | The warning is the game's reaction to a declaration; the declaration is checked in sources (`Check-Xml.ps1`). |
+| H no Vanilla Animals Expanded | Not applicable | The warning is the game's reaction to a declaration; the declaration is checked in sources (`Check-Patches.ps1`). |
 | I, J legacy modules | Not applicable | Both target 1.3 and cannot load on 1.6. |
 | K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` is checked in sources. |
 | L mod list entry | Offline plus a look | Name and metadata are checked offline; the banner and icon were inspected as images. |
@@ -60,7 +60,7 @@ Written is not run: none of this is a pass until the passes return green.
 
 ## What is settled before the game starts
 
-Run `powershell -File scripts/Check-Xml.ps1` for standalone XML and metadata checks:
+Run `powershell -File scripts/Check-Patches.ps1` for standalone XML and metadata checks:
 parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
 unofficial suffix, GitHub description link, dependency and identical licence copies.
 This and Check-Coats passed on 2026-09-12, with no installed-target checks skipped.
