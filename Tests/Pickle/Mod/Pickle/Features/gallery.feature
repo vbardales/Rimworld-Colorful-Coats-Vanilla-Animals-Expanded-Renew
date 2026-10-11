@@ -23,13 +23,13 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 4 adult animals of kind "AEXP_Poodle" are spawned in a row from (150, 105), spacing 2
+    And Nelim's Pickle Tools: 4 adult animals of kind "AEXP_Poodle" are spawned in a row from (150, 109), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-4" is given coat 2
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 105) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-1-poodles"
 
   # Image 2: wildlife, not only pets. Kangaroos, the three coats side by side.
@@ -38,12 +38,12 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_Kangaroo" are spawned in a row from (151, 105), spacing 2
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_Kangaroo" are spawned in a row from (151, 109), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 105) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-2-kangaroos"
 
   # Image 3: red pandas, the strongest colour contrast, against the flowers.
@@ -52,12 +52,12 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned in a row from (151, 105), spacing 2
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned in a row from (151, 109), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 105) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-3-red-pandas"
 
   # Image 4: the cats, the other half of what a colony keeps: the original and both coats.
@@ -66,10 +66,10 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned in a row from (151, 105), spacing 2
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned in a row from (151, 109), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 105) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-4-bengal-cats"
