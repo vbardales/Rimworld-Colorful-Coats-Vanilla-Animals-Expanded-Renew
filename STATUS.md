@@ -24,7 +24,7 @@ remaining:
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TESTING.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
-social_preview_sha256: 58726b84ea8e4d67096e9d5e62d90568b285ff0bf4a7ab235cee2475c2c35d0d
+social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
 session:      local_e26bc266-36d6-4bee-9097-818839c11467
 updated:      2026-10-10, audit re-run against the 15-state chain: done -> playTests[1.0.0]
 protocols_read_sha: b4a73cf0998fa5914b1d5e52b0817a8fe77abab3
