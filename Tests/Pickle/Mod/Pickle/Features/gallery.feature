@@ -9,7 +9,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   # kind's alternateGraphics, -1 the original), so every image shows distinct coats by construction. Subjects: kinds
   # with 2 to 4 extra coats (counted in ColorfulCoats_VAEcore.xml): poodle 4, kangaroo 3, red panda 3, Bengal cat 2.
   # Play in the gallery pass only (wsl-deps.gallery.map, -Filter gallery), Odyssey present, no other coat mod.
-  # Replayed 2026-10-11 in Nelim's Sanctuary (SanctuaryBacklot, named place "flower-garden", docs/SANCTUAIRE-LIEUX.md) after the studio fixture vanished (run d06b, 0/4).
+  # Images 3 and 4 moved to calm-zone on 2026-10-12 (run a16a: flowers swallowed the warm coats). Replayed 2026-10-11 in Nelim's Sanctuary (SanctuaryBacklot, named place "flower-garden", docs/SANCTUAIRE-LIEUX.md) after the studio fixture vanished (run d06b, 0/4).
 
   Background:
     Given the save "Nelims-tribe" is loaded
@@ -53,36 +53,36 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
     And I take a screenshot "gallery-2-kangaroos"
 
-  # Image 3: red pandas, the strongest colour contrast, against the flowers.
+  # Image 3: red pandas, on the plain cream square of calm-zone (flat light floor, no flowers), the strongest contrast.
   @review @gallery
-  Scenario: red pandas in the glade, each in its own coat
+  Scenario: red pandas on the cream square, each in its own coat
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
-    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned in a row from (151, 109), spacing 2
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_RedPanda" are spawned in a row from (198, 185), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
-    And Nelim's Pickle Tools: the animal "coat-1" stands at (151, 109) facing South
-    And Nelim's Pickle Tools: the animal "coat-2" stands at (153, 109) facing South
-    And Nelim's Pickle Tools: the animal "coat-3" stands at (155, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (198, 185) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (200, 185) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (202, 185) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 7
     And I take a screenshot "gallery-3-red-pandas"
 
-  # Image 4: the cats, the other half of what a colony keeps: the original and both coats.
+  # Image 4: the cats, the other half of what a colony keeps, same plain cream square: the original and both coats.
   @review @gallery
-  Scenario: Bengal cats in the glade, the original and both coats
+  Scenario: Bengal cats on the cream square, the original and both coats
     Given Nelim's Pickle Tools: the colonists are sent to the map corner
-    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned in a row from (151, 109), spacing 2
+    And Nelim's Pickle Tools: 3 adult animals of kind "AEXP_CatBengal" are spawned in a row from (198, 185), spacing 2
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
-    And Nelim's Pickle Tools: the animal "coat-1" stands at (151, 109) facing South
-    And Nelim's Pickle Tools: the animal "coat-2" stands at (153, 109) facing South
-    And Nelim's Pickle Tools: the animal "coat-3" stands at (155, 109) facing South
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (198, 185) facing South
+    And Nelim's Pickle Tools: the animal "coat-2" stands at (200, 185) facing South
+    And Nelim's Pickle Tools: the animal "coat-3" stands at (202, 185) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 7
     And I take a screenshot "gallery-4-bengal-cats"
