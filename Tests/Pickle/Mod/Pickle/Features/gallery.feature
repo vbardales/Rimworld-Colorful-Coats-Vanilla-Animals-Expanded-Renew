@@ -33,7 +33,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-3" stands at (154, 109) facing South
     And Nelim's Pickle Tools: the animal "coat-4" stands at (156, 109) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (153, 109) at zoom 2.5
     And I take a screenshot "gallery-1-poodles"
 
   # Image 2: wildlife, not only pets. Kangaroos, the three coats side by side.
