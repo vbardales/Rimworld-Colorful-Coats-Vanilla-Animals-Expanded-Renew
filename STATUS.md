@@ -18,7 +18,7 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - feature: gallery pass (gallery.feature, staged glade photographs, coats chosen by "is given coat K") written 2026-10-02, never played; the spawn-around and coat steps now exist in PickleTools; deposit one small ticket (wsl-deps.gallery.map, -Filter gallery), then open each image
+  - feature: gallery: four candidates in Art/Gallery (1-candidate-poodles, 2-candidate-kangaroos, 3-candidate-red-pandas, 4-candidate-bengal-cats), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
   - unverified: code review (AUDIT.md 8.m): code_review_sha absent; data-only mod (Mod/ XML + textures, no Source); review Mod/ from 0.1.0, then store the sha
   - unverified: mod-list UI in English and French, new game and existing save, Player.log read (8.i); no owned text, so only the load log and the coats on screen matter
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
@@ -49,3 +49,15 @@ Re-applied `../AUDIT.md` (read in full) and `WELCOME.md`, `AGENTS.md`, `PICKLE.m
 - Registered with the Ticket Manager (`-Owner local_e26bc266-36d6-4bee-9097-818839c11467`). No image generated, no test invented, nothing published.
 
 Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` feature | defect | unverified; `dependencies` declared | to check | none. The state chain and its criteria live in `../AUDIT.md`.
+
+## Gallery table (candidates, 2026-10-12)
+
+| Index | File | Subject | State |
+|---|---|---|---|
+| 0 | `0-preview.png` | Preview copy | stale until ModIcon derivatives are regenerated |
+| 1 | `1-candidate-poodles.png` | 4 poodles, 4 coats, flower garden | candidate, 1.0 MB |
+| 2 | `2-candidate-kangaroos.png` | 3 kangaroos, 3 coats | candidate, 1.0 MB |
+| 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, 1.0 MB |
+| 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, 1.0 MB, small in frame |
+
+Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on an undefined step (the animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed an empty frame, tiny scattered animals, and the bed and cube in frame.
