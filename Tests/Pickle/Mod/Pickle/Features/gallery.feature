@@ -67,7 +67,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-2" stands at (200, 185) facing South
     And Nelim's Pickle Tools: the animal "coat-3" stands at (202, 185) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 7
+    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 2.5
     And I take a screenshot "gallery-3-red-pandas"
 
   # Image 4: the cats, the other half of what a colony keeps, same plain cream square: the original and both coats.
@@ -84,5 +84,5 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-2" stands at (200, 185) facing South
     And Nelim's Pickle Tools: the animal "coat-3" stands at (202, 185) facing South
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 7
+    And Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 2.5
     And I take a screenshot "gallery-4-bengal-cats"
