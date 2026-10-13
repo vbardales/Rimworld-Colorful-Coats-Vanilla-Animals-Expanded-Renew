@@ -32,7 +32,7 @@ The MIT licence above covers only what the 1.6 port added:
     chances they carry are purpleyam's, as below; only the aiming is mine
   - the showcase drawn for this port: About/Preview.png, About/ModIcon.png,
     and the Art/ sources and engraving page behind them
-  - the test scenarios in TESTING.md and the checker under _tools/
+  - the test scenarios in TEST_SCENARIOS.md and the checker under _tools/
   - the packaging and the documentation
 
 IT DOES NOT COVER THE ORIGINAL MOD. The 74 coats, their chances and the 222

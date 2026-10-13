@@ -172,4 +172,4 @@ for what the MIT grant does and does not cover, and [CHANGELOG.md](CHANGELOG.md)
 
 The port work was done with the help of an AI assistant (Claude, by Anthropic), under human
 direction. Offline checks have passed; final in-game validation of this delivery remains
-unverified. See STATUS.md and TESTING.md for the checks and outstanding scenarios.
+unverified. See STATUS.md and TEST_SCENARIOS.md for the checks and outstanding scenarios.

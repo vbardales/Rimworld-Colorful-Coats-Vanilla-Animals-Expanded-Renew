@@ -1,6 +1,6 @@
 # The 25 AEXP_* PawnKindDefs that Odyssey never touches: present and patched in every pass
 # that has Vanilla Animals Expanded, whatever Endangered or Odyssey are doing. This is the
-# structural half of TESTING.md's scenario B - the sequence-stops-at-first-false risk - for
+# structural half of TEST_SCENARIOS.md's scenario B - the sequence-stops-at-first-false risk - for
 # every animal except the five Odyssey can take over (see with-odyssey.feature /
 # without-odyssey.feature) and the five Endangered-only ones (see endangered.feature).
 # Needs no save: these steps read the def database built at the main menu.

@@ -37,6 +37,6 @@ for steps this suite does not use. `scripts/SEARCHING.md`: its sweep is done.
 ## This mod's own documents
 
 Read at the repository's HEAD each session, not pinned: `STATUS.md`, `README.md`, `CHANGELOG.md`,
-`ATTRIBUTION.md`, `LICENSE`, `PUBLICATION.md`, `TESTING.md`, `Mod/About/About.xml`, `docs/runs/`,
+`ATTRIBUTION.md`, `LICENSE`, `PUBLICATION.md`, `TEST_SCENARIOS.md`, `Mod/About/About.xml`, `docs/runs/`,
 `Tests/Pickle/`. Absent by design: `BACKLOG.md`, `NOTES.md`, `BUGS.md` (open work lives in
 `STATUS.md` `remaining`).

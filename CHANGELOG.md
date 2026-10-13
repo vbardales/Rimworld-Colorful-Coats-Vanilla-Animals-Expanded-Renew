@@ -28,7 +28,7 @@ their targets exactly. The one change to the patches is hardening, not a repair.
   `Art/ModIcon-source.png` at 64% of the frame, keeping the mascot legible at the 32 pixels the
   mod list actually draws, rather than a plain reduction of the whole crowd. Nothing in `Art/`
   ships: the Workshop uploader only ever sees `Mod/`.
-- `TESTING.md`, thirteen scenarios for the game plus what is settled before it starts. All four
+- `TEST_SCENARIOS.md`, thirteen scenarios for the game plus what is settled before it starts. All four
   shared checkers pass, every coat ships its three rotations with nothing orphaned, and all 40
   defNames exist in the three target sets as installed today with no `alternateGraphics` of their
   own.

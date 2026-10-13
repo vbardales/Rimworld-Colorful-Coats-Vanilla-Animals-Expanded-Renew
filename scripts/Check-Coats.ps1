@@ -20,7 +20,7 @@
     3. Every defName the patch aims at still exists in the mod that owns it, and none of them
        already carries alternateGraphics of its own. This is the check that expires: both targets
        are alive, and a renamed animal costs it its coats in complete silence, since every
-       operation carries <success>Always</success>. See scenario A in TESTING.md.
+       operation carries <success>Always</success>. See scenario A in TEST_SCENARIOS.md.
 
        This check has a second half that the Megafauna port had no need for. Vanilla Animals
        Expanded splits its 1.6 defs across two folders and loads the second one only
@@ -34,7 +34,7 @@
     4. The 16 animals that ColorfulCoats_VAEvarious.xml patches a second time carry the same
        chance and the same coats there as in the core file. That equality is what makes a double
        application harmless if one of the eight dead modules is ever revived, and scenario J in
-       TESTING.md states it as a fact rather than a hope.
+       TEST_SCENARIOS.md states it as a fact rather than a hope.
 
     5. The five animals in the Odyssey file get the same coats and the same chances as their
        AEXP_ counterparts in the core file. They are matched on their coat lists, since the
@@ -267,4 +267,4 @@ if ($drift) {
 
 Write-Host ''
 if ($problems) { Write-Host "$problems check(s) failed."; exit 1 }
-Write-Host 'All checks passed. What is left is scenario A in TESTING.md, which needs the game.'
+Write-Host 'All checks passed. What is left is scenario A in TEST_SCENARIOS.md, which needs the game.'

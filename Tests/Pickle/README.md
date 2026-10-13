@@ -1,6 +1,6 @@
 # Pickle tests — Colorful Coats - Vanilla Animals Expanded! Renew
 
-Written 2026-09-28, closing the gap `AUDIT.md`'s `preTest` gate flags for a `TESTING.md` that
+Written 2026-09-28, closing the gap `AUDIT.md`'s `preTest` gate flags for a `TEST_SCENARIOS.md` that
 never names a Pickle pass count. Not yet run: writing a suite is a `preTest -> done` criterion,
 executing and reading it belongs to `done -> tested` (`AUDIT.md`, step 8's explicit note).
 
@@ -21,7 +21,7 @@ whether its three rotations point at the right art, and whether the 5%/80% rarit
 right over many spawns are exactly what `PickleTools/Authoring/README.md` step 1 says to keep
 out of Gherkin: a rendered outcome a person has to look at, and a statistical distribution no
 green checkmark can summarize honestly (`AUDIT.md`'s own point about a Pickle green not proving
-what a screenshot shows). `TESTING.md` scenarios A, C, E, F, G keep doing that job. What this
+what a screenshot shows). `TEST_SCENARIOS.md` scenarios A, C, E, F, G keep doing that job. What this
 suite *does* replace is the structural half of scenario B — the risk that one renamed def
 silently drops every def listed after it in the sequence — which it checks completely and in
 about two seconds, instead of by spawning enough shih tzus to trust a statistic.
@@ -35,7 +35,7 @@ Two pass families apply; two do not.
 | Minimal, Odyssey absent | `wsl-deps.no-odyssey.map` | `always-patched.feature`, `without-odyssey.feature` | The 25 DLC-independent animals plus the five Odyssey could take over, all patched under `AEXP_*`; the bare Ludeon names do not exist to be confused with them. |
 | Minimal, Odyssey present | `wsl-deps.odyssey.map` | `always-patched.feature`, `with-odyssey.feature` | Same 25, plus the same five now patched under Ludeon's own bare names; `AEXP_Badger` and its four fellows no longer exist. |
 | Optional integration: Endangered | `wsl-deps.endangered.map` | `always-patched.feature`, `endangered.feature` | The five Endangered-only animals exist and are patched, on top of whichever Odyssey state the pass also has. |
-| Declared incompatibility | — | — | **Not stageable today.** `incompatibleWith` names `purpleyam.colorfulcoats.vaewildlife` and `purpleyam.colorfulcoats.vaecatsdogs`; both cap their `supportedVersions` at 1.3 and cannot be loaded on 1.6 at all (`TESTING.md`, scenario K). There is nothing to look at until one of them is revived — recorded here rather than invented as a pass that could not run. |
+| Declared incompatibility | — | — | **Not stageable today.** `incompatibleWith` names `purpleyam.colorfulcoats.vaewildlife` and `purpleyam.colorfulcoats.vaecatsdogs`; both cap their `supportedVersions` at 1.3 and cannot be loaded on 1.6 at all (`TEST_SCENARIOS.md`, scenario K). There is nothing to look at until one of them is revived — recorded here rather than invented as a pass that could not run. |
 | Rare coats (fifth and sixth passes) | `wsl-deps.coats.map`, filter `'rare-jaguar,rare-tiger-odyssey'`; `wsl-deps.coats-no-odyssey.map`, filter `'rare-tiger-plain'` | `rare-jaguar`, `rare-tiger-odyssey`, `rare-tiger-plain` | 100 large animals for the first two: at least one carries the 5% coat (under 1% odds of a false red). `rare-tiger-plain` is 100 on a new colony since 2026-10-02 (the `test-colony` fixture was saved with Odyssey and does not load without it; map `wsl-deps.coats-no-odyssey.map` now stages NewColony); submit with `-Extra '-pickle-scenario-timeout=400'`, alone, once. |
 | Coats drawn (fourth pass) | `wsl-deps.coats.map` | `coats.feature` | Poodles draw at least two extra coats, keep them across reload, and each is drawn with its own texture (`@review` capture). Odyssey stays at its default. Rare 5% coats are not covered: tiger and jaguar need about 100 large animals placed. Uses the shared CoatSteps (PickleTools, compiled, never played). Filter: `'coats'`. |
 | English and French | — | — | **Not applicable.** This mod owns no in-game text (`STATUS.md`, localization: `not_applicable`); there is nothing a language switch could change here. |
