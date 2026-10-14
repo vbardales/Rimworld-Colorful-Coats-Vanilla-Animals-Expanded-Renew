@@ -18,7 +18,7 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; 3-candidate-red-pandas and 4-candidate-bengal-cats redone at frame 1.5, ticket gallery-12; 2-candidate-poodles redone at 2.5, session verdict accept), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
+  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; 3-candidate-red-pandas and 4-candidate-bengal-cats redone at frame 2 (1.5 refused by the game: camera root bounded at 2, run ae19), ticket gallery-13; 2-candidate-poodles redone at 2.5, session verdict accept), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
   - unverified: code review (AUDIT.md 8.m): code_review_sha absent; data-only mod (Mod/ XML + textures, no Source); review Mod/ from 0.1.0, then store the sha
   - unverified: mod-list UI in English and French, new game and existing save, Player.log read (8.i); no owned text, so only the load log and the coats on screen matter
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
