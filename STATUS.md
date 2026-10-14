@@ -18,7 +18,7 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; 3-candidate-red-pandas and 4-candidate-bengal-cats redone at frame 2 (1.5 refused by the game: camera root bounded at 2, run ae19), ticket gallery-13; 2-candidate-poodles redone at 2.5, session verdict accept), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
+  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; all three candidates 2 to 4 played at frame 2 or 2.5 (runs a816, f048; 1.5 refused by the game, camera bounded at 2) and judged accept by the session), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
   - unverified: code review (AUDIT.md 8.m): code_review_sha absent; data-only mod (Mod/ XML + textures, no Source); review Mod/ from 0.1.0, then store the sha
   - unverified: mod-list UI in English and French, new game and existing save, Player.log read (8.i); no owned text, so only the load log and the coats on screen matter
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
@@ -58,7 +58,7 @@ Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` 
 | 0 | `0-preview.png` | Preview copy | stale until ModIcon derivatives are regenerated |
 | 1 | `1-kangaroos.png` | 3 kangaroos, 3 coats, flower garden | accepted by Virginie 2026-10-12, 1.0 MB |
 | 2 | `2-candidate-poodles.png` | 4 poodles, 4 coats, flower garden | candidate, frame 2.5 (run a816, gallery-11), 0.9 MB; session verdict: accept |
-| 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, 1.0 MB |
-| 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, 1.0 MB, small in frame |
+| 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
+| 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
 
 Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on an undefined step (the animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed an empty frame, tiny scattered animals, and the bed and cube in frame.
