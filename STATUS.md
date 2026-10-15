@@ -27,7 +27,7 @@ remaining:
 social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
 session:      local_e26bc266-36d6-4bee-9097-818839c11467
 updated:      2026-10-10, audit re-run against the 15-state chain: done -> playTests[1.0.0]
-protocols_read_sha: abe91647aaaabbb913f42a9a699ab0b3db63942c
+protocols_read_sha: 7bafac79376f69b0ecc5d31de811aef4f53a9987
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
