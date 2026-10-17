@@ -19,7 +19,7 @@ tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
   - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; all three candidates 2 to 4 played at frame 2 or 2.5 (runs a816, f048; 1.5 refused by the game, camera bounded at 2) and judged accept by the session), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
-  - unverified: 8.i: load log read by ticket 20261017-163944-176-815b (loadaudit.feature, English, filed 2026-10-17, awaiting RUN_DONE); mod-list entry (scenario L) has no scenario, only offline check and image look
+  - unverified: 8.i: load log read by ticket 20261017-215813-717-6411 (loadaudit.feature, English, refiled 2026-10-17 after 815b died with no report, launcher exit 3; awaiting RUN_DONE); mod-list entry (scenario L) has no scenario, only offline check and image look
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
@@ -27,7 +27,7 @@ code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
 session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
 updated:      2026-10-17, code review 8.m done (Mod/ XML + textures, no defect)
-protocols_read_sha: 78bf85cc96d564b99ea1a0e122ba9beb10d77268
+protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
