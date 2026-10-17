@@ -29,36 +29,33 @@ session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
 updated:      2026-10-10, audit re-run against the 15-state chain: done -> playTests[1.0.0]
 protocols_read_sha: 730ee92b2ee520dd415b7fd71180b3b859538aac
 ---
-
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
-Read by a sweep across every mod, rather than by asking each thread in turn. It lives at the
-root, never inside `Mod/`, so Steam never receives it. Dropped here by the sweep of 2026-09-12 and
-held since by this mod's thread, which updates it in the commit that changes what it describes.
+Read by sweep across every mod, not by asking each thread in turn. Lives at root, never inside `Mod/`, so Steam never receives it. Dropped here by sweep of 2026-09-12, held since by this mod's thread, which updates it in commit that changes what it describes.
 
 ## Audit re-run — 2026-10-10 (15-state chain)
 
-Re-applied `../AUDIT.md` (read in full) and `WELCOME.md`, `AGENTS.md`, `PICKLE.md`, `GALLERY.md` at protocols HEAD `b4a73cf`. HEAD of this repository `5fb9999`. Working tree at entry: `Art/ModIcon.ico`, `Art/Preview.ico`, `Art/ModIcon-source.png` modified and `Art/ModIcon-signature-candidate.png` untracked (the owner's ModIcon work, left alone: sources are hers, AUDIT.md 2.a). `Mod/` is clean.
+Re-applied `../AUDIT.md` (read in full) and `WELCOME.md`, `AGENTS.md`, `PICKLE.md`, `GALLERY.md` at protocols HEAD `b4a73cf`. HEAD of this repository `5fb9999`. Working tree at entry: `Art/ModIcon.ico`, `Art/Preview.ico`, `Art/ModIcon-source.png` modified, `Art/ModIcon-signature-candidate.png` untracked (owner's ModIcon work, left alone: sources are hers, AUDIT.md 2.a). `Mod/` clean.
 
-**Old `done` -> `playTests[1.0.0]`** (AUDIT.md section 16 correspondence). The first transition that does not hold is `playTests` -> `shootGallery`; everything before it holds.
+**Old `done` -> `playTests[1.0.0]`** (AUDIT.md section 16 correspondence). First transition that does not hold: `playTests` -> `shootGallery`; everything before holds.
 
-- **Held, re-run today:** `scripts/Check-Patches.ps1` PASS (5 XML files, metadata, licence copies); `scripts/Check-Coats.ps1` all checks passed (the five Odyssey and five Endangered defNames still exist, no `alternateGraphics` conflict). Dependencies, settings (`not_applicable`) and localization (`not_applicable`, no owned text) rest on the 2026-09-13/28 audits; `Mod/` has not changed since.
-- **`playTests` evidence (8.c to 8.f, 8.j):** Pickle suites green on current logic: always-patched, with/without-odyssey, endangered, coats-v2 3/3, rare-odyssey, rare-plain-4 (see `docs/runs/`). No `@wip`. Every `@requires` has its pass. Scenario G not applicable (decided 2026-10-02). The red rare-plain was replayed alone and is green.
+- **Held, re-run today:** `scripts/Check-Patches.ps1` PASS (5 XML files, metadata, licence copies); `scripts/Check-Coats.ps1` all checks passed (five Odyssey and five Endangered defNames still exist, no `alternateGraphics` conflict). Dependencies, settings (`not_applicable`), localization (`not_applicable`, no owned text) rest on 2026-09-13/28 audits; `Mod/` unchanged since.
+- **`playTests` evidence (8.c to 8.f, 8.j):** Pickle suites green on current logic: always-patched, with/without-odyssey, endangered, coats-v2 3/3, rare-odyssey, rare-plain-4 (see `docs/runs/`). No `@wip`. Every `@requires` has pass. Scenario G not applicable (decided 2026-10-02). Red rare-plain replayed alone, green.
 - **Not met yet (in `remaining`):** 8.i (UI and log in EN/FR, new game and save), 8.m (code review, `code_review_sha` absent), 8.l (`tested_on` empty). Missing checks, not defects.
-- **Gallery (`shootGallery`, next state):** `gallery.feature` is written and uses existing steps (`spawned around`, `is given coat K`, `studio presentation mode`); never played. `Art/Gallery/` holds only `0-preview.png`.
+- **Gallery (`shootGallery`, next state):** `gallery.feature` written, uses existing steps (`spawned around`, `is given coat K`, `studio presentation mode`); never played. `Art/Gallery/` holds only `0-preview.png`.
 - **Lint:** four WARN at entry (retired `stage` field, old `done` vocabulary, `protocols_read_sha` missing, 43 KB). Fixed: `stage` deleted, vocabulary replaced, `protocols_read_sha` written by `Mark-ProtocolsRead.ps1`, dated sections folded into `docs/runs/status-history-2026-09-to-10-02.md`.
-- Registered with the Ticket Manager (`-Owner local_e26bc266-36d6-4bee-9097-818839c11467`). No image generated, no test invented, nothing published.
+- Registered with Ticket Manager (`-Owner local_e26bc266-36d6-4bee-9097-818839c11467`). No image generated, no test invented, nothing published.
 
-Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` feature | defect | unverified; `dependencies` declared | to check | none. The state chain and its criteria live in `../AUDIT.md`.
+Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` feature | defect | unverified; `dependencies` declared | to check | none. State chain and criteria live in `../AUDIT.md`.
 
 ## Gallery table (candidates, 2026-10-12)
 
 | Index | File | Subject | State |
 |---|---|---|---|
-| 0 | `0-preview.png` | Preview copy | stale until ModIcon derivatives are regenerated |
+| 0 | `0-preview.png` | Preview copy | stale until ModIcon derivatives regenerated |
 | 1 | `1-kangaroos.png` | 3 kangaroos, 3 coats, flower garden | accepted by Virginie 2026-10-12, 1.0 MB |
 | 2 | `2-candidate-poodles.png` | 4 poodles, 4 coats, flower garden | candidate, frame 2.5 (run a816, gallery-11), 0.9 MB; session verdict: accept |
 | 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
 | 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
 
-Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on an undefined step (the animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed an empty frame, tiny scattered animals, and the bed and cube in frame.
+Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on undefined step (animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed empty frame, tiny scattered animals, bed and cube in frame.
