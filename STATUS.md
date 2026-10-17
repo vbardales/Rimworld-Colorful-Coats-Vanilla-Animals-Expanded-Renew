@@ -25,9 +25,9 @@ remaining:
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
 social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
-session:      local_e26bc266-36d6-4bee-9097-818839c11467
+session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
 updated:      2026-10-10, audit re-run against the 15-state chain: done -> playTests[1.0.0]
-protocols_read_sha: 7bafac79376f69b0ecc5d31de811aef4f53a9987
+protocols_read_sha: 730ee92b2ee520dd415b7fd71180b3b859538aac
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
