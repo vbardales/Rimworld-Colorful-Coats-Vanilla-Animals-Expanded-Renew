@@ -1,0 +1,7 @@
+# Pass: the load of the mod read from Player.log (AUDIT.md 8.i). Vanilla Animals Expanded and its Endangered
+# pack, so all four patch files are read by the game; Odyssey stays at its default for the machine.
+# Select with -DepMap wsl-deps.loadaudit.map, filter 'loadaudit'.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
+VanillaExpanded.VAEEndAndExt 2366589898
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod
