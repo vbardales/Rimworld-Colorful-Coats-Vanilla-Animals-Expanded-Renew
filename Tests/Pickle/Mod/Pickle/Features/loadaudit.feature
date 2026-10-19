@@ -7,3 +7,6 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew loads cleanly
 
   Scenario: the mod loads with no error, warning or missing definition
     Then Nelim's Pickle Tools: the load of the mod "nelim.colorfulcoats.vae" is clean
+
+  Scenario: the mod list entry has its name, a description and a preview image
+    Then Nelim's Pickle Tools: the mod list entry of the mod "nelim.colorfulcoats.vae" has the name "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)", a description and a preview image that loaded
