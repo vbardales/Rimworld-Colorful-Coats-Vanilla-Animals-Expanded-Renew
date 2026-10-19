@@ -15,7 +15,7 @@ licence_at:   Steam description, public profile, local original files, GitHub re
 upstream_mod_remotes: N/A
 dependencies: declared
 showcase:     complete
-tested_on:
+tested_on:    "RimWorld 1.6, kept proofs in Tests/Pickle/Evidence (Mod/ defs, patches and textures unchanged since 2026-09-11; later Mod/ commits touch About text and images only): 2026-09-28 odyssey-v2 2/2, endangered-v2 1/1, no-odyssey-v2 1/1, rare-odyssey; 2026-10-02 coats-v2 3/3, rare-plain-4; 2026-10-18 loadaudit-2 1/1 (ticket 20261017-215813-717-6411); all green, English; see docs/runs/2026-10-19.md. Scenario G not applicable"
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
   - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; all three candidates 2 to 4 played at frame 2 or 2.5 (runs a816, f048; 1.5 refused by the game, camera bounded at 2) and judged accept by the session), from run a16a (4/4 passed, exitReason passed, commit 4e1e1e9 era; evidence folder deleted 2026-10-19, captures live in Art/Gallery), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
