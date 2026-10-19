@@ -18,8 +18,8 @@ showcase:     complete
 tested_on:
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; all three candidates 2 to 4 played at frame 2 or 2.5 (runs a816, f048; 1.5 refused by the game, camera bounded at 2) and judged accept by the session), from run a16a (gallery-8, 4/4 passed, exitReason passed, commit 4e1e1e9 era), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
-  - unverified: 8.i: load log read by ticket 20261017-215813-717-6411 (loadaudit.feature, English, refiled 2026-10-17 after 815b died with no report, launcher exit 3; awaiting RUN_DONE); mod-list entry (scenario L) has no scenario, only offline check and image look
+  - feature: gallery: four candidates in Art/Gallery (1-kangaroos accepted 2026-10-12; all three candidates 2 to 4 played at frame 2 or 2.5 (runs a816, f048; 1.5 refused by the game, camera bounded at 2) and judged accept by the session), from run a16a (4/4 passed, exitReason passed, commit 4e1e1e9 era; evidence folder deleted 2026-10-19, captures live in Art/Gallery), each opened and looked at 2026-10-12; waiting for the owner to accept (drop "candidate"), refuse or reorder; cats are small in frame, a closer zoom is the likely redo
+  - unverified: 8.i: load log read by ticket 20261017-215813-717-6411, green 2026-10-18 (loadaudit.feature, 1/1 passed, proof kept in Tests/Pickle/Evidence/loadaudit-2); mod-list entry (scenario L) has no scenario, only offline check and image look
   - feature: gallery scenarios polish (TM relay of Audit rule 2026-10-18, not started): per shot and transition refine clothes, hair, tattoos, weapons, other-mod objects, animals, plants, props, buildings; Nelim as protagonist, StageDecor props, facing front; look first in PickleTools/ColonistRace/docs CATALOGUE-*, FACE-PARTS, GALLERY-PROPS.md; research via scripts/SEARCHING.md; release rules AGENTS.md 9a, 9b; then run Mark-ProtocolsRead and ack TM one line
   - unverified: non-regression of the whole suite on the final revision, deposited last, after commit and deploy (AUDIT.md, Passes Pickle, ordering)
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
@@ -55,8 +55,8 @@ Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` 
 |---|---|---|---|
 | 0 | `0-preview.png` | Preview copy | stale until ModIcon derivatives regenerated |
 | 1 | `1-kangaroos.png` | 3 kangaroos, 3 coats, flower garden | accepted by Virginie 2026-10-12, 1.0 MB |
-| 2 | `2-candidate-poodles.png` | 4 poodles, 4 coats, flower garden | candidate, frame 2.5 (run a816, gallery-11), 0.9 MB; session verdict: accept |
-| 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
-| 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, frame 2 (run f048, gallery-13), session verdict: accept |
+| 2 | `2-candidate-poodles.png` | 4 poodles, 4 coats, flower garden | candidate, frame 2.5 (run a816), 0.9 MB; session verdict: accept |
+| 3 | `3-candidate-red-pandas.png` | 3 red pandas, 3 coats | candidate, frame 2 (run f048), session verdict: accept |
+| 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, frame 2 (run f048), session verdict: accept |
 
 Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on undefined step (animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed empty frame, tiny scattered animals, bed and cube in frame.
