@@ -29,7 +29,7 @@ code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
 session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
 updated:      2026-10-17, code review 8.m done (Mod/ XML + textures, no defect)
-protocols_read_sha: 114fdced85a80e9c17840fdb561a63e48e587579
+protocols_read_sha: 1d2ae9ae29d98d9166f388f0d6a05136bcd8f98d
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
