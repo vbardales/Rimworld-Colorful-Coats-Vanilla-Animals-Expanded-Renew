@@ -26,7 +26,7 @@ remaining:
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
-social_preview_sha256: a523be2d6f2573e1cf63b8b1c10ebb94094440542aa57651774c351b3289db07
+social_preview_sha256: f6302df9fb8c2afae8da1ade4281cd1748274fc356658997f5a1919a2fb40548
 session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
 updated:      2026-10-17, code review 8.m done (Mod/ XML + textures, no defect)
 protocols_read_sha: c94c7bd9c6954f001038a6202ae288fd8c078915
