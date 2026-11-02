@@ -28,7 +28,7 @@ remaining:
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: f6302df9fb8c2afae8da1ade4281cd1748274fc356658997f5a1919a2fb40548
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-02, replay-audit: scripts/ retired, docs and LOCAL_SCRIPTS rows aligned; stage unchanged
+updated:      2026-11-02, Check-Coats.ps1 restored to Tests/ (mod values no shared check holds), Check-Patches dropped (Check-ModBasics covers XML, identity, licence copies)
 protocols_read_sha: 14d0bd9d513c1ba510a8e0edab250e360c87faac
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
