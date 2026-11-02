@@ -100,7 +100,7 @@ the folder that always loads:
 `LoadFolders.xml` loads the second folder only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because
 those five became Ludeon's animals with that expansion. So with Odyssey the guard matched, the
 operations ran, and five of them found nothing. `Patches/ColorfulCoats_VAEodyssey.xml` is the
-answer; `scripts/Check-Coats.ps1` is what asked the question, and asks it again on demand.
+answer; the retired `scripts/Check-Coats.ps1` is what asked the question.
 
 **The two fields still exist under those names.** Verified by reflection against the 1.6
 `Assembly-CSharp.dll`:
@@ -151,11 +151,10 @@ Mod/          published — the junction into RimWorld/Mods points here
   Patches/
   Textures/
 Art/          the showcase sources: icon and Preview sources, echo.png, Preview.config.json (read by the shared Preview renderer), the .ico files, Gallery/
-scripts/       Check-Coats.ps1, the five checks that need no game
 ```
 
-Everything outside `Mod/` — this file, the changelog, the attribution, the scenarios, `Art/` and
-`scripts/` — stays out of the Steam upload by construction. `SteamUGC.SetItemContent` takes the
+Everything outside `Mod/` — this file, the changelog, the attribution, the scenarios and `Art/`
+— stays out of the Steam upload by construction. `SteamUGC.SetItemContent` takes the
 junction's target directory as it stands on disk, with no filtering.
 
 ## Credit and removal

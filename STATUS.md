@@ -27,8 +27,8 @@ remaining:
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: f6302df9fb8c2afae8da1ade4281cd1748274fc356658997f5a1919a2fb40548
-session:      local_fce6650a-8fe1-40de-bce1-88db3b30cf8f
-updated:      2026-10-17, code review 8.m done (Mod/ XML + textures, no defect)
+session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
+updated:      2026-11-02, replay-audit: scripts/ retired, docs and LOCAL_SCRIPTS rows aligned; stage unchanged
 protocols_read_sha: 14d0bd9d513c1ba510a8e0edab250e360c87faac
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status

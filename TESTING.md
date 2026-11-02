@@ -47,10 +47,10 @@ and green, or listed not applicable with reason. State on 2026-09-28, nothing ye
 | B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first, shih tzu last. |
 | C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries 5% coat. `rare-tiger-plain`: 100 on new colony (NewColony, map 150) since 2026-10-02; fixture save does not play without Odyssey (red 2026-10-01 at save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
 | D Endangered | Automated, written | `endangered.feature`; guard name proven by animals being patched. |
-| E 74 coats, three rotations | Offline plus `@review` | `Check-Coats.ps1` proves every rotation file ships; north view is capture a person looks at. |
+| E 74 coats, three rotations | Offline plus `@review` | The retired `Check-Coats.ps1` (scripts/ removed, commit 1a505e7) proved every rotation file ships on 2026-09-12; the shared `Check-ModBasics.ps1` and the Pickle features now cover it; north view is capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
 | G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in other Colorful Coats ports: existing animals recolour on adding, revert on removing; nothing stored in save; game's reaction to missing mod not ours. |
-| H no Vanilla Animals Expanded | Not applicable | Warning is game's reaction to declaration; declaration checked in sources (`Check-Patches.ps1`). |
+| H no Vanilla Animals Expanded | Not applicable | Warning is game's reaction to declaration; declaration checked in sources (`Check-ModBasics.ps1`). |
 | I, J legacy modules | Not applicable | Both target 1.3, cannot load on 1.6. |
 | K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` checked in sources. |
 | L mod list entry | Offline plus a look | Name and metadata checked offline; banner and icon inspected as images. |
@@ -60,18 +60,14 @@ Written is not run: none of this a pass until passes return green.
 
 ## What is settled before the game starts
 
-Run `powershell -File scripts/Check-Patches.ps1` for standalone XML and metadata checks:
+The shared `Check-ModBasics.ps1` (run from the protocols repository) does the standalone XML and metadata checks; `scripts/Check-Patches.ps1` and `scripts/Check-Coats.ps1` were retired with `scripts/` (commit 1a505e7):
 parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
 unofficial suffix, GitHub description link, dependency, identical licence copies.
 This and Check-Coats passed on 2026-09-12, no installed-target checks skipped.
 Checks do not execute RimWorld's patch engine or replace scenarios A–M.
 
-`scripts/Check-Coats.ps1` answers five questions needing no running RimWorld, exits
-non-zero naming file or animal on failure:
-
-```
-powershell -File scripts/Check-Coats.ps1
-```
+The retired `scripts/Check-Coats.ps1` answered five questions needing no running RimWorld, exiting
+non-zero naming file or animal on failure. Its five questions:
 
 1. Every `texPath` has its three rotation files shipped.
 2. Every shipped texture referenced by some `texPath`.
@@ -442,6 +438,6 @@ operation, no visible error** — only animals quietly stopped having coats. Sce
 and D exist because nothing else would ever tell us.
 
 One did get caught, though, worth saying which: five animals Odyssey took
-over found by `scripts/Check-Coats.ps1`, not in game. Reading target's `LoadFolders.xml`
+over found by the retired `scripts/Check-Coats.ps1`, not in game. Reading target's `LoadFolders.xml`
 cheap, nobody would ever have noticed tiger by playing — rarity at `0.05` looks
 exactly same whether rare or absent.
