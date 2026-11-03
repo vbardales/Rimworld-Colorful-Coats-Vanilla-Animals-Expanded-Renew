@@ -36,7 +36,9 @@
   },
   "backgroundFile": "Preview-source.png",
   "echo": {
-    "file": "echo-source.png"
+    "file": "echo-source.png",
+    "panelMaxHeight": 45,
+    "panelMaxWidth": 22
   },
   "icon": {
     "file": "ModIcon-source.png"
