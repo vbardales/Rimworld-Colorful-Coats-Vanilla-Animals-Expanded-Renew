@@ -47,7 +47,7 @@ and green, or listed not applicable with reason. State on 2026-09-28, nothing ye
 | B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first, shih tzu last. |
 | C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries 5% coat. `rare-tiger-plain`: 100 on new colony (NewColony, map 150) since 2026-10-02; fixture save does not play without Odyssey (red 2026-10-01 at save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
 | D Endangered | Automated, written | `endangered.feature`; guard name proven by animals being patched. |
-| E 74 coats, three rotations | Offline plus `@review` | `Tests/Check-Coats.ps1` proves every rotation file ships on 2026-09-12; the shared `Check-ModBasics.ps1` and the Pickle features now cover it; north view is capture a person looks at. |
+| E 74 coats, three rotations | Offline plus `@review` | `Check-Textures.ps1` proves every rotation file ships (2026-11-06); the shared `Check-ModBasics.ps1` and the Pickle features now cover it; north view is capture a person looks at. |
 | F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
 | G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in other Colorful Coats ports: existing animals recolour on adding, revert on removing; nothing stored in save; game's reaction to missing mod not ours. |
 | H no Vanilla Animals Expanded | Not applicable | Warning is game's reaction to declaration; declaration checked in sources (`Check-ModBasics.ps1`). |
@@ -60,25 +60,24 @@ Written is not run: none of this a pass until passes return green.
 
 ## What is settled before the game starts
 
-The shared `Check-ModBasics.ps1` (run from the protocols repository) does the standalone XML and metadata checks; `scripts/Check-Patches.ps1` was retired with `scripts/` (commit 1a505e7), `Check-Coats.ps1` moved to `Tests/`:
+The shared `Check-ModBasics.ps1` (run from the protocols repository) does the standalone XML and metadata checks; `scripts/Check-Patches.ps1` was retired with `scripts/` (commit 1a505e7), its coat checks are now the shared `Check-Textures.ps1`, `Check-PatchTargets.ps1` and `Check-AlternateGraphics.ps1`, plus `Tests/Rule-OwnValues.ps1` (2026-11-06):
 parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
 unofficial suffix, GitHub description link, dependency, identical licence copies.
-This and Check-Coats passed on 2026-09-12, no installed-target checks skipped.
+The old `Check-Coats.ps1` passed on 2026-09-12, no installed-target checks skipped; the shared checks and `Rule-OwnValues.ps1` passed on 2026-11-06 (Check-PatchTargets skips 16 operations whose VAE module is not installed).
 Checks do not execute RimWorld's patch engine or replace scenarios A–M.
 
-`Tests/Check-Coats.ps1` answers five questions needing no running RimWorld, exiting non-zero naming file or animal on failure (`powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Check-Coats.ps1`). Its five questions:
+Five questions need no running RimWorld. Shared checks answer four (run from the protocols repository with `-ModRoot`):
 
-1. Every `texPath` has its three rotation files shipped.
-2. Every shipped texture referenced by some `texPath`.
-3. Every defName still exists in owning mod, with no `alternateGraphics` of its own —
-   and, separately, whether it exists **only** in conditionally loaded folder.
-4. 16 animals patched twice carry same chance and same coats in both files, which
-   makes scenario J harmless.
-5. Five animals of Odyssey file get same coats and chances as `AEXP_`
-   counterparts, matched on coat lists since defNames deliberately differ.
+1. Every `texPath` has its three rotation files shipped, and every shipped texture is referenced (`Check-Textures.ps1`).
+2. Every defName still exists in its owning mod (`Check-PatchTargets.ps1`).
+3. No target animal carries `alternateGraphics` of its own, and a chance has a list (`Check-AlternateGraphics.ps1`).
 
-Also counts sequenced operations carrying `<success>Always</success>`, since shape of
-those three files depends on all 51 having it.
+`Tests/Rule-OwnValues.ps1 -ModRoot .` holds what only this mod knows (exit 1 naming file or animal):
+
+4. 16 animals patched twice carry same chance and same coats in both files, which makes scenario J harmless.
+5. Five animals of Odyssey file get same coats and chances as `AEXP_` counterparts, matched on coat lists since defNames deliberately differ.
+
+It also checks that every sequenced operation carries `<success>Always</success>`.
 
 Run 2026-09-11 and again 2026-09-12, same result: 74 coats, 222 textures, nothing missing,
 nothing orphaned, all 51 flagged, all 40 defNames present across three targets, no
@@ -437,6 +436,6 @@ operation, no visible error** — only animals quietly stopped having coats. Sce
 and D exist because nothing else would ever tell us.
 
 One did get caught, though, worth saying which: five animals Odyssey took
-over found by `Tests/Check-Coats.ps1`, not in game. Reading target's `LoadFolders.xml`
+over found by the offline coat check (now `Check-PatchTargets.ps1`), not in game. Reading target's `LoadFolders.xml`
 cheap, nobody would ever have noticed tiger by playing — rarity at `0.05` looks
 exactly same whether rare or absent.
