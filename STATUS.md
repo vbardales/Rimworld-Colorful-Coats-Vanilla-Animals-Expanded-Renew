@@ -28,8 +28,8 @@ remaining:
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: f6302df9fb8c2afae8da1ade4281cd1748274fc356658997f5a1919a2fb40548
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-02, Check-Coats.ps1 restored to Tests/ (mod values no shared check holds), Check-Patches dropped (Check-ModBasics covers XML, identity, licence copies)
-protocols_read_sha: 014c74a804b7cbfdc5fc105210e9c31037c24a95
+updated:      2026-11-06, Preview re-rendered (migrated Art/Preview.config.json, automatic title fit 35 px, echo beside the title, no clipping, looked at); social_preview_sha256 stale until Virginie uploads the new Preview.png; Check-Coats.ps1 stays in Tests/ (SHARE row of the 2026-11-04 review: Check-AlternateGraphics shared exists, conversion to Rule-OwnValues.ps1 not done yet)
+protocols_read_sha: 4e6d7b694f3ae899b26ec15b743228a30a7dd519
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
