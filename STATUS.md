@@ -32,7 +32,7 @@ code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_372522c2-0e0b-47d6-a482-b41a0acb0460
 updated:      2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
-protocols_read_sha: af61b7d9c0729dbcdfbffc3847e62b1adfaef855
+protocols_read_sha: f7592aa80bf9af62b5743df4685935b6ff26d48c
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
