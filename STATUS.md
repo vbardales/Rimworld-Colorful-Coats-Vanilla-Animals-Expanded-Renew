@@ -88,7 +88,7 @@ Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" on
 | Red pandas (AEXP_RedPanda), anonymous | 3 | none | n/a | wild, not covered by the rule |
 | Bengal cats (AEXP_CatBengal), anonymous | 4 | none | n/a | outside NSB, domestic: outside NSB, domestic, validated by Virginie 2026-11-06 (same words, covers poodles and Bengal cats for this mod) |
 
-Third run, 2026-11-06 (`sync-nsb`, rule 5 of 2026-11-06): `git log --since=2026-11-06 -- Docs` in NSB is empty, nothing changed there; `CATALOGUE-ANIMAUX.md` re-read: the only NSB animal the mod recolours is Tama (Norwegian Forest Cat, `AEXP_CatNorwegianForest`, free to use). Rule 5 gap found: the mod patches 40 PawnKindDefs, only poodle, kangaroo, red panda and Bengal cat have a shot. Rows below are a PROPOSAL (shots 5 to 9, grouped by habitat, wild ones are decor and need no question); not written into the shotlist or any scenario yet. Domestic animals outside NSB (4 dogs, 8 cats): validated by Virginie 2026-11-06 ("2. oui").
+Third run, 2026-11-06 (`sync-nsb`, rule 5 of 2026-11-06): `git log --since=2026-11-06 -- Docs` in NSB is empty, nothing changed there; `CATALOGUE-ANIMAUX.md` re-read: the only NSB animal the mod recolours is none: Tama is a Let's Have a Cat! cat (`akaNEKO_N_Forest_Cat`), not an animal this mod recolours (corrected after a read of `TAMA-PROFIL.md`). Rule 5 gap found: the mod patches 40 PawnKindDefs, only poodle, kangaroo, red panda and Bengal cat have a shot. Rows below are a PROPOSAL (shots 5 to 9, grouped by habitat, wild ones are decor and need no question); not written into the shotlist or any scenario yet. Domestic animals outside NSB (4 dogs, 8 cats): validated by Virginie 2026-11-06 ("2. oui").
 
 | Included animal (PawnKindDef) | Shot | Domestic outside NSB |
 |---|---|---|
@@ -101,7 +101,7 @@ Third run, 2026-11-06 (`sync-nsb`, rule 5 of 2026-11-06): `git log --since=2026-
 | Moa, Rockhopper penguin | MISSING, proposed shot 7 (birds) | wild |
 | Chihuahua, Great Dane, Rottweiler, Shih Tzu | MISSING, proposed shot 8 (dogs) | validated by Virginie 2026-11-06 ("2. oui", answer to: may I use the 4 dogs and 8 cats outside NSB, Chihuahua, Great Dane, Rottweiler, Shih Tzu) |
 | British Shorthair, Maine Coon, Munchkin, Norwegian, Persian, Siamese, Somali, Sphynx | MISSING, proposed shot 9 (cats) | validated by Virginie 2026-11-06 ("2. oui", same answer, covers the 8 cats listed) |
-| Norwegian Forest Cat (Tama, NSB) | MISSING, proposed shot 9 | none, in NSB |
+| Norwegian Forest Cat (`AEXP_CatNorwegianForest`) | MISSING, proposed shot 9 | validated 2026-11-06 ("2. oui"); NOT Tama: her def is `akaNEKO_N_Forest_Cat` (Let's Have a Cat!, per NSB `TAMA-PROFIL.md`), she cannot wear our coats |
 
 Tribe read: 2026-11-06 (animals catalogue; Nelim's profile and `VALIDE.md` re-read at the fourth run).
 
