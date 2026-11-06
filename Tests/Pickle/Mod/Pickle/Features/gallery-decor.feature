@@ -28,8 +28,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-4" is given coat 2
-    And Nelim's Pickle Tools: "Nelim" stands next to "coat-1"
-    And Nelim's Pickle Tools: "Nelim" faces South
+    And Nelim's Pickle Tools: "Nelim" stands at (141, 70) facing South
     And Nelim's Pickle Tools: the animal "coat-1" faces South
     And Nelim's Pickle Tools: the animal "coat-2" faces South
     And Nelim's Pickle Tools: the animal "coat-3" faces West
@@ -48,8 +47,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
-    And Nelim's Pickle Tools: "Nelim" stands next to "coat-2"
-    And Nelim's Pickle Tools: "Nelim" faces South
+    And Nelim's Pickle Tools: "Nelim" stands at (178, 126) facing South
     And Nelim's Pickle Tools: the animal "coat-1" faces South
     And Nelim's Pickle Tools: the animal "coat-2" faces South
     And Nelim's Pickle Tools: the animal "coat-3" faces East
@@ -68,8 +66,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
-    And Nelim's Pickle Tools: "Nelim" stands next to "coat-1"
-    And Nelim's Pickle Tools: "Nelim" faces South
+    And Nelim's Pickle Tools: "Nelim" stands at (206, 115) facing South
     And Nelim's Pickle Tools: the animal "coat-1" faces South
     And Nelim's Pickle Tools: the animal "coat-2" faces West
     And Nelim's Pickle Tools: the animal "coat-3" faces South
