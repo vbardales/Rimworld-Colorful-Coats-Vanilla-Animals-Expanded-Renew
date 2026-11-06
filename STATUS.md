@@ -60,3 +60,26 @@ Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` 
 | 4 | `4-candidate-bengal-cats.png` | 3 Bengal cats, original and 2 coats | candidate, frame 2 (run f048), session verdict: accept |
 
 Run history: `20261011-203432-728-a16a` (gallery-8) green after gallery-6 crashed at startup (exit 139, SIGSEGV, no report), gallery-7 failed on undefined step (animal facing step lives in ColonistRace, now staged). Earlier runs 583e, a614, 59fb showed empty frame, tiny scattered animals, bed and cube in frame.
+
+## NSB
+
+First sync, 2026-11-06 (`sync-nsb`). NSB changed since the gallery was authored (2026-10-11/12): `Docs/EMBELLISSEMENT-LIEUX.md` (plan of 2026-11-04) adds decor to `flower-garden` (rose border along the statue path, two birches in the background; later pass: hydrangeas, lavender, lanterns, a silver tree), applied by NPT to the `Nelims-tribe` fixture. `calm-zone` stays free (shooting zones are kept bare); a new `calm-zone-close` frame exists. Nothing renamed or removed. Left alone: the two scenarios that use `flower-garden` (poodles, kangaroos) stay as played; if the owner wants them replayed on the embellished garden, that is a redo, not a fix. The mod uses no NSB colonist and no named NSB animal.
+
+Places read: 2026-11-06
+Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" only; roster and profiles not opened, no colonist used)
+
+| Place | Shots that use it | Changes made for the gallery | Last read |
+|---|---|---|---|
+| `flower-garden` (154, 105) | 1 poodles, 2 kangaroos | none by this mod; NSB plan adds roses and birches (may hide warm coats, check on replay) | 2026-11-06 |
+| `calm-zone` (200, 187), shot at (200, 185) | 3 red pandas, 4 Bengal cats | none | 2026-11-06 |
+
+| Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
+|---|---|---|---|---|
+| none (colonists sent to the map corner) | | | | none |
+
+| Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
+|---|---|---|---|---|
+| Poodles (AEXP_Poodle), anonymous | 1 | none | n/a | outside NSB, domestic: validation PENDING |
+| Kangaroos (AEXP_Kangaroo), anonymous | 2 | none | n/a | wild, not covered by the rule |
+| Red pandas (AEXP_RedPanda), anonymous | 3 | none | n/a | wild, not covered by the rule |
+| Bengal cats (AEXP_CatBengal), anonymous | 4 | none | n/a | outside NSB, domestic: validation PENDING (NSB alternative: Tama or Kuru, but they carry no coats of this mod) |
