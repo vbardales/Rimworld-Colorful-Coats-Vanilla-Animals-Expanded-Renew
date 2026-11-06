@@ -26,9 +26,9 @@ remaining:
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
-social_preview_sha256: f6302df9fb8c2afae8da1ade4281cd1748274fc356658997f5a1919a2fb40548
+social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); social_preview_sha256 stale until the new Preview.png is uploaded; Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
+updated:      2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
 protocols_read_sha: 4e6d7b694f3ae899b26ec15b743228a30a7dd519
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
