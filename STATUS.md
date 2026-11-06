@@ -79,7 +79,7 @@ Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" on
 
 | Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
 |---|---|---|---|---|
-| Nelim (NSB) | 2, 3, 4 (not 1: colonists sent to the map corner) | same outfit all three, same day: daily dress `LTS_Tunika` emerald `#1F7A5C` plus gold earrings `Apparel_PAESmallEarrings` (validated 2026-11-04, `VALIDE.md`); hair `Roo_HD_Hair_Highpony`, no hat | 2026-11-06 (`NELIM-PROFIL.md` top, `VALIDE.md`) | mouth: canon is `MouthLipsSmirk`, the shotlist plays a smile (`face kit "smile"`) under the `GALLERY.md` rule of 2026-10-25 (smile on default scenes); no quoted owner words in chat for this mod: PENDING (rule 3, mouth is a roster property) |
+| Nelim (NSB) | 2, 3, 4 (not 1: colonists sent to the map corner) | same outfit all three, same day: daily dress `LTS_Tunika` emerald `#1F7A5C` plus gold earrings `Apparel_PAESmallEarrings` (validated 2026-11-04, `VALIDE.md`); hair `Roo_HD_Hair_Highpony`, no hat | 2026-11-06 (`NELIM-PROFIL.md` top, `VALIDE.md`) | mouth: canon is `MouthLipsSmirk`, the shotlist plays a smile (`face kit "smile"`) under the `GALLERY.md` rule of 2026-10-25 (smile on default scenes); no quoted owner words in chat for this mod: NSB answered 2026-11-06: no validated smile exists, the only validated mouth is `MouthLipsSmirk` (brows `BrowNormal`, lids `LidCheerful`, eyeballs `Swift`, `face is held neutral`, expression `normal`); scenes 2 to 4 play that set until Virginie says yes in chat; smile = PENDING her words (tell NSB if yes, it records it in `VALIDE.md`) |
 
 | Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
 |---|---|---|---|---|
