@@ -79,7 +79,7 @@ Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" on
 
 | Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
 |---|---|---|---|---|
-| Poodles (AEXP_Poodle), anonymous | 1 | none | n/a | outside NSB, domestic: validation PENDING |
+| Poodles (AEXP_Poodle), anonymous | 1 | none | n/a | outside NSB, domestic, validated by Virginie 2026-11-06: "ils font partie du mod, c'est ça ? donc j'accepte" (animals the mod recolours) |
 | Kangaroos (AEXP_Kangaroo), anonymous | 2 | none | n/a | wild, not covered by the rule |
 | Red pandas (AEXP_RedPanda), anonymous | 3 | none | n/a | wild, not covered by the rule |
-| Bengal cats (AEXP_CatBengal), anonymous | 4 | none | n/a | outside NSB, domestic: validation PENDING (NSB alternative: Tama or Kuru, but they carry no coats of this mod) |
+| Bengal cats (AEXP_CatBengal), anonymous | 4 | none | n/a | outside NSB, domestic: outside NSB, domestic, validated by Virginie 2026-11-06 (same words, covers poodles and Bengal cats for this mod) |
