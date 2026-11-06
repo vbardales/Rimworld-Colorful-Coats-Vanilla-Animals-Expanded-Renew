@@ -79,7 +79,7 @@ Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" on
 
 | Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
 |---|---|---|---|---|
-| none (colonists sent to the map corner) | | | | none |
+| Nelim (NSB) | 2, 3, 4 (not 1: colonists sent to the map corner) | same outfit all three, same day: daily dress `LTS_Tunika` emerald `#1F7A5C` plus gold earrings `Apparel_PAESmallEarrings` (validated 2026-11-04, `VALIDE.md`); hair `Roo_HD_Hair_Highpony`, no hat | 2026-11-06 (`NELIM-PROFIL.md` top, `VALIDE.md`) | mouth: canon is `MouthLipsSmirk`, the shotlist plays a smile (`face kit "smile"`) under the `GALLERY.md` rule of 2026-10-25 (smile on default scenes); no quoted owner words in chat for this mod: PENDING (rule 3, mouth is a roster property) |
 
 | Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
 |---|---|---|---|---|
@@ -103,7 +103,9 @@ Third run, 2026-11-06 (`sync-nsb`, rule 5 of 2026-11-06): `git log --since=2026-
 | British Shorthair, Maine Coon, Munchkin, Norwegian, Persian, Siamese, Somali, Sphynx | MISSING, proposed shot 9 (cats) | PENDING |
 | Norwegian Forest Cat (Tama, NSB) | MISSING, proposed shot 9 | none, in NSB |
 
-Tribe read: 2026-11-06 (animals catalogue only again; no colonist used).
+Tribe read: 2026-11-06 (animals catalogue; Nelim's profile and `VALIDE.md` re-read at the fourth run).
+
+Fourth run, 2026-11-06 (`sync-nsb`): `VALIDE.md` (changed 16:29) and `NELIM-PROFIL.md` (15:33) are newer than the third run. `VALIDE.md` still validates `cloister` (178,128), `hut` (141,72) and `ritual-hall` (206,117) with the decorated save, and now adds Shogun (labrador, not an animal of this mod). Ritual-hall validated version: six Yuran cushions facing an altar reliquary in the west, incense burner (208,121), brazier (204,118), original furniture kept. Nothing renamed or removed; the scene lines stand. Nelim now carries rows in the colonists table above (she was missing: scenes 2 to 4 use her). Open owner question under rule 3: the smile (canon mouth is `MouthLipsSmirk`).
 
 ## Shotlist (scenes 2, 3, 4 rewritten 2026-11-06, `write-shotlist 2, 3, 4`; scene 1 kangaroos accepted, unchanged)
 
