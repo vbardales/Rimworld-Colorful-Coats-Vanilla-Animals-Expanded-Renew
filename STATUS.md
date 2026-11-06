@@ -119,6 +119,26 @@ Story, "The coats afternoon": late afternoon into night at Nelim's Sanctuary. Ne
 
 Rule: a scene below 4 is reworked before it is played. Scenes 2 and 4 stay below 4 until the Nelim placement step is confirmed (ask NPT, owner rule 2026-10-25); no scenario for them before that.
 
+### Rewrite of scenes 2, 3, 4 after the refused captures (2026-11-06, `write-shotlist shots 2, 3, 4`; supersedes the tables above for these scenes)
+
+Why: run de2b captures refused (too wide, clutter, a panda outside the room, selection overlays in the hall, Nelim posed still, no gesture; `rate-gallery` plan 3.9, image 3.5, adequacy 3.4). Opus director pass done (one call); kept: tighter zoom, Nelim turned in profile and a different facing each scene (no more South every time), only standing animals except one sleeper in scene 4, scene 3 sentence moves the story, overlay risk named. Dropped: "she set the tea down" (no step to put tea on the table; instant is now the biscuit), napping poodle (lying sprite blurs the coat). Same outfit all three scenes (same day): `LTS_Tunika` emerald, gold hoops, `Roo_HD_Hair_Highpony`, smile by `"Nelim" face kit is "smile"`, no hat. Animals placed by cell, never spawned around. Light is the thread: 17h andon, 18h torches, 19h brazier.
+
+| Scene | a place, hour, weather | b decor | c living | d Nelim | e gesture, instant, how obtained | f composition | g sentence | j |
+|---|---|---|---|---|---|---|---|---|
+| 2 poodles | `hut`, 17h, Clear, game paused | tatamis, low Korean table (141,71), cushions, oil andon (in place, nothing added) | 4 poodles coats -1,0,1,2: (139,70) faces East, (143,70), (140,68), (142,68) face South (front view) | (141,70) faces West, emerald tunika, smile | holds out `Kibble` (`carries the item`); before: she took a biscuit, after: the nearest poodle takes it; obtained by carries + facings, no job | medium, camera centred on "Nelim" root size 4, poodles at both sides and in front, table behind | "the poodles came for the tea hour, no two match" | four coats side by side at about 4 cells each |
+| 3 red pandas | `cloister` (178,128), 18h, Clear | lit torch lamps along the boards, komainu, torii, ablution pavilion (in place) | 3 pandas coats 0,1,2: coat-1 (177,127) and coat-2 (176,127) face East, coat-3 (178,128) faces South (front view), all standing | (178,126) faces East in profile toward the shrine, smile | carries `RawBerries`; before: she came in from the garden, after: the pandas follow her to the shrine; obtained by carries + facings | medium-close, area (178,128) root size 3.5, one lit torch in the foreground | "the red pandas follow her to the shrine" | three coats on a wood floor |
+| 4 Bengal cats | `ritual-hall` (206,117), 19h, Clear (night falls, brazier is the light) | brazier (204,118) lit, cushions, incense burner (in place) | 3 cats (original, coats 0,1): coat-1 (205,114) faces East toward her, coat-2 (207,116) faces South, coat-3 lies (206,117) near the brazier (the sleeper, closing beat) | (206,114) faces West in profile, smile | carries `Milk`; before: she reached toward the nearest cat, after: it takes the milk; obtained by carries + facing a cat | close, camera frames the head of "Nelim" and "coat-1" at root size 3 | "the coats come in for the night" | two coats plus the sleeper, brazier glow |
+
+Series (k): one story "The coats afternoon", 16h kangaroos (wide, flower-garden, accepted, kept) then 17h offering, 18h walking, 19h settling for the night; wide, medium, medium-close, close; opening = place, closing = the sleeper by the brazier. ok.
+
+| Scene | Estimate | Main risk |
+|---|---|---|
+| 2 poodles | 4.5 | every cell is a guess, walkability unchecked (Nelim stood 1 cell off her ask last run); kibble in hand must show at root size 4 |
+| 3 red pandas | 4.5 | same cell risk; pandas small, root size 3.5 may crop the torch |
+| 4 Bengal cats | 4 | blue gathering-spot and ritual-spot overlays may show again: clear the selection first, else ask NPT (no step exists); cats must not sit on the brazier |
+
+Not yet written into the feature scenarios: the bodies in `gallery-decor.feature` are still the refused ones. When they are written the old captures `Tests/Pickle/Inbox/gallery-decor-3` scenes 2 to 4 are removed in the same commit (GALLERY.md, "Réécrire une scène supprime ses anciennes captures"). Rule 5 shots 5 to 9 are still a proposal, domestic animals pending Virginie's validation.
+
 ### Revision, validated places only (2026-11-06, after `SanctuaryBacklot/Docs/VALIDE.md`)
 
 Owner order: tickets only with validated place, colonists and animals. `VALIDE.md` (updated 2026-11-06) validates five places: `cloister`, `terrace`, `infirmary-pawns`, `hut` (2026-11-06), `ritual-hall` (2026-11-06). `flower-garden`, `water-garden`, `calm-zone` and `hearth-hall` are NOT validated. Ticket 20261106-043447-076-488b (old scenarios on `flower-garden` and `calm-zone`) was cancelled before it started. Scene 1 kangaroos (flower-garden, accepted capture) is not replayed. Nelim: appearance validated, daily outfit (`LTS_Tunika` emerald, gold hoops) validated, canon hair `Roo_HD_Hair_Highpony` (a ponytail is valid without a hat). Poodles and Bengal cats: validated by Virginie 2026-11-06 (see NSB). Red pandas: wild, not covered.
