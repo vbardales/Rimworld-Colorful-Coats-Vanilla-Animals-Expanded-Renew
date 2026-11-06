@@ -99,3 +99,15 @@ Story, "The coats afternoon": late afternoon into night at Nelim's Sanctuary. Ne
 | 4 Bengal cats | `hearth-hall` (181,115), 19h | Nelim by the fire, 3 cats (original, coats 0,1): "the coats come in for the night" | close, zoom 4, cats foreground at the hearth stones, Nelim off-centre, firelight | one cat faces Nelim, one the fire, one south toward the camera | hall fireplace (in place), `PlantPot` + `Plant_Daylily`; no extra brazier | she just reached toward the nearest cat | 3.5 | Nelim posture (sitting) has no existing step: stand beside instead; indoor light level |
 
 Rule: a scene below 4 is reworked before it is played. Scenes 2 and 4 stay below 4 until the Nelim placement step is confirmed (ask NPT, owner rule 2026-10-25); no scenario for them before that.
+
+### Revision, validated places only (2026-11-06, after `SanctuaryBacklot/Docs/VALIDE.md`)
+
+Owner order: tickets only with validated place, colonists and animals. `VALIDE.md` (updated 2026-11-06) validates five places: `cloister`, `terrace`, `infirmary-pawns`, `hut` (2026-11-06), `ritual-hall` (2026-11-06). `flower-garden`, `water-garden`, `calm-zone` and `hearth-hall` are NOT validated. Ticket 20261106-043447-076-488b (old scenarios on `flower-garden` and `calm-zone`) was cancelled before it started. Scene 1 kangaroos (flower-garden, accepted capture) is not replayed. Nelim: appearance validated, daily outfit (`LTS_Tunika` emerald, gold hoops) validated, canon hair `Roo_HD_Hair_Highpony` (a ponytail is valid without a hat). Poodles and Bengal cats: validated by Virginie 2026-11-06 (see NSB). Red pandas: wild, not covered.
+
+| Scene | Place (validated), hour | Change from the table above |
+|---|---|---|
+| 2 poodles | `hut`, 17h | same place; the hut now has its own decor (tatamis, low Korean table, cushions, oil andon): no `PlantPot`, no `TorchLamp` of ours; light is the andon |
+| 3 red pandas | `cloister` (178,128), zoom 4.5, 18h | replaces `water-garden`; torii, komainu, ablution pavilion; Nelim stands beside one of the cloister lamps (stone lanterns exist only in the decorated save) |
+| 4 Bengal cats | `ritual-hall` (206,117), 19h | replaces `hearth-hall`; brazier (204,118) lit, cushions facing the shrine; cats among the cushions, Nelim standing beside the brazier |
+
+Open before any ticket: the validated decorated save (`Nelims-tribe-decor-mods.rws`, map `wsl-deps.sanctuary-decor-mods.map`, 19 mods, loaded through a DecorBase test mod) is not in `Mod/Pickle/Fixtures` and `Nelims-tribe` is still the old undecorated Sanctuary: asked NSB and NPT how a mod gallery loads it. Nelim steps exist (NPT 2026-11-06): `"Nelim" stands at (x, z) facing <dir>`, `"Nelim" stands next to "<name>"`, `"Nelim" sits on the building "<stool def>" at (x, z)`; no step for sitting on the hut cushions, so Nelim stands. Estimates stay 3.5 / 4 / 3.5 until scenarios are written on the validated places and the save question is answered.
