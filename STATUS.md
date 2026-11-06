@@ -123,6 +123,8 @@ Rule: a scene below 4 is reworked before it is played. Scenes 2 and 4 stay below
 
 ### Rewrite of scenes 2, 3, 4 after the refused captures (2026-11-06, `write-shotlist shots 2, 3, 4`; supersedes the tables above for these scenes)
 
+Mouth (2026-11-06, NSB answer): the smile in the table below is NOT validated; until Virginie says yes the scenes play Nelim's validated face set (smirk) and the smile steps are not written.
+
 Why: run de2b captures refused (too wide, clutter, a panda outside the room, selection overlays in the hall, Nelim posed still, no gesture; `rate-gallery` plan 3.9, image 3.5, adequacy 3.4). Opus director pass done (one call); kept: tighter zoom, Nelim turned in profile and a different facing each scene (no more South every time), only standing animals except one sleeper in scene 4, scene 3 sentence moves the story, overlay risk named. Dropped: "she set the tea down" (no step to put tea on the table; instant is now the biscuit), napping poodle (lying sprite blurs the coat). Same outfit all three scenes (same day): `LTS_Tunika` emerald, gold hoops, `Roo_HD_Hair_Highpony`, smile by `"Nelim" face kit is "smile"`, no hat. Animals placed by cell, never spawned around. Light is the thread: 17h andon, 18h torches, 19h brazier.
 
 | Scene | a place, hour, weather | b decor | c living | d Nelim | e gesture, instant, how obtained | f composition | g sentence | j |
