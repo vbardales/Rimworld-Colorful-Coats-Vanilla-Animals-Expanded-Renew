@@ -55,3 +55,20 @@ Draft, plain text; replaced by the final `### 1.0.0` block at send time:
 Commit nothing by hand for the tag or release: the CI creates them after a successful upload.
 `Mod/About/PublishedFileId.txt` is already committed. Steam creates every item private; the owner
 switches it public herself.
+
+## Gallery subtitles
+
+Draft 2026-11-07, indexes as shot numbers. Shots 7 and 9 are still being recomposed; reindex with no gap before burning (the clean files are named by shot until then).
+
+| index | file | line |
+|---|---|---|
+| 1 | 1-kangaroos | Three kangaroos, three coats, one sunny garden. |
+| 2 | 2-poodles-tea-room | Tea time: four poodles, four coats. |
+| 3 | 3-red-pandas-cloister | Red pandas follow the berries to the shrine. |
+| 4 | 4-bengal-cats-ritual-hall | Bengal cats settle in for the night. |
+| 5 | 5-giants-plaza | Morning on the plaza: giants in new coats. |
+| 6 | 6-hunters-bridge | The hunters cross the bridge in file. |
+| 7 | 7-waterside-pond | The waterside folk queue on the bank. |
+| 8 | 8-barn-yard | Small visitors crowd around the kibble. |
+| 9 | 9-dogs-terrace | Noon on the terrace: five dogs, five coats. |
+| 10 | 10-cats-tea-room | Nine cats, nine coats, one cup of milk. |
