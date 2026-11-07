@@ -33,5 +33,6 @@ mingtuwuxiang.FishingDecorative 2981211719
 draegon.FishingDecoRetex 3256420234
 # Animal expansion the shots need: Endangered (black rhino, moa, rockhopper, pangolin, ferret; tickets 28ca and 0292 failed on "No animal PawnKindDef named AEXP_BlackRhino"). Badger, muskox, otter, walrus and tiger are Ludeon defs with Odyssey (plain names, patched by ColorfulCoats_VAEodyssey.xml), so the biome packs are not needed.
 VanillaExpanded.VAEEndAndExt 2366589898
-# Face kit "smile" needs Nals Facial Animation (ticket 0292: "Nals Facial Animation is not loaded").
+# Face kit "smile" needs Nals Facial Animation and the mouth MouthSmile of Vanilla Textures Expanded - [NL] Facial Animation (ticket db12: No mouth type MouthSmile; valid: MouthNormal).
 Nals.FacialAnimation 1635901197
+VanillaExpanded.VTEXE.FacialAnims 2816938779
