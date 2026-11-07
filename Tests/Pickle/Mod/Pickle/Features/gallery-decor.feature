@@ -10,13 +10,13 @@
 #   4. bengal-cats-ritual-hall: ritual-hall, 19h, close, frame (206, 116) at zoom 3. In place: six Yuran cushions, altar reliquary, incense burner, brazier alight. Added: Plant_Daylily (203, 115) fully grown, Plant_Daylily (209, 115) fully grown, TorchLamp (202, 122) lit. Nelim (206, 114) faces West, carries Milk.
 #        Animals: AEXP_CatBengal coat -1 (205, 114) East; AEXP_CatBengal coat 0 (207, 116) South; AEXP_CatBengal coat 1 (206, 117) asleep. Gesture and instant: holds out Milk in profile to the cat facing her, the second cat looks at the camera, the third sleeps by the brazier; before: she reached toward the nearest cat, after: it takes the milk. Obtained by the carried item, the facings and adjacent cells, no job. Says: the coats come in for the night, the last cat already asleep by the brazier.
 #   5. giants-plaza: statue-garden, 8h, medium-wide, frame (155, 99) at zoom 5. In place: statues, flower beds, stone paths. Added: TorchLamp (148, 97) unlit, Plant_Daylily (151, 101) fully grown, Plant_Daylily (158, 97) fully grown, Hay (152, 97). Nelim (152, 98) faces East, carries Hay.
-#        Animals: AEXP_Giraffe coat 0 (153, 99) West; AEXP_Giraffe coat -1 (150, 100) South; AEXP_BlackRhino coat 1 (156, 100) South; AEXP_Muskox coat 2 (159, 100) South; AEXP_Moa coat 3 (162, 99) South. Gesture and instant: holds Hay toward the giraffe one cell east of her, a stack of hay at her feet, the other giants wait in a row facing the camera; before: she crossed the plaza with the hay, after: the giraffe reaches the hay. Obtained by the carried item, the facings and adjacent cells, no job. Says: four giants and a moa wait their turn for Nelim's hay, the giraffe in two coats side by side.
+#        Animals: AEXP_Giraffe coat 0 (153, 99) West; AEXP_Giraffe coat -1 (150, 100) South; AEXP_BlackRhino coat 1 (156, 100) South; Muskox coat 2 (159, 100) South; AEXP_Moa coat 3 (162, 99) South. Gesture and instant: holds Hay toward the giraffe one cell east of her, a stack of hay at her feet, the other giants wait in a row facing the camera; before: she crossed the plaza with the hay, after: the giraffe reaches the hay. Obtained by the carried item, the facings and adjacent cells, no job. Says: four giants and a moa wait their turn for Nelim's hay, the giraffe in two coats side by side.
 #   6. hunters-bridge: river-bridge, 9h, medium, frame (137, 124) at zoom 5. In place: wooden bridge, river banks. Added: Plant_Daylily (132, 126) fully grown, Plant_Daylily (140, 126) fully grown, TorchLamp (133, 121) unlit, TorchLamp (139, 121) unlit, SculptureSmall (130, 124), Stool (130, 121), PlantPot_Bonsai (141, 121). Nelim (131, 122) faces East, carries Meat_Muffalo.
-#        Animals: AEXP_Tiger coat 0 (132, 123) West; AEXP_Tiger coat -1 (134, 124) West; AEXP_Jaguar coat 0 (136, 124) West; AEXP_Hyena coat 1 (138, 125) South; AEXP_MegaWolverine coat 0 (140, 124) West; AEXP_BlackBear coat 1 (142, 125) South. Gesture and instant: waits at the bridge end holding Meat_Muffalo, the tiger one cell away looks at it, the others queue behind it on the bridge; before: they crossed the bridge in file, after: the tiger takes the meat. Obtained by the carried item, the facings and adjacent cells, no job. Says: the hunters cross the bridge in file to Nelim, the tiger in two coats leads.
+#        Animals: Tiger coat 0 (132, 123) West; Tiger coat -1 (134, 124) West; AEXP_Jaguar coat 0 (136, 124) West; AEXP_Hyena coat 1 (138, 125) South; AEXP_MegaWolverine coat 0 (140, 124) West; AEXP_BlackBear coat 1 (142, 125) South. Gesture and instant: waits at the bridge end holding Meat_Muffalo, the tiger one cell away looks at it, the others queue behind it on the bridge; before: they crossed the bridge in file, after: the tiger takes the meat. Obtained by the carried item, the facings and adjacent cells, no job. Says: the hunters cross the bridge in file to Nelim, the tiger in two coats leads.
 #   7. waterside-pond: water-garden, 10h, medium, frame (168, 172) at zoom 5. In place: pond, lily pads, reeds, bank. Added: Plant_Daylily (164, 170) fully grown, Plant_Daylily (170, 170) fully grown, TorchLamp (162, 173) unlit. Nelim (163, 171) faces East, carries RawBerries.
-#        Animals: AEXP_Otter coat -1 (164, 172) West; AEXP_Otter coat 1 (166, 172) West; AEXP_Beaver coat 0 (168, 172) West; AEXP_Platypus coat 0 (170, 172) West; AEXP_RockhopperPenguin coat 2 (172, 172) West; AEXP_Walrus coat 1 (174, 173) West. Gesture and instant: stands on the bank holding RawBerries, the otter one cell away looks up at her, the others face her in a row on the bank, nothing in the water; before: she came down to the bank, after: the otter takes the berries. Obtained by the carried item, the facings and adjacent cells, no job. Says: the waterside folk queue on the bank, two otters one in each coat.
+#        Animals: Otter coat -1 (164, 172) West; Otter coat 1 (166, 172) West; AEXP_Beaver coat 0 (168, 172) West; AEXP_Platypus coat 0 (170, 172) West; AEXP_RockhopperPenguin coat 2 (172, 172) West; Walrus coat 1 (174, 173) West. Gesture and instant: stands on the bank holding RawBerries, the otter one cell away looks up at her, the others face her in a row on the bank, nothing in the water; before: she came down to the bank, after: the otter takes the berries. Obtained by the carried item, the facings and adjacent cells, no job. Says: the waterside folk queue on the bank, two otters one in each coat.
 #   8. barn-yard: barn, 11h, close, frame (196, 236) at zoom 4. In place: barn, hay, wooden posts. Added: Plant_Daylily (194, 239) fully grown, TorchLamp (192, 236) unlit, Hay (196, 239), EggBox (203, 239). Nelim (195, 236) faces East, carries Kibble.
-#        Animals: AEXP_Badger coat -1 (196, 237) West; AEXP_Badger coat 1 (197, 236) West; AEXP_Hedgehog coat 2 (196, 235) West; AEXP_Pangolin coat 0 (194, 237) East; AEXP_BlackFootedFerret coat 1 (194, 235) East; AEXP_Koala coat 1 (198, 237) West. Gesture and instant: crouch-height ring: she holds Kibble at the centre, five small animals within two cells face her, the badger in two coats side by side; before: they crept out of the hay, after: the badger sniffs the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: the small folk crowd around Nelim and the kibble, six animals in six coats.
+#        Animals: Badger coat -1 (196, 237) West; Badger coat 1 (197, 236) West; AEXP_Hedgehog coat 2 (196, 235) West; AEXP_Pangolin coat 0 (194, 237) East; AEXP_BlackFootedFerret coat 1 (194, 235) East; AEXP_Koala coat 1 (198, 237) West. Gesture and instant: crouch-height ring: she holds Kibble at the centre, five small animals within two cells face her, the badger in two coats side by side; before: they crept out of the hay, after: the badger sniffs the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: the small folk crowd around Nelim and the kibble, six animals in six coats.
 #   9. dogs-terrace: terrace, 12h, medium, frame (197, 123) at zoom 4.5. In place: covered terrace, wood floor, benches. Added: TorchLamp (194, 125) unlit, Plant_Daylily (194, 126) fully grown, Plant_Daylily (201, 126) fully grown, PlantPot_Bonsai (192, 122), SculptureSmall (203, 124), Stool (202, 121). Nelim (194, 122) faces East, carries Kibble.
 #        Animals: AEXP_Chihuahua coat -1 (196, 123) West; AEXP_Chihuahua coat 2 (197, 124) West; AEXP_GreatDane coat 0 (199, 123) West; AEXP_Rottweiler coat 0 (201, 123) West; AEXP_Shih-Tzu coat 0 (198, 125) South. Gesture and instant: holds out Kibble in profile, the Chihuahua one cell away looks at it, three dogs face her in a row, the Shih Tzu looks at the camera; before: the dogs ran in from the garden, after: the Chihuahua gets the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: noon on the terrace, five dogs in five coats and the smallest first.
 #   10. cats-tea-room: hut, 17h, close, frame (141, 71) at zoom 4.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (137, 72) fully grown, TorchLamp (145, 72) lit. Nelim (141, 70) faces West, carries Milk.
@@ -131,7 +131,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Giraffe" named "coat-1" is spawned at (153, 99)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Giraffe" named "coat-2" is spawned at (150, 100)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_BlackRhino" named "coat-3" is spawned at (156, 100)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Muskox" named "coat-4" is spawned at (159, 100)
+    And Nelim's Pickle Tools: an adult animal of kind "Muskox" named "coat-4" is spawned at (159, 100)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Moa" named "coat-5" is spawned at (162, 99)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat -1
@@ -163,8 +163,8 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: the hunters cross the bridge in file, each in its own coat
     Given I set the hour to 9
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Tiger" named "coat-1" is spawned at (132, 123)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Tiger" named "coat-2" is spawned at (134, 124)
+    And Nelim's Pickle Tools: an adult animal of kind "Tiger" named "coat-1" is spawned at (132, 123)
+    And Nelim's Pickle Tools: an adult animal of kind "Tiger" named "coat-2" is spawned at (134, 124)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Jaguar" named "coat-3" is spawned at (136, 124)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Hyena" named "coat-4" is spawned at (138, 125)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_MegaWolverine" named "coat-5" is spawned at (140, 124)
@@ -204,12 +204,12 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: six waterside visitors line up on the pond bank
     Given I set the hour to 10
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Otter" named "coat-1" is spawned at (164, 172)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Otter" named "coat-2" is spawned at (166, 172)
+    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-1" is spawned at (164, 172)
+    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-2" is spawned at (166, 172)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Beaver" named "coat-3" is spawned at (168, 172)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Platypus" named "coat-4" is spawned at (170, 172)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_RockhopperPenguin" named "coat-5" is spawned at (172, 172)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Walrus" named "coat-6" is spawned at (174, 173)
+    And Nelim's Pickle Tools: an adult animal of kind "Walrus" named "coat-6" is spawned at (174, 173)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 0
@@ -241,8 +241,8 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: six small visitors crowd around the kibble in the barn yard
     Given I set the hour to 11
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Badger" named "coat-1" is spawned at (196, 237)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Badger" named "coat-2" is spawned at (197, 236)
+    And Nelim's Pickle Tools: an adult animal of kind "Badger" named "coat-1" is spawned at (196, 237)
+    And Nelim's Pickle Tools: an adult animal of kind "Badger" named "coat-2" is spawned at (197, 236)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Hedgehog" named "coat-3" is spawned at (196, 235)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Pangolin" named "coat-4" is spawned at (194, 237)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_BlackFootedFerret" named "coat-5" is spawned at (194, 235)

@@ -31,14 +31,7 @@ KindSeal.DecorativePainting 3587440566
 AKN.Decorations 2755025925
 mingtuwuxiang.FishingDecorative 2981211719
 draegon.FishingDecoRetex 3256420234
-# Animal expansions the shots need (2026-11-07, tickets 28ca and 0292 failed on "No animal PawnKindDef named AEXP_BlackRhino/Tiger/Otter/Badger"): Endangered (black rhino, moa, rockhopper, pangolin, ferret), Tropical Rainforest (tiger), Boreal Forest (otter), Temperate Forest (badger), plus the other four biome packs the patches target. Workshop ids from Mod/About/OptionalCompat.xml.
+# Animal expansion the shots need: Endangered (black rhino, moa, rockhopper, pangolin, ferret; tickets 28ca and 0292 failed on "No animal PawnKindDef named AEXP_BlackRhino"). Badger, muskox, otter, walrus and tiger are Ludeon defs with Odyssey (plain names, patched by ColorfulCoats_VAEodyssey.xml), so the biome packs are not needed.
 VanillaExpanded.VAEEndAndExt 2366589898
-VanillaExpanded.VAEAS 1836900626
-VanillaExpanded.VAEAU 1963681588
-VanillaExpanded.VAEBF 1895364938
-VanillaExpanded.VAEIS 1895364782
-VanillaExpanded.VAET 1895364585
-VanillaExpanded.VAETF 2260502331
-VanillaExpanded.VAETR 1907283872
 # Face kit "smile" needs Nals Facial Animation (ticket 0292: "Nals Facial Animation is not loaded").
 Nals.FacialAnimation 1635901197
