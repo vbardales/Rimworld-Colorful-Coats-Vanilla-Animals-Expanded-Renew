@@ -32,7 +32,7 @@ code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_372522c2-0e0b-47d6-a482-b41a0acb0460
 updated:      2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
-protocols_read_sha: f7592aa80bf9af62b5743df4685935b6ff26d48c
+protocols_read_sha: fd1e6cb40431806204ab7cdf8cebebc09962ca5d
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
@@ -71,13 +71,18 @@ First sync, 2026-11-06 (`sync-nsb`). NSB changed since the gallery was authored 
 
 Second run, same day: no NSB doc changed since the first read (file dates 2026-11-05 or older); `wsl-deps.gallery.map` still matches what NSB uses (VAE, its core, the PickleTools steps, `nelim.sanctuarybacklot`); nothing to update.
 
-Places read: 2026-11-06
-Tribe read: 2026-11-06 (animals catalogue and "Qui une galerie peut utiliser" only; roster and profiles not opened, no colonist used)
+Places read: 2026-11-07
+Tribe read: 2026-11-07 (`VALIDE.md` in full, `CATALOGUE-ANIMAUX.md`, `SANCTUAIRE-LIEUX.md` places table; roster and individual profiles not opened, Nelim is the only colonist used and `VALIDE.md` holds her outfit)
+
+Fifth run, 2026-11-07 (`sync-nsb`, Check-Status `nsb-sync`): NSB commits since the fourth run only touch `VALIDE.md`, `SANCTUAIRE-LIEUX.md`, `AVANCEMENT.md`, `GALERIE.md`, `runs/`. `VALIDE.md` now validates, on the decorated save (photos 2e61, 8a0a, cd57): `flower-garden`, `water-garden`, `statue-garden`, `river-bridge`, `barn`, `pediatrics`, `infirmary`, `infirmary-animals`, plus the free zones (`calm-zone`, `calm-zone-close`, `bare-clearing`, `emerald-clearing`, `exhibition-zone`, `fishing-zone`, smileys, bamboo backdrops), on top of `cloister`, `terrace`, `hut`, `ritual-hall`, `infirmary-pawns`. `ritual-hall` frame in `VALIDE.md`: (206, 117) zoom 8 (the places table of `SANCTUAIRE-LIEUX` says (206, 119) zoom 6.5; `SanctuarySites` in code wins). Consequence for this mod: scene 1 (kangaroos, `flower-garden`) and the old water-garden and calm-zone options are usable again; nothing renamed or removed; the scene lines of 2 to 4 stand. NSB animals (Shogun, Yuki, Atticus, Rain, Kuru, Tama, Onigiri, Ottawa, Pecan, Ulysse, Ursule, Wren, Wrille, Xylo): none is an animal this mod recolours, so no animal row changes. Rule 5 gap unchanged (shots 5 to 9 proposed, none written). `GALLERY.md` of 2026-11-07 now demands each scene rated 5 by `rate-gallery` (b: no thin decor, g: story readable in the image) before any ticket, then `Check-ShotlistVsScenario.ps1`: the 4 to 4.5 estimates above no longer open a ticket; next step is `write-shotlist` rework, not a refile. `Mod/Pickle/Fixtures/Nelims-tribe` is still the old undecorated save (copy "at the end of the redecoration").
 
 | Place | Shots that use it | Changes made for the gallery | Last read |
 |---|---|---|---|
-| `flower-garden` (154, 105) | 1 poodles, 2 kangaroos | none by this mod; NSB plan adds roses and birches (may hide warm coats, check on replay) | 2026-11-06 |
-| `calm-zone` (200, 187), shot at (200, 185) | 3 red pandas, 4 Bengal cats | none | 2026-11-06 |
+| `flower-garden` (154, 110) zoom 10.5 | 1 kangaroos (accepted capture) | none by this mod; validated 2026-11-06, revalidated 2026-11-07 (photo 2e61); a replay now has the roses and birches | 2026-11-07 |
+| `cloister` (178, 128) zoom 4.5 | 3 red pandas | none | 2026-11-07 |
+| `hut` (141, 72) zoom 9 | 2 poodles | none | 2026-11-07 |
+| `ritual-hall` (206, 117) zoom 8 | 4 Bengal cats | none (overlay spots `PartySpot,RitualSpot` hidden by the existing Given, not yet played) | 2026-11-07 |
+| `calm-zone` (200, 187), `water-garden` (167, 173) | none now (old scenes, replaced) | none; both validated 2026-11-07, available as alternatives | 2026-11-07 |
 
 | Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
 |---|---|---|---|---|
