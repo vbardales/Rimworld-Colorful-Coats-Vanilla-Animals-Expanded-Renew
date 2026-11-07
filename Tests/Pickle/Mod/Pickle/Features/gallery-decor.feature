@@ -13,8 +13,8 @@
 #        Animals: AEXP_Giraffe coat 0 (153, 99) West; AEXP_Giraffe coat -1 (150, 100) South; AEXP_BlackRhino coat 1 (156, 100) South; Muskox coat 2 (159, 100) South; AEXP_Moa coat 3 (162, 99) South. Gesture and instant: holds Hay toward the giraffe one cell east of her, a stack of hay at her feet, the other giants wait in a row facing the camera; before: she crossed the plaza with the hay, after: the giraffe reaches the hay. Obtained by the carried item, the facings and adjacent cells, no job. Says: four giants and a moa wait their turn for Nelim's hay, the giraffe in two coats side by side.
 #   6. hunters-bridge: river-bridge, 9h, medium, frame (137, 124) at zoom 5. In place: wooden bridge, river banks. Added: Plant_Daylily (132, 126) fully grown, Plant_Daylily (141, 127) fully grown, TorchLamp (133, 121) unlit, TorchLamp (139, 121) unlit, SculptureSmall (130, 124), Stool (130, 121), PlantPot_Bonsai (141, 121). Nelim (131, 122) faces East, carries Meat_Muffalo.
 #        Animals: Tiger coat 0 (132, 123) West; Tiger coat -1 (134, 124) West; AEXP_Jaguar coat 0 (136, 124) West; AEXP_Hyena coat 1 (138, 125) South; AEXP_MegaWolverine coat 0 (140, 124) West; AEXP_BlackBear coat 1 (142, 125) South. Gesture and instant: waits at the bridge end holding Meat_Muffalo, the tiger one cell away looks at it, the others queue behind it on the bridge; before: they crossed the bridge in file, after: the tiger takes the meat. Obtained by the carried item, the facings and adjacent cells, no job. Says: the hunters cross the bridge in file to Nelim, the tiger in two coats leads.
-#   7. waterside-pond: water-garden, 10h, medium, frame (151, 171) at zoom 5. In place: pond, lily pads, reeds, bank. Added: Plant_Daylily (145, 169) fully grown, Plant_Daylily (155, 169) fully grown, TorchLamp (143, 173) unlit, Stool (147, 174), PlantPot_Bonsai (153, 174), SculptureSmall (150, 169), TorchLamp (158, 170) unlit. Nelim (144, 170) faces East, carries RawBerries.
-#        Animals: Otter coat -1 (146, 171) West; Otter coat 1 (148, 171) West; AEXP_Beaver coat 0 (150, 171) West; AEXP_Platypus coat 0 (152, 171) West; AEXP_RockhopperPenguin coat 2 (154, 171) West; Walrus coat 1 (156, 172) West. Gesture and instant: stands on the bank holding RawBerries, the otter one cell away looks up at her, the others face her in a row on the bank, nothing in the water; before: she came down to the bank, after: the otter takes the berries. Obtained by the carried item, the facings and adjacent cells, no job. Says: the waterside folk queue on the bank, two otters one in each coat.
+#   7. waterside-pond: water-garden, 10h, medium, frame (150, 169) at zoom 3.5. In place: pond, lily pads, reeds, bank. Added: Plant_Daylily (145, 168) fully grown, Plant_Daylily (155, 168) fully grown, TorchLamp (144, 172) unlit, Stool (147, 172), PlantPot_Bonsai (153, 172), SculptureSmall (150, 167), TorchLamp (156, 169) unlit. Nelim (145, 169) faces East, carries RawBerries.
+#        Animals: Otter coat -1 (146, 170) West; Otter coat 1 (148, 170) West; AEXP_Beaver coat 0 (150, 170) West; AEXP_Platypus coat 0 (152, 170) West; AEXP_RockhopperPenguin coat 2 (154, 170) West; Walrus coat 1 (155, 171) West. Gesture and instant: stands on the bank holding RawBerries, the otter one cell away looks up at her, the others face her in a row on the bank, nothing in the water; before: she came down to the bank, after: the otter takes the berries. Obtained by the carried item, the facings and adjacent cells, no job. Says: the waterside folk queue on the bank, two otters one in each coat.
 #   8. barn-yard: barn, 11h, close, frame (196, 236) at zoom 4. In place: barn, hay, wooden posts. Added: Plant_Daylily (194, 239) fully grown, TorchLamp (192, 236) unlit, Hay (196, 239), EggBox (203, 239). Nelim (195, 236) faces East, carries Kibble.
 #        Animals: Badger coat -1 (196, 237) West; Badger coat 1 (197, 236) West; AEXP_Hedgehog coat 2 (196, 235) West; AEXP_Pangolin coat 0 (194, 237) East; AEXP_BlackFootedFerret coat 1 (194, 235) East; AEXP_Koala coat 1 (198, 237) West. Gesture and instant: crouch-height ring: she holds Kibble at the centre, five small animals within two cells face her, the badger in two coats side by side; before: they crept out of the hay, after: the badger sniffs the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: the small folk crowd around Nelim and the kibble, six animals in six coats.
 #   9. dogs-terrace: terrace, 12h, medium, frame (197, 123) at zoom 4.5. In place: covered terrace, wood floor, benches. Added: TorchLamp (195, 121) unlit, Plant_Daylily (193, 120) fully grown, Plant_Daylily (200, 121) fully grown, PlantPot_Bonsai (193, 122), SculptureSmall (199, 120), Stool (197, 120). Nelim (194, 122) faces East, carries Kibble.
@@ -204,26 +204,26 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: six waterside visitors line up on the pond bank
     Given I set the hour to 10
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-1" is spawned at (146, 171)
-    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-2" is spawned at (148, 171)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Beaver" named "coat-3" is spawned at (150, 171)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Platypus" named "coat-4" is spawned at (152, 171)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RockhopperPenguin" named "coat-5" is spawned at (154, 171)
-    And Nelim's Pickle Tools: an adult animal of kind "Walrus" named "coat-6" is spawned at (156, 172)
+    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-1" is spawned at (146, 170)
+    And Nelim's Pickle Tools: an adult animal of kind "Otter" named "coat-2" is spawned at (148, 170)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Beaver" named "coat-3" is spawned at (150, 170)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Platypus" named "coat-4" is spawned at (152, 170)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RockhopperPenguin" named "coat-5" is spawned at (154, 170)
+    And Nelim's Pickle Tools: an adult animal of kind "Walrus" named "coat-6" is spawned at (155, 171)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-4" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-5" is given coat 2
     And Nelim's Pickle Tools: the animal "coat-6" is given coat 1
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (145, 169) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (155, 169) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (143, 173)
-    And Nelim's Pickle Tools: I place the decor "Stool" at (147, 174)
-    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (153, 174)
-    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (150, 169)
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (158, 170)
-    And Nelim's Pickle Tools: "Nelim" stands at (144, 170) facing East
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (145, 168) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (155, 168) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 172)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (147, 172)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (153, 172)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (150, 167)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (156, 169)
+    And Nelim's Pickle Tools: "Nelim" stands at (145, 169) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" carries the item "RawBerries"
     And Nelim's Pickle Tools: the animal "coat-1" faces West
@@ -235,7 +235,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (151, 171) at zoom 5
+    And Nelim's Pickle Tools: I frame the cell (150, 169) at zoom 3.5
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "gallery-7-waterside-pond"
     And Nelim's Pickle Tools: the decor is removed
@@ -282,6 +282,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   @review @gallery
   Scenario: five dogs crowd the terrace at noon, each in its own coat
     Given I set the hour to 12
+    And Nelim's Pickle Tools: a decor that finds no cell is skipped and logged
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-1" is spawned at (196, 123)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-2" is spawned at (197, 124)
@@ -293,12 +294,12 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-4" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-5" is given coat 0
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 121)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" near (195, 121)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (193, 120) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 121) fully grown
-    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (193, 122)
-    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (199, 120)
-    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 120)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" near (193, 122)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" near (199, 120)
+    And Nelim's Pickle Tools: I place the decor "Stool" near (197, 120)
     And Nelim's Pickle Tools: "Nelim" stands at (194, 122) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" carries the item "Kibble"
