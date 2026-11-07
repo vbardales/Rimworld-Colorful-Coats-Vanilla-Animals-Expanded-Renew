@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OptionalCompat>
+  <li><packageId>VanillaExpanded.VAEAS</packageId><workshopId>1836900626</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAEAU</packageId><workshopId>1963681588</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAEBF</packageId><workshopId>1895364938</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAEIS</packageId><workshopId>1895364782</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAET</packageId><workshopId>1895364585</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAETF</packageId><workshopId>2260502331</workshopId><kind>patch</kind></li>
+  <li><packageId>VanillaExpanded.VAETR</packageId><workshopId>1907283872</workshopId><kind>patch</kind></li>
+</OptionalCompat>
