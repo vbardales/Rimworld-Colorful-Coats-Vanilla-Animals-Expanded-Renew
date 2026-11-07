@@ -17,8 +17,8 @@
 #        Animals: Otter coat -1 (146, 170) West; Otter coat 1 (148, 170) West; AEXP_Beaver coat 0 (150, 170) West; AEXP_Platypus coat 0 (152, 170) West; AEXP_RockhopperPenguin coat 2 (154, 170) West; Walrus coat 1 (155, 171) West. Gesture and instant: stands on the bank holding RawBerries, the otter one cell away looks up at her, the others face her in a row on the bank, nothing in the water; before: she came down to the bank, after: the otter takes the berries. Obtained by the carried item, the facings and adjacent cells, no job. Says: the waterside folk queue on the bank, two otters one in each coat.
 #   8. barn-yard: barn, 11h, close, frame (196, 236) at zoom 4. In place: barn, hay, wooden posts. Added: Plant_Daylily (194, 239) fully grown, TorchLamp (192, 236) unlit, Kibble (196, 236), Hay (198, 233), EggBox (203, 239). Nelim (194, 236) faces East, carries Kibble.
 #        Animals: Badger coat -1 (195, 237) East; Badger coat 1 (197, 237) West; AEXP_Hedgehog coat 2 (196, 235) East; AEXP_Pangolin coat 0 (195, 235) East; AEXP_BlackFootedFerret coat 1 (197, 235) West; AEXP_Koala coat 1 (196, 237) West. Gesture and instant: crouch-height ring: she stands one cell west of a pile of Kibble, the six small animals ring the pile and face it, the badger in two coats side by side; before: they crept out of the hay, after: the badger sniffs the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: the small folk crowd around Nelim and the kibble, six animals in six coats.
-#   9. dogs-terrace: terrace, 12h, medium, frame (197, 123) at zoom 4.5. In place: covered terrace, wood floor, benches. Added: TorchLamp (195, 121) unlit, Plant_Daylily (193, 120) fully grown, Plant_Daylily (200, 121) fully grown, PlantPot_Bonsai (193, 122), SculptureSmall (199, 120), Stool (197, 120). Nelim (194, 122) faces East, carries Kibble.
-#        Animals: AEXP_Chihuahua coat -1 (196, 123) West; AEXP_Chihuahua coat 2 (197, 124) West; AEXP_GreatDane coat 0 (196, 124) West; AEXP_Rottweiler coat 0 (195, 124) West; AEXP_Shih-Tzu coat 0 (196, 122) South. Gesture and instant: holds out Kibble in profile, the Chihuahua one cell away looks at it, three dogs face her in a row, the Shih Tzu looks at the camera; before: the dogs ran in from the garden, after: the Chihuahua gets the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: noon on the terrace, five dogs in five coats and the smallest first.
+#   9. dogs-terrace: terrace, 12h, medium, frame (196, 123) at zoom 4.5. In place: covered terrace, wood floor, benches. Added: TorchLamp (195, 121) unlit, Plant_Daylily (193, 120) fully grown, Plant_Daylily (200, 121) fully grown, PlantPot_Bonsai (193, 122), SculptureSmall (199, 120), Stool (197, 120). Added: Kibble x30 (196, 123). Nelim (194, 123) faces East, carries Kibble.
+#        Animals: AEXP_Chihuahua coat -1 (195, 122) East; AEXP_Chihuahua coat 2 (196, 122) South; AEXP_GreatDane coat 0 (197, 123) West; AEXP_Rottweiler coat 0 (196, 124) North; AEXP_Shih-Tzu coat 0 (195, 124) East. Gesture and instant: holds Kibble in profile, five dogs ring a pile of 30 Kibble one cell east of her, every head turned to the pile; before: the dogs ran in from the garden, after: the smallest dog reaches the pile first. Obtained by the carried item, the facings and adjacent cells, no job. Says: noon on the terrace, five dogs in five coats and the smallest first.
 #   10. cats-tea-room: hut, 17h, close, frame (141, 71) at zoom 4.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (137, 72) fully grown, TorchLamp (145, 72) lit. Nelim (141, 70) faces West, carries Milk.
 #        Animals: AEXP_CatMaineCoon coat -1 (139, 71) East; AEXP_CatMaineCoon coat 1 (140, 69) East; AEXP_CatBritishShorthair coat 0 (142, 69) West; AEXP_CatMunchkin coat 0 (143, 71) West; AEXP_CatNorwegianForest coat 1 (138, 70) East; AEXP_CatPersian coat 0 (144, 70) West; AEXP_CatSiamese coat 1 (139, 73) North; AEXP_CatSomali coat 0 (143, 73) North; AEXP_CatSphynx coat 1 (145, 71) West. Gesture and instant: holds out Milk at the low table, nine cats crowd the tatamis and cushions all turned toward her and the table; before: she poured the milk, after: the nearest cat reaches the bowl. Obtained by the carried item, the facings and adjacent cells, no job. Says: tea hour again, nine cats crowd the tea table toward Nelim and her milk.
 # Play alone, wsl-deps.gallery-decor.map (heavy decor-mods variant, container cap 7g, scenario timeout 600). Coats are chosen, never drawn: "the animal coat-N is given coat K" (K index into alternateGraphics, -1 the original).
@@ -285,11 +285,11 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given I set the hour to 12
     And Nelim's Pickle Tools: a decor that finds no cell is skipped and logged
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-1" is spawned at (196, 123)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-2" is spawned at (197, 124)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_GreatDane" named "coat-3" is spawned at (196, 124)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Rottweiler" named "coat-4" is spawned at (195, 124)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Shih-Tzu" named "coat-5" is spawned at (196, 122)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-1" is spawned at (195, 122)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Chihuahua" named "coat-2" is spawned at (196, 122)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_GreatDane" named "coat-3" is spawned at (197, 123)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Rottweiler" named "coat-4" is spawned at (196, 124)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_Shih-Tzu" named "coat-5" is spawned at (195, 124)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 2
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 0
@@ -301,18 +301,19 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" near (193, 122)
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" near (199, 120)
     And Nelim's Pickle Tools: I place the decor "Stool" near (197, 120)
-    And Nelim's Pickle Tools: "Nelim" stands at (194, 122) facing East
+    And Nelim's Pickle Tools: 30 of the item "Kibble" are spawned at (196, 123)
+    And Nelim's Pickle Tools: "Nelim" stands at (194, 123) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" carries the item "Kibble"
-    And Nelim's Pickle Tools: the animal "coat-1" faces West
-    And Nelim's Pickle Tools: the animal "coat-2" faces West
+    And Nelim's Pickle Tools: the animal "coat-1" faces East
+    And Nelim's Pickle Tools: the animal "coat-2" faces South
     And Nelim's Pickle Tools: the animal "coat-3" faces West
-    And Nelim's Pickle Tools: the animal "coat-4" faces West
-    And Nelim's Pickle Tools: the animal "coat-5" faces South
+    And Nelim's Pickle Tools: the animal "coat-4" faces North
+    And Nelim's Pickle Tools: the animal "coat-5" faces East
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (197, 123) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (196, 123) at zoom 4.5
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "gallery-9-dogs-terrace"
     And Nelim's Pickle Tools: the decor is removed

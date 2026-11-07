@@ -27,8 +27,8 @@ remaining:
 code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_372522c2-0e0b-47d6-a482-b41a0acb0460
-updated:      2026-11-07 (gallery-decor tickets refiled after dep map and cell fixes; OptionalCompat check OK 7/7), shotlist 2 to 10 and gallery-decor.feature rewritten (plan 5 per scene, drift check OK); 2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
-protocols_read_sha: f0219f10b948804b3bfd2586c5fca74bf45c3805
+updated:      2026-11-08 (shot 9 REDO after score-gallery: image 3.5, adequacy 3.5, understanding 3, decoration 4; dogs ring 30 Kibble, refiled alone as ticket 20261108-001450-572-8d49 Inbox/gallery-decor-13; shot 8 ticket c578 still queued); 2026-11-07 (gallery-decor tickets refiled after dep map and cell fixes; OptionalCompat check OK 7/7), shotlist 2 to 10 and gallery-decor.feature rewritten (plan 5 per scene, drift check OK); 2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
+protocols_read_sha: e50928000bb957ac07098875d03ff6097b1637de
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
@@ -118,7 +118,7 @@ Story: day 1 "The coats afternoon" (16h to 19h): kangaroos (1), poodles at tea (
 | 6 hunters | river-bridge, 9h | tiger -1,0; jaguar 0; hyena 1; mega wolverine 0; black bear 1 | Meat_Muffalo | (137, 124) zoom 5 | 5 |
 | 7 waterside | water-garden, 10h | otter -1,1; beaver 0; platypus 0; rockhopper 2; walrus 1 | RawBerries | (168, 172) zoom 5 | 5 |
 | 8 barn yard | barn, 11h | badger -1,1; hedgehog 2; pangolin 0; ferret 1; koala 1 | Kibble | (196, 236) zoom 4 | 5 |
-| 9 dogs | terrace, 12h | chihuahua -1,2; great dane 0; rottweiler 0; shih tzu 0 | Kibble | (197, 123) zoom 4.5 | 5 |
+| 9 dogs | terrace, 12h | chihuahua -1,2; great dane 0; rottweiler 0; shih tzu 0 | Kibble | (196, 123) zoom 4.5 | 5 |
 | 10 cats | hut, 17h | Maine coon -1,1; British shorthair 0; munchkin 0; Norwegian forest 1; Persian 0; Siamese 1; Somali 0; Sphynx 1 | Milk | (141, 71) zoom 4.5 | 5 |
 
 Rule 5 (every kind): 35 of 35 kinds of the mod appear (kangaroo 1, poodle 2, red panda 3, Bengal cat 4; giraffe, black rhino, muskox, moa 5; tiger, jaguar, hyena, mega wolverine, black bear 6; otter, beaver, platypus, rockhopper, walrus 7; badger, hedgehog, pangolin, ferret, koala 8; chihuahua, great dane, rottweiler, shih tzu 9; the eight other cats 10). Original (-1) next to an added coat is drawn in each group shot except 3 (three added coats) and 1 (accepted).
