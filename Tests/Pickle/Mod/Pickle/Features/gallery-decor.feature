@@ -275,7 +275,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
     And Nelim's Pickle Tools: I frame the cell (196, 236) at zoom 4
-    And Nelim's Pickle Tools: I let 5 frames pass
+    And Nelim's Pickle Tools: I let 1 frames pass
     And I take a screenshot "gallery-8-barn-yard"
     And Nelim's Pickle Tools: the decor is removed
 
