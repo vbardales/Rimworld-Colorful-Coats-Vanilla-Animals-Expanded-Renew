@@ -7,4 +7,5 @@
   <li><packageId>VanillaExpanded.VAET</packageId><workshopId>1895364585</workshopId><kind>patch</kind></li>
   <li><packageId>VanillaExpanded.VAETF</packageId><workshopId>2260502331</workshopId><kind>patch</kind></li>
   <li><packageId>VanillaExpanded.VAETR</packageId><workshopId>1907283872</workshopId><kind>patch</kind></li>
+  <!-- Vanilla Animals Expanded - Desert (Oskar Potocki, workshop 1849183875, kind patch): patched by name in ColorfulCoats_VAEvarious.xml. Dead since 1.3 (listed 1.0 to 1.3), not installed locally and the Steam page does not show its packageId, so no packageId is declared (not proven). -->
 </OptionalCompat>
