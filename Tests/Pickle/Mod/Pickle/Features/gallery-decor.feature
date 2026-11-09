@@ -274,7 +274,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (196, 236) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (196, 236) at zoom 6
     And Nelim's Pickle Tools: I let 1 frames pass
     And I take a screenshot "gallery-8-barn-yard"
     And Nelim's Pickle Tools: the decor is removed
@@ -313,7 +313,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (196, 123) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (196, 123) at zoom 6
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "gallery-9-dogs-terrace"
     And Nelim's Pickle Tools: the decor is removed
