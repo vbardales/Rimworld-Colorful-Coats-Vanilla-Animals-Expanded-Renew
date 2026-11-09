@@ -28,7 +28,7 @@ code_review_sha: 80b5d8f278eecacf4469bdb18893518759f9a5f6
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_372522c2-0e0b-47d6-a482-b41a0acb0460
 updated:      2026-11-08 (shot 8 c578 scored REDO: animals drifted 2 cells off the pile in two groups, Nelim back turned, decor odd; frame wait 5 to 1, refiled gallery-decor-14; shot 9 REDO after score-gallery: image 3.5, adequacy 3.5, understanding 3, decoration 4; dogs ring 30 Kibble, refiled alone as ticket 20261108-001450-572-8d49 Inbox/gallery-decor-13; shot 8 ticket c578 still queued); 2026-11-07 (gallery-decor tickets refiled after dep map and cell fixes; OptionalCompat check OK 7/7), shotlist 2 to 10 and gallery-decor.feature rewritten (plan 5 per scene, drift check OK); 2026-11-06, Preview re-rendered and validated by Virginie 2026-11-06 (automatic title fit 35 px, echo beside the title); Check-Coats.ps1 replaced by Tests/Rule-OwnValues.ps1 (new test shape, mutation proof done), LOCAL_SCRIPTS row pushed, CI/CD regenerate (Test-Mod.ps1 + .github) and Audit validation still to ask
-protocols_read_sha: e50928000bb957ac07098875d03ff6097b1637de
+protocols_read_sha: 01ba2e9cfe0b307ec9f0aef7d1edfd39f2458666
 ---
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
 
