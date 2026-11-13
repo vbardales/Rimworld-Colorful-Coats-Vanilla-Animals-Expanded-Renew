@@ -53,6 +53,10 @@ Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` 
 
 Only `Art/Gallery/0-preview.png` and `1-kangaroos.png` (accepted by Virginie 2026-10-12) exist. Scenes 2 to 10 are planned (section "Shotlist"), no capture yet. The old candidates 2 to 4 and the refused run de2b captures are deleted.
 
+## Ecosystem
+
+PiI, 2026-11-13 (details: `../docs/inventory/ecosystem-steam/ColorfulCoatsVAERenew.md`): original 2398446130, packageId `purpleyam.colorfulcoats.vaewildlife`, versions 1.2 1.3 1.4, dead for 1.6. No duplicate or fork. A corpus scan of its packageId finds only the original, this Renew and No Version Warning (link). No other Steam mod recolours Vanilla Animals Expanded. Siblings of the series (Cats and Dogs, Dodos, Megafauna) all dead for 1.6. Only live neighbour: Animal Variety Coats 1511926373. Patch-only mod, no defName scan. Nothing subscribed.
+
 ## NSB
 
 First sync, 2026-11-06 (`sync-nsb`). NSB changed since the gallery was authored (2026-10-11/12): `Docs/EMBELLISSEMENT-LIEUX.md` (plan of 2026-11-04) adds decor to `flower-garden` (rose border along the statue path, two birches in the background; later pass: hydrangeas, lavender, lanterns, a silver tree), applied by NPT to the `Nelims-tribe` fixture. `calm-zone` stays free (shooting zones are kept bare); a new `calm-zone-close` frame exists. Nothing renamed or removed. Left alone: the two scenarios that use `flower-garden` (poodles, kangaroos) stay as played; if the owner wants them replayed on the embellished garden, that is a redo, not a fix. The mod uses no NSB colonist and no named NSB animal.
