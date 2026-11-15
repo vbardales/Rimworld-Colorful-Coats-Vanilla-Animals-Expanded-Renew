@@ -64,14 +64,16 @@ First sync, 2026-11-06 (`sync-nsb`). NSB changed since the gallery was authored 
 
 Second run, same day: no NSB doc changed since the first read (file dates 2026-11-05 or older); `wsl-deps.gallery.map` still matches what NSB uses (VAE, its core, the PickleTools steps, `nelim.sanctuarybacklot`); nothing to update.
 
-Places read: 2026-11-07
-Tribe read: 2026-11-07 (`VALIDE.md` in full, `CATALOGUE-ANIMAUX.md`, `SANCTUAIRE-LIEUX.md` places table; roster and individual profiles not opened, Nelim is the only colonist used and `VALIDE.md` holds her outfit)
+Places read: 2026-11-15 (`VALIDE.md` rows of every place the shotlist uses, `SANCTUAIRE-LIEUX.md` barn entry, commit list since 2026-11-07)
+Tribe read: 2026-11-15 (diff-only: no commit since 2026-11-07 touches `CATALOGUE-ANIMAUX.md` or `NSB-ROSTER.md` in content; profiles not opened, Nelim is the only colonist used and `VALIDE.md` holds her outfit)
 
 Fifth run, 2026-11-07 (`sync-nsb`, Check-Status `nsb-sync`): NSB commits since the fourth run only touch `VALIDE.md`, `SANCTUAIRE-LIEUX.md`, `AVANCEMENT.md`, `GALERIE.md`, `runs/`. `VALIDE.md` now validates, on the decorated save (photos 2e61, 8a0a, cd57): `flower-garden`, `water-garden`, `statue-garden`, `river-bridge`, `barn`, `pediatrics`, `infirmary`, `infirmary-animals`, plus the free zones (`calm-zone`, `calm-zone-close`, `bare-clearing`, `emerald-clearing`, `exhibition-zone`, `fishing-zone`, smileys, bamboo backdrops), on top of `cloister`, `terrace`, `hut`, `ritual-hall`, `infirmary-pawns`. `ritual-hall` frame in `VALIDE.md`: (206, 117) zoom 8 (the places table of `SANCTUAIRE-LIEUX` says (206, 119) zoom 6.5; `SanctuarySites` in code wins). Consequence for this mod: scene 1 (kangaroos, `flower-garden`) and the old water-garden and calm-zone options are usable again; nothing renamed or removed; the scene lines of 2 to 4 stand. NSB animals (Shogun, Yuki, Atticus, Rain, Kuru, Tama, Onigiri, Ottawa, Pecan, Ulysse, Ursule, Wren, Wrille, Xylo): none is an animal this mod recolours, so no animal row changes. Rule 5 gap unchanged (shots 5 to 9 proposed, none written). `GALLERY.md` of 2026-11-07 now demands each scene rated 5 by `rate-gallery` (b: no thin decor, g: story readable in the image) before any ticket, then `Check-ShotlistVsScenario.ps1`: the 4 to 4.5 estimates above no longer open a ticket; next step is `write-shotlist` rework, not a refile. `Mod/Pickle/Fixtures/Nelims-tribe` is still the old undecorated save (copy "at the end of the redecoration").
 
 Sixth run, 2026-11-13 (`sync-nsb-npt`, Check-Status `nsb-sync` warning): the only NSB commit since the fifth run is 18abf53 (2026-11-12), `docs/` renamed `Docs/`, 0 lines changed in any file: no place, colonist, animal or validation moved. Docs not reopened, so Places read and Tribe read keep 2026-11-07. NPT (first read of its log since 2026-11-01, diffs of the three that serve a gallery): new steps `the decor {string} at ({int}, {int}) burns` (lights a brazier or lamp, fuel and switch), `the main bar, the speed controls and the mouse-over readout are hidden` (cleaner capture), `I place the decor {string} holding {string} fully grown near ({int}, {int})` (pot with plant); other new steps (batteries, cultures, surgery, filth, floors) do not serve a shot. Nothing renamed or removed that a gallery scenario calls (to confirm with `Check-ShotlistVsScenario.ps1` at the next refile). Possible use for the REDO of shots 8 and 9: hide the bars; nothing applied. Rule 5: all 35 kinds still have a shot, no MISSING row. No owner question.
 
-Steps read: 2026-11-13
+Seventh run, 2026-11-15 (`sync-nsb-npt`, Check-Status `nsb-sync` and `npt-sync`): NSB commits since 2026-11-07 are validations of other places, decor batches 4 to 5m (fixture `z3` copied 2026-11-09), Beauty2 mouth patch, tests and the 2026-11-12 `docs` to `Docs` rename (0 lines changed). Every place the shotlist uses is still validated with the same frame in `VALIDE.md`: `hut` (141, 72) 9, `cloister` (178, 128) 4,5, `ritual-hall` (206, 117), `statue-garden` (155, 99) 11, `river-bridge` (135, 124) 8,5, `water-garden` (167, 173) 14, `barn` (196, 237) 8,5, `terrace` (196, 123) 6,8, `flower-garden` (154, 110) 10,5. Our frames differ on purpose (close zooms of the shotlist). `CATALOGUE-ANIMAUX.md` and `NSB-ROSTER.md` unchanged: no NSB animal is one this mod recolours, Nelim stays the only colonist. NPT: no commit to `docs/steps.md` or the ColonistRace catalogues since 2026-11-12 (read 2026-11-13). Rule 5 unchanged: 35 of 35 kinds have a shot. Nothing renamed or removed that a scenario calls. No owner question.
+
+Steps read: 2026-11-15
 
 | Place | Shots that use it | Changes made for the gallery | Last read |
 |---|---|---|---|
@@ -79,7 +81,12 @@ Steps read: 2026-11-13
 | `cloister` (178, 128) zoom 4.5 | 3 red pandas | none | 2026-11-07 |
 | `hut` (141, 72) zoom 9 | 2 poodles | none | 2026-11-07 |
 | `ritual-hall` (206, 117) zoom 8 | 4 Bengal cats | none (overlay spots `PartySpot,RitualSpot` hidden by the existing Given, not yet played) | 2026-11-07 |
-| `calm-zone` (200, 187), `water-garden` (167, 173) | none now (old scenes, replaced) | none; both validated 2026-11-07, available as alternatives | 2026-11-07 |
+| `statue-garden` (155, 99) | 5 giants | StageDecor props (shotlist) | 2026-11-15 |
+| `river-bridge` (135, 124) | 6 hunters | StageDecor props (shotlist) | 2026-11-15 |
+| `water-garden` (167, 173) | 7 waterside | StageDecor props (shotlist) | 2026-11-15 |
+| `barn` (196, 237) | 8 barn yard | yard decor, hay, kibble pile at (196, 238), frame zoom 2.5 | 2026-11-15 |
+| `terrace` (196, 123) | 9 dogs | StageDecor props (shotlist) | 2026-11-15 |
+| `calm-zone` (200, 187) | none now (old scene, replaced) | none; validated 2026-11-07, available as alternative | 2026-11-07 |
 
 | Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
 |---|---|---|---|---|
