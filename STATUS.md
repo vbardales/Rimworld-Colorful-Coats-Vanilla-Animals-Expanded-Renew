@@ -58,6 +58,8 @@ Only `Art/Gallery/0-preview.png` and `1-kangaroos.png` (accepted by Virginie 202
 
 ## Ecosystem
 
+Refresh 2026-11-17 (PiI, report commit f27686d, now with the `ecosystem-links` block: parent VAE 2871933948, linked: original 2398446130, Animal Variety Coats 1511926373, Colorful Coats Cats and Dogs, Megafauna, Dodos, Vanilla Textures Expanded). Animal Variety Coats static check: it patches 34 vanilla PawnKindDefs, this mod 40 AEXP_* kinds, overlap 0 defNames; runtime texture clash not tested, a Pickle run with both loaded would settle it (feature item in `remaining`). No translation of the original found, so nothing to add at `localize`. Original kept as linked by PiI, not parent: tell PiI if the original should be the parent.
+
 PiI, 2026-11-13 (details: `../docs/inventory/ecosystem-steam/ColorfulCoatsVAERenew.md`): original 2398446130, packageId `purpleyam.colorfulcoats.vaewildlife`, versions 1.2 1.3 1.4, dead for 1.6. No duplicate or fork. A corpus scan of its packageId finds only the original, this Renew and No Version Warning (link). No other Steam mod recolours Vanilla Animals Expanded. Siblings of the series (Cats and Dogs, Dodos, Megafauna) all dead for 1.6. Only live neighbour: Animal Variety Coats 1511926373. Patch-only mod, no defName scan. Nothing subscribed.
 
 ## NSB
