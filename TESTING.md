@@ -32,7 +32,7 @@ applicable: mod owns no in-game text.
 | Minimal, Odyssey present | Same 25, plus same five now patched under Ludeon's own bare names instead. |
 | Optional integration: Endangered | Five Endangered-only animals, on top of either Odyssey state. |
 | Coats drawn | Poodles draw and keep extra coat, drawn with own texture (`@review`). |
-| Gallery captures (`@gallery`, `wsl-deps.gallery.map`) | Four `@review` captures for Workshop page: poodles, kangaroos, red pandas, Bengal cats. Not played yet. |
+| Gallery captures (`@gallery`, `wsl-deps.gallery.map`) | Four `@review` captures for Workshop page: poodles, kangaroos, red pandas, Bengal cats. In progress (`STATUS.md`). |
 | Rare coats, Odyssey present | 100 jaguars, 100 Odyssey tigers: each draws 5% coat at least once. |
 | Rare coats, Odyssey absent | 100 `AEXP_Tiger`: draws 5% coat at least once. |
 
@@ -43,20 +43,20 @@ and green, or listed not applicable with reason. State on 2026-09-28, nothing ye
 
 | Scenario | Status | Reason |
 |---|---|---|
-| A coats appear | Automated, written | `coats.feature`, poodles. |
-| B far end of the sequence | Automated, written | `always-patched.feature` covers all 25 animals, giraffe first, shih tzu last. |
-| C the two rarities | Automated, written | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries 5% coat. `rare-tiger-plain`: 100 on new colony (NewColony, map 150) since 2026-10-02; fixture save does not play without Odyssey (red 2026-10-01 at save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
-| D Endangered | Automated, written | `endangered.feature`; guard name proven by animals being patched. |
+| A coats appear | Automated, green | `coats.feature`, poodles. |
+| B far end of the sequence | Automated, green | `always-patched.feature` covers all 25 animals, giraffe first, shih tzu last. |
+| C the two rarities | Automated, green | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries 5% coat. `rare-tiger-plain`: 100 on new colony (NewColony, map 150) since 2026-10-02; fixture save does not play without Odyssey (red 2026-10-01 at save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
+| D Endangered | Automated, green | `endangered.feature`; guard name proven by animals being patched. |
 | E 74 coats, three rotations | Offline plus `@review` | `Check-Textures.ps1` proves every rotation file ships (2026-11-06); the shared `Check-ModBasics.ps1` and the Pickle features now cover it; north view is capture a person looks at. |
-| F survives a reload | Automated, written | `coats.feature`, note and still-has-coat steps. |
+| F survives a reload | Automated, green | `coats.feature`, note and still-has-coat steps. |
 | G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in other Colorful Coats ports: existing animals recolour on adding, revert on removing; nothing stored in save; game's reaction to missing mod not ours. |
 | H no Vanilla Animals Expanded | Not applicable | Warning is game's reaction to declaration; declaration checked in sources (`Check-ModBasics.ps1`). |
 | I, J legacy modules | Not applicable | Both target 1.3, cannot load on 1.6. |
 | K originals enabled alongside | Not applicable | Both originals cannot load on 1.6; `incompatibleWith` checked in sources. |
 | L mod list entry | Offline plus a look | Name and metadata checked offline; banner and icon inspected as images. |
-| M five Odyssey animals | Automated, written | `with-odyssey.feature`, `without-odyssey.feature`. Smaller draw size is `@review` look at `coats.feature` capture. |
+| M five Odyssey animals | Automated, green | `with-odyssey.feature`, `without-odyssey.feature`. Smaller draw size is `@review` look at `coats.feature` capture. |
 
-Written is not run: none of this a pass until passes return green.
+Green means the trajectory ran (`AUDIT.md` 8.c), nothing more.
 
 ## What is settled before the game starts
 
