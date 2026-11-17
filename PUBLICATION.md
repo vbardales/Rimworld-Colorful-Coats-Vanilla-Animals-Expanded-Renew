@@ -58,7 +58,7 @@ switches it public herself.
 
 ## Gallery subtitles
 
-Draft 2026-11-07, indexes as shot numbers. Shots 7 and 9 are still being recomposed; reindex with no gap before burning (the clean files are named by shot until then).
+Written 2026-11-17, indexes are the shot numbers (no gap), clean originals in `Art/Gallery-clean/`, burned copies in `Art/Gallery/` with `Add-Subtitle.ps1`.
 
 | index | file | line |
 |---|---|---|
@@ -70,5 +70,5 @@ Draft 2026-11-07, indexes as shot numbers. Shots 7 and 9 are still being recompo
 | 6 | 6-hunters-bridge | The hunters cross the bridge in file. |
 | 7 | 7-waterside-pond | The waterside folk queue on the bank. |
 | 8 | 8-barn-yard | Small visitors crowd around the kibble. |
-| 9 | 9-dogs-terrace | Noon on the terrace: five dogs, five coats. |
-| 10 | 10-cats-tea-room | Nine cats, nine coats, one cup of milk. |
+| 9 | 9-dogs-terrace | Noon on the terrace: the dogs came for the kibble too. |
+| 10 | 10-cats-tea-room | Nine cats gather round one cup of milk. |
