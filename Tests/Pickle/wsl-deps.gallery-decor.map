@@ -12,6 +12,13 @@ nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
 nelim.pickletools.savesteps path:PickleTools/SaveSteps/Mod
 nelim.pickletools.decorbase path:PickleTools/Tests/Pickle/DecorBase/Mod
 brrainz.harmony 2009463077
+# Nelim's body and clothes as SanctuaryBacklot defines them (copied from SanctuaryBacklot wsl-deps.sanctuary-nelim.map, owner rejected shots 2 to 10 on 2026-11-17: Nelim half naked, hair off the SaB definition). Female Body Variants and Female Apparel Variants load BEFORE WDI; AB's Visible Pants needs its seed in Tests/Pickle/config/gallery-decor/.
+tiagocc0.FemaleBodyVariants 3798082132
+tiagocc0.FemaleApparelVariants 3799726535
+Malistaticy.UnderWhere 1870010563
+wdi.realistic.bodies 3527486510
+ab.vplrf 2986402536
+nelim.venustouch.waistlines path:VenusTouchWaistlines/Mod
 erdelf.HumanoidAlienRaces 839005762
 Caoyuanfei.YuranShrineJapaneseArchitecture 3671664434
 RooAndGloomy.YuranRaceMod 2844129100
@@ -38,3 +45,18 @@ Nals.FacialAnimation 1635901197
 VanillaExpanded.VTEXE.FacialAnims 2816938779
 # Camera root size below the game floor of 11 (ticket 770b: "the camera root size should be 3; it reads 11"); NPT probe 38f0 proved SimpleCameraSetting honours values below 6.
 ray1203.SimpleCameraSetting 3232415388
+# Nelim's hair, daily dress, earrings, skin and facial animation (SanctuaryBacklot wsl-deps.sanctuary-nelim.map, same order): Roo HD hair, [LTS] Raiments (LTS_Tunika), Ponpeco Accessories (Apparel_PAESmallEarrings), Genes Expanded Skin, the facial animation set.
+rooboid.hdhair.continued 3559870636
+limetreesnake.raiments 3751997843
+ponpeco.PonpecoAccessories 3298397484
+LazyFridayStudio.GenesExpandedSkin 3214172563
+nals.facialanimationexperimentals 2581693737
+Newton.AKNExtras.FacialAnimations 2889716301
+lucius.eyegenes3 3745223213
+astryl.FacialAnimationPerformancePatch 3790129900
+vk.addeyes.EX 3694711465
+sd.fa.movingvanillaeyes 3753978140
+SleepyFrieren.beautygenefa 3685072616
+ria.cuterkidsforfacialanimation 3807706870
+Moshii.NLFA.InitFix 3609895011
+ccj.nlfaloadfix 3721489042

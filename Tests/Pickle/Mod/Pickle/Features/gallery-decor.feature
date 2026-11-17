@@ -1,6 +1,6 @@
 # Shotlist (write-shotlist 2026-11-07, STATUS.md "Shotlist"): gallery shots 2 to 10 on the validated decorated Sanctuary; shot 1 (kangaroos, gallery.feature) is an accepted capture and is not replayed. Staged photographs, nobody asserts anything (a person opens each image).
 # STORY, "The coats afternoon" (day 1, 16h to 19h): visitors wander into Nelim's Sanctuary in different coats and she greets them with treats, hour by hour: kangaroos in the glade (1, wide, opening), poodles at tea (2), red pandas to the shrine (3), Bengal cats for the night (4). "The morning after" (day 2, 8h to 17h): word got round, the rest come into the Sanctuary and she hands out treats place by place, giants (5, medium-wide), hunters (6), waterside (7), small folk (8, close), dogs at noon (9), tea hour again with nine cats (10, close, closing, echo of 2).
-# Nelim: daily dress as the fixture dresses her (emerald tunic, gold hoops, high ponytail, same outfit both days, it is her daily dress), smile by face kit, never a hat. Animals face her or the camera, only facings and the carried item pose them. Each group has one kind in two coats so the recolour reads in the thumbnail. Every kind of the mod appears: 35 of 35 (31 in shots 5 to 10).
+# Nelim: daily dress as the fixture dresses her (owner rejected the first nine captures 2026-11-17: Nelim half naked and hair off the SaB definition; the scenarios now dress her as SaB defines: LTS_Tunika emerald, gold earrings, Roo_HD_Hair_Highpony, her tattoos and her own face, bodies and AB seed in the map) (emerald tunic, gold hoops, high ponytail, same outfit both days, it is her daily dress), smile by face kit, never a hat. Animals face her or the camera, only facings and the carried item pose them. Each group has one kind in two coats so the recolour reads in the thumbnail. Every kind of the mod appears: 35 of 35 (31 in shots 5 to 10).
 # Game paused, Clear weather, one hour per shot, each scenario sets its hour, places from VALIDE.md only, decor removed after the capture, lamps lit only after dusk.
 #
 #   2. poodles-tea-room: hut, 17h, medium, frame (141, 70) at zoom 4. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (138, 72) fully grown, Plant_Daylily (144, 72) fully grown, TorchLamp (136, 70) lit. Nelim (141, 70) faces South, carries Kibble.
@@ -22,7 +22,7 @@
 #   10. cats-tea-room: hut, 17h, close, frame (141, 71) at zoom 4.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (137, 72) fully grown, TorchLamp (145, 72) lit. Nelim (141, 70) faces West, carries Milk.
 #        Animals: AEXP_CatMaineCoon coat -1 (139, 71) East; AEXP_CatMaineCoon coat 1 (140, 69) East; AEXP_CatBritishShorthair coat 0 (142, 69) West; AEXP_CatMunchkin coat 0 (143, 71) West; AEXP_CatNorwegianForest coat 1 (138, 70) East; AEXP_CatPersian coat 0 (144, 70) West; AEXP_CatSiamese coat 1 (139, 73) North; AEXP_CatSomali coat 0 (143, 73) North; AEXP_CatSphynx coat 1 (145, 71) West. Gesture and instant: holds out Milk at the low table, nine cats crowd the tatamis and cushions all turned toward her and the table; before: she poured the milk, after: the nearest cat reaches the bowl. Obtained by the carried item, the facings and adjacent cells, no job. Says: tea hour again, nine cats crowd the tea table toward Nelim and her milk.
 # Play alone, wsl-deps.gallery-decor.map (heavy decor-mods variant, container cap 7g, scenario timeout 600). Coats are chosen, never drawn: "the animal coat-N is given coat K" (K index into alternateGraphics, -1 the original).
-@requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.decorbase @requires:nelim.pickletools.stagedecor @requires:nelim.sanctuarybacklot
+@requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.decorbase @requires:nelim.pickletools.stagedecor @requires:nelim.sanctuarybacklot @requires:limetreesnake.raiments @requires:ponpeco.PonpecoAccessories @requires:rooboid.hdhair.continued
 Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery captures 2 to 10 (validated Sanctuary)
 
   Background:
@@ -47,8 +47,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (136, 70)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (136, 70) is lit
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (141, 70) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Kibble"
     And Nelim's Pickle Tools: the animal "coat-1" faces East
     And Nelim's Pickle Tools: the animal "coat-2" faces West
@@ -79,8 +88,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: the decor "TorchLamp" at (175, 126) is lit
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (175, 130) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 129) fully grown
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (178, 126) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "RawBerries"
     And Nelim's Pickle Tools: the animal "coat-1" faces East
     And Nelim's Pickle Tools: the animal "coat-2" faces East
@@ -109,8 +127,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (209, 115) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (202, 122)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (202, 122) is lit
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (206, 115) facing West
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And Nelim's Pickle Tools: the animal "coat-1" faces East
     And Nelim's Pickle Tools: the animal "coat-2" faces South
@@ -142,8 +169,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (151, 102) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (158, 97) fully grown
     And Nelim's Pickle Tools: 25 of the item "Hay" are spawned at (152, 97)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (152, 98) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
     And Nelim's Pickle Tools: the animal "coat-1" faces West
     And Nelim's Pickle Tools: the animal "coat-2" faces South
@@ -182,8 +218,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (130, 124)
     And Nelim's Pickle Tools: I place the decor "Stool" at (130, 121)
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (141, 121)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (131, 122) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Meat_Muffalo"
     And Nelim's Pickle Tools: the animal "coat-1" faces West
     And Nelim's Pickle Tools: the animal "coat-2" faces West
@@ -223,8 +268,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (153, 172)
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (150, 167)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (156, 169)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (145, 169) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "RawBerries"
     And Nelim's Pickle Tools: the animal "coat-1" faces West
     And Nelim's Pickle Tools: the animal "coat-2" faces West
@@ -268,8 +322,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "TorchLamp" near (197, 236)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 232) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" near (198, 233)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (192, 234) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Kibble"
     And Nelim's Pickle Tools: the animal "coat-1" faces South
     And Nelim's Pickle Tools: the animal "coat-2" faces North
@@ -309,8 +372,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" near (199, 120)
     And Nelim's Pickle Tools: I place the decor "Stool" near (197, 120)
     And Nelim's Pickle Tools: 30 of the item "Kibble" are spawned at (196, 123)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (194, 123) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Kibble"
     And Nelim's Pickle Tools: the animal "coat-1" faces East
     And Nelim's Pickle Tools: the animal "coat-2" faces South
@@ -352,8 +424,17 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (137, 72) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (145, 72)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (145, 72) is lit
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Love"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" stands at (141, 70) facing West
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And Nelim's Pickle Tools: the animal "coat-1" faces East
     And Nelim's Pickle Tools: the animal "coat-2" faces East
