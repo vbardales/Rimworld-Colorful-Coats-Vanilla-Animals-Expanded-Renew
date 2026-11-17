@@ -7,8 +7,8 @@
 #        Animals: AEXP_Poodle coat -1 (139, 70) East; AEXP_Poodle coat 0 (143, 70) West; AEXP_Poodle coat 1 (139, 71) East; AEXP_Poodle coat 2 (143, 71) West. Gesture and instant: holds out Kibble to the poodle one cell east of her, three poodles look at her, one at the camera; before: she took a biscuit from the table, after: the nearest poodle gets the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: Nelim feeds four poodles at the tea table, no two coats match.
 #   3. red-pandas-cloister: cloister, 18h, medium-close, frame (178, 127) at zoom 3.5. In place: torii, komainu, ablution pavilion, wall lanterns. Added: TorchLamp (180, 126) lit, TorchLamp (175, 126) lit, Plant_Daylily (175, 130) fully grown, Plant_Daylily (181, 129) fully grown. Nelim (178, 126) faces East, carries RawBerries.
 #        Animals: AEXP_RedPanda coat 0 (177, 127) East; AEXP_RedPanda coat 1 (176, 127) East; AEXP_RedPanda coat 2 (178, 128) East. Gesture and instant: walks east in profile toward the shrine with RawBerries, the three pandas in file behind her all facing east; before: she came in from the garden, after: they follow her to the shrine. Obtained by the carried item, the facings and adjacent cells, no job. Says: the red pandas follow Nelim to the shrine, three coats in one line.
-#   4. bengal-cats-ritual-hall: ritual-hall, 19h, close, frame (206, 116) at zoom 1.8. In place: six Yuran cushions, altar reliquary, incense burner, brazier alight. Added: Plant_Daylily (203, 115) fully grown, Plant_Daylily (209, 115) fully grown, TorchLamp (202, 122) lit. Nelim (206, 115) faces East, carries Milk.
-#        Animals: AEXP_CatBengal coat -1 (205, 114) East; AEXP_CatBengal coat 0 (207, 115) West; AEXP_CatBengal coat 1 (206, 117) asleep. Gesture and instant: holds out Milk in profile to the cat facing her, the second cat stands east of her facing her, the third sleeps by the brazier; before: she reached toward the nearest cat, after: it takes the milk. Obtained by the carried item, the facings and adjacent cells, no job. Says: the coats come in for the night, the last cat already asleep by the brazier.
+#   4. bengal-cats-ritual-hall: ritual-hall, 19h, close, frame (206, 116) at zoom 2.4. In place: six Yuran cushions, altar reliquary, incense burner, brazier alight. Added: Plant_Daylily (203, 115) fully grown, Plant_Daylily (209, 115) fully grown, TorchLamp (202, 122) lit. Nelim (206, 114) faces South, carries Milk.
+#        Animals: AEXP_CatBengal coat -1 (205, 116) East; AEXP_CatBengal coat 0 (207, 116) West; AEXP_CatBengal coat 1 (206, 117) asleep. Gesture and instant: holds out Milk, facing the camera, to the cats gathered south of her, the second cat stands east of the first facing it, the third sleeps by the brazier; before: she reached toward the nearest cat, after: it takes the milk. Obtained by the carried item, the facings and adjacent cells, no job. Says: the coats come in for the night, the last cat already asleep by the brazier.
 #   5. giants-plaza: statue-garden, 8h, medium-wide, frame (155, 99) at zoom 5. In place: statues, flower beds, stone paths. Added: TorchLamp (148, 97) unlit, Plant_Daylily (151, 102) fully grown, Plant_Daylily (158, 97) fully grown, Hay (152, 97). Nelim (152, 98) faces East, carries Hay.
 #        Animals: AEXP_Giraffe coat 0 (153, 99) West; AEXP_Giraffe coat -1 (150, 100) South; AEXP_BlackRhino coat 1 (156, 100) South; Muskox coat 2 (159, 100) South; AEXP_Moa coat 3 (162, 99) South. Gesture and instant: holds Hay toward the giraffe one cell east of her, a stack of hay at her feet, the other giants wait in a row facing the camera; before: she crossed the plaza with the hay, after: the giraffe reaches the hay. Obtained by the carried item, the facings and adjacent cells, no job. Says: four giants and a moa wait their turn for Nelim's hay, the giraffe in two coats side by side.
 #   6. hunters-bridge: river-bridge, 9h, medium, frame (137, 124) at zoom 5. In place: wooden bridge, river banks. Added: Plant_Daylily (132, 126) fully grown, Plant_Daylily (141, 127) fully grown, TorchLamp (133, 121) unlit, TorchLamp (139, 121) unlit, SculptureSmall (130, 124), Stool (130, 121), PlantPot_Bonsai (141, 121). Nelim (131, 122) faces East, carries Meat_Muffalo.
@@ -117,8 +117,8 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     Given I set the hour to 19
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: the things "PartySpot,RitualSpot" within 10 cells of (206, 118) are hidden when present
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBengal" named "coat-1" is spawned at (205, 114)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBengal" named "coat-2" is spawned at (207, 115)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBengal" named "coat-1" is spawned at (205, 116)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBengal" named "coat-2" is spawned at (207, 116)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBengal" named "coat-3" is spawned at (206, 117)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 0
@@ -135,7 +135,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
-    And Nelim's Pickle Tools: "Nelim" stands at (206, 115) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (206, 114) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
@@ -145,7 +145,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (206, 116) at zoom 1.8
+    And Nelim's Pickle Tools: I frame the cell (206, 116) at zoom 2.4
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "gallery-4-bengal-cats-ritual-hall"
     And Nelim's Pickle Tools: the decor is removed
