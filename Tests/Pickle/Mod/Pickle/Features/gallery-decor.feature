@@ -1,6 +1,6 @@
 # Shotlist (write-shotlist 2026-11-07, STATUS.md "Shotlist"): gallery shots 2 to 10 on the validated decorated Sanctuary; shot 1 (kangaroos, gallery.feature) is an accepted capture and is not replayed. Staged photographs, nobody asserts anything (a person opens each image).
 # STORY, "The coats afternoon" (day 1, 16h to 19h): visitors wander into Nelim's Sanctuary in different coats and she greets them with treats, hour by hour: kangaroos in the glade (1, wide, opening), poodles at tea (2), red pandas to the shrine (3), Bengal cats for the night (4). "The morning after" (day 2, 8h to 17h): word got round, the rest come into the Sanctuary and she hands out treats place by place, giants (5, medium-wide), hunters (6), waterside (7), small folk (8, close), dogs at noon (9), tea hour again with nine cats (10, close, closing, echo of 2).
-# Nelim: daily dress as the fixture dresses her (owner rejected the first nine captures 2026-11-17: Nelim half naked and hair off the SaB definition; the scenarios now dress her as SaB defines: LTS_Tunika emerald, gold earrings, Roo_HD_Hair_Highpony, her tattoos and her own face, bodies and AB seed in the map) (emerald tunic, gold hoops, high ponytail, same outfit both days, it is her daily dress), smile by face kit, never a hat. Animals face her or the camera, only facings and the carried item pose them. Each group has one kind in two coats so the recolour reads in the thumbnail. Every kind of the mod appears: 35 of 35 (31 in shots 5 to 10).
+# Nelim: daily dress as the fixture dresses her (owner rejected the first nine captures 2026-11-17: Nelim half naked and hair off the SaB definition; the scenarios now dress her as SaB defines: Apparel_Pants cloth (undyed, as the fixture) under LTS_Tunika emerald, gold earrings, Roo_HD_Hair_Highpony, her tattoos and her own face, bodies and AB seed in the map) (cloth trousers, emerald tunic, gold hoops, high ponytail, same outfit both days, it is her daily dress), smile by face kit, never a hat. Animals face her or the camera, only facings and the carried item pose them. Each group has one kind in two coats so the recolour reads in the thumbnail. Every kind of the mod appears: 35 of 35 (31 in shots 5 to 10).
 # Game paused, Clear weather, one hour per shot, each scenario sets its hour, places from VALIDE.md only, decor removed after the capture, lamps lit only after dusk.
 #
 #   2. poodles-tea-room: hut, 17h, medium, frame (141, 70) at zoom 2.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (138, 72) fully grown, Plant_Daylily (144, 72) fully grown, TorchLamp (136, 70) lit. Nelim (141, 70) faces South, carries Kibble.
@@ -20,7 +20,7 @@
 #   9. dogs-terrace: terrace, 12h, medium, frame (196, 123) at zoom 2.5. In place: covered terrace, wood floor, benches. Added: TorchLamp (195, 121) unlit, Plant_Daylily (193, 120) fully grown, Plant_Daylily (200, 121) fully grown, PlantPot_Bonsai (193, 122), SculptureSmall (199, 120), Stool (197, 120). Added: Kibble x30 (196, 123). Nelim (194, 123) faces East, carries Kibble.
 #        Animals: AEXP_Chihuahua coat -1 (195, 122) East; AEXP_Chihuahua coat 2 (196, 122) South; AEXP_GreatDane coat 0 (197, 123) West; AEXP_Rottweiler coat 0 (196, 124) East; AEXP_Shih-Tzu coat 0 (195, 124) East. Gesture and instant: holds Kibble in profile, five dogs ring a pile of 30 Kibble one cell east of her, every head turned to the pile; before: the dogs ran in from the garden, after: the smallest dog reaches the pile first. Obtained by the carried item, the facings and adjacent cells, no job. Says: noon on the terrace, five dogs in five coats and the smallest first.
 #   10. cats-tea-room: hut, 17h, close, frame (141, 71) at zoom 2.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (137, 72) fully grown, TorchLamp (145, 72) lit. Nelim (141, 70) faces West, carries Milk.
-#        Animals: AEXP_CatMaineCoon coat -1 (139, 71) East; AEXP_CatMaineCoon coat 1 (140, 69) East; AEXP_CatBritishShorthair coat 0 (142, 69) West; AEXP_CatMunchkin coat 0 (143, 71) West; AEXP_CatNorwegianForest coat 1 (138, 70) East; AEXP_CatPersian coat 0 (144, 70) West; AEXP_CatSiamese coat 1 (139, 73) North; AEXP_CatSomali coat 0 (143, 73) North; AEXP_CatSphynx coat 1 (145, 71) West. Gesture and instant: holds out Milk at the low table, nine cats crowd the tatamis and cushions all turned toward her and the table; before: she poured the milk, after: the nearest cat reaches the bowl. Obtained by the carried item, the facings and adjacent cells, no job. Says: tea hour again, nine cats crowd the tea table toward Nelim and her milk.
+#        Animals: AEXP_CatMaineCoon coat -1 (139, 71) East; AEXP_CatMaineCoon coat 1 (140, 69) East; AEXP_CatBritishShorthair coat 0 (142, 69) West; AEXP_CatMunchkin coat 0 (143, 71) West; AEXP_CatNorwegianForest coat 1 (138, 70) East; AEXP_CatPersian coat 0 (142, 72) West; AEXP_CatSiamese coat 1 (139, 73) North; AEXP_CatSomali coat 0 (141, 73) North; AEXP_CatSphynx coat 1 (145, 71) West. Gesture and instant: holds out Milk at the low table, nine cats crowd the tatamis and cushions all turned toward her and the table; before: she poured the milk, after: the nearest cat reaches the bowl. Obtained by the carried item, the facings and adjacent cells, no job. Says: tea hour again, nine cats crowd the tea table toward Nelim and her milk.
 # Play alone, wsl-deps.gallery-decor.map (heavy decor-mods variant, container cap 7g, scenario timeout 600). Coats are chosen, never drawn: "the animal coat-N is given coat K" (K index into alternateGraphics, -1 the original).
 @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.decorbase @requires:nelim.pickletools.stagedecor @requires:nelim.sanctuarybacklot @requires:limetreesnake.raiments @requires:ponpeco.PonpecoAccessories @requires:rooboid.hdhair.continued
 Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery captures 2 to 10 (validated Sanctuary)
@@ -52,6 +52,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -93,6 +94,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -174,6 +176,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -223,6 +226,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -275,6 +279,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -329,6 +334,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -379,6 +385,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
@@ -410,9 +417,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatBritishShorthair" named "coat-3" is spawned at (142, 69)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatMunchkin" named "coat-4" is spawned at (143, 71)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatNorwegianForest" named "coat-5" is spawned at (138, 70)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatPersian" named "coat-6" is spawned at (144, 70)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatPersian" named "coat-6" is spawned at (142, 72)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatSiamese" named "coat-7" is spawned at (139, 73)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatSomali" named "coat-8" is spawned at (143, 73)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatSomali" named "coat-8" is spawned at (141, 73)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_CatSphynx" named "coat-9" is spawned at (145, 71)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
@@ -431,6 +438,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
