@@ -151,7 +151,7 @@ Story: day 1 "The coats afternoon" (16h to 19h): kangaroos (1), poodles at tea (
 |---|---|---|---|---|---|
 | 1 kangaroos | flower-garden, 16h | 3 kangaroos coats 0,1,2 | none | cell (153, 109) zoom 4 | accepted capture |
 | 2 poodles | hut, 17h | poodle -1,0,1,2 | Kibble | (141, 70) zoom 4 | 5 |
-| 3 red pandas | cloister, 18h | red panda 0,1,2 | RawBerries | (178, 128) zoom 3.5 | 5 |
+| 3 red pandas | cloister, 18h | red panda 0,1,2 | none | (178, 128) zoom 3.5 | 5 |
 | 4 Bengal cats | ritual-hall, 19h | Bengal -1,0, asleep 1 | Milk | (206, 116) zoom 3 | 5 |
 | 5 giants | statue-garden, 8h | giraffe -1,0; black rhino 1; muskox 2; moa 3 | Hay | (155, 99) zoom 5 | 5 |
 | 6 hunters | river-bridge, 9h | tiger -1,0; jaguar 0; hyena 1; mega wolverine 0; black bear 1 | Meat_Muffalo | (137, 124) zoom 5 | 5 |
