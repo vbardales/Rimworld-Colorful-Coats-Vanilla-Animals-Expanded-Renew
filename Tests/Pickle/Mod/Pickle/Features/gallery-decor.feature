@@ -35,7 +35,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: four poodles come to the tea room, each in its own coat
     Given I set the hour to 17
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Sanctuary: the "IncenseShrine" near (143, 70) is hidden
+    And Nelim's Sanctuary: the "RLE_Kouro" near (143, 70) is hidden
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Poodle" named "coat-1" is spawned at (139, 70)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Poodle" named "coat-2" is spawned at (143, 70)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Poodle" named "coat-3" is spawned at (139, 71)
