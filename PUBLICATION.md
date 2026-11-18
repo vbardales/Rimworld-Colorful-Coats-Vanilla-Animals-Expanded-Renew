@@ -64,7 +64,7 @@ Written 2026-11-17, indexes are the shot numbers (no gap), clean originals in `A
 |---|---|---|
 | 1 | 1-kangaroos | Three kangaroos, three coats, one sunny garden. |
 | 2 | 2-poodles-tea-room | Tea time: four poodles, four coats. |
-| 3 | 3-red-pandas-cloister | Red pandas follow the berries to the shrine. |
+| 3 | 3-red-pandas-cloister | Three red pandas pad along the cloister, one coat each. |
 | 4 | 4-bengal-cats-ritual-hall | Bengal cats settle in for the night. |
 | 5 | 5-giants-plaza | Morning on the plaza: giants in new coats. |
 | 6 | 6-hunters-bridge | The hunters cross the bridge in file. |
