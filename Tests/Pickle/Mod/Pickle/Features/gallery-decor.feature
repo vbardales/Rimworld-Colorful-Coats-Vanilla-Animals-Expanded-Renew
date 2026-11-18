@@ -5,8 +5,8 @@
 #
 #   2. poodles-tea-room: hut, 17h, medium, frame (141, 70) at zoom 2.5. In place: tatamis, low Korean table, cushions, oil andon. Added: Plant_Daylily (138, 72) fully grown, Plant_Daylily (144, 72) fully grown, TorchLamp (136, 70) lit. Nelim (141, 70) faces South, carries Kibble.
 #        Animals: AEXP_Poodle coat -1 (139, 70) East; AEXP_Poodle coat 0 (143, 70) West; AEXP_Poodle coat 1 (139, 71) East; AEXP_Poodle coat 2 (143, 71) West. Gesture and instant: holds out Kibble to the poodle one cell east of her, three poodles look at her, one at the camera; before: she took a biscuit from the table, after: the nearest poodle gets the kibble. Obtained by the carried item, the facings and adjacent cells, no job. Says: Nelim feeds four poodles at the tea table, no two coats match.
-#   3. red-pandas-cloister: cloister, 18h, medium-close, frame (178, 127) at zoom 3.5. In place: torii, komainu, ablution pavilion, wall lanterns. Added: TorchLamp (180, 126) lit, TorchLamp (175, 126) lit, Plant_Daylily (175, 130) fully grown, Plant_Daylily (181, 129) fully grown. Nelim (178, 126) faces East, carries RawBerries.
-#        Animals: AEXP_RedPanda coat 0 (177, 127) East; AEXP_RedPanda coat 1 (176, 127) East; AEXP_RedPanda coat 2 (178, 128) East. Gesture and instant: walks east in profile toward the shrine with RawBerries, the three pandas in file behind her all facing east; before: she came in from the garden, after: they follow her to the shrine. Obtained by the carried item, the facings and adjacent cells, no job. Says: the red pandas follow Nelim to the shrine, three coats in one line.
+#   3. red-pandas-cloister: cloister, 18h, medium-close, frame (178, 128) at zoom 3.5. In place: torii, komainu, ablution pavilion, wall lanterns. Added: TorchLamp (180, 126) lit, TorchLamp (175, 126) lit, Plant_Daylily (175, 130) fully grown, Plant_Daylily (181, 129) fully grown. Nelim (178, 127) faces East, carries RawBerries.
+#        Animals: AEXP_RedPanda coat 0 (177, 128) East; AEXP_RedPanda coat 1 (176, 128) East; AEXP_RedPanda coat 2 (178, 129) East. Gesture and instant: walks east in profile toward the shrine with RawBerries, the three pandas in file behind her all facing east; before: she came in from the garden, after: they follow her to the shrine. Obtained by the carried item, the facings and adjacent cells, no job. Says: the red pandas follow Nelim to the shrine, three coats in one line.
 #   4. bengal-cats-ritual-hall: ritual-hall, 19h, close, frame (206, 116) at zoom 2.4. In place: six Yuran cushions, altar reliquary, incense burner, brazier alight. Added: Plant_Daylily (203, 115) fully grown, Plant_Daylily (209, 115) fully grown, TorchLamp (202, 122) lit. Nelim (206, 115) faces South, carries Milk.
 #        Animals: AEXP_CatBengal coat -1 (205, 116) East; AEXP_CatBengal coat 0 (207, 116) West; AEXP_CatBengal coat 1 (206, 117) asleep. Gesture and instant: holds out Milk, facing the camera, to the cats gathered south of her, the second cat stands east of the first facing it, the third sleeps by the brazier; before: she reached toward the nearest cat, after: it takes the milk. Obtained by the carried item, the facings and adjacent cells, no job. Says: the coats come in for the night, the last cat already asleep by the brazier.
 #   5. giants-plaza: statue-garden, 8h, medium-wide, frame (155, 99) at zoom 5. In place: statues, flower beds, stone paths. Added: TorchLamp (148, 97) unlit, Plant_Daylily (151, 102) fully grown, Plant_Daylily (158, 97) fully grown, Hay (152, 97). Nelim (152, 98) faces East, carries Hay.
@@ -77,9 +77,9 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
   Scenario: three red pandas in the cloister, each in its own coat
     Given I set the hour to 18
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-1" is spawned at (177, 127)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-2" is spawned at (176, 127)
-    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-3" is spawned at (178, 128)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-1" is spawned at (177, 128)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-2" is spawned at (176, 128)
+    And Nelim's Pickle Tools: an adult animal of kind "AEXP_RedPanda" named "coat-3" is spawned at (178, 129)
     When Nelim's Pickle Tools: the animal "coat-1" is given coat 0
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
     And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
@@ -98,7 +98,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
-    And Nelim's Pickle Tools: "Nelim" stands at (178, 126) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (178, 127) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" carries the item "RawBerries"
@@ -108,7 +108,7 @@ Feature: Colorful Coats - Vanilla Animals Expanded! Renew: Workshop gallery capt
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: the item and name labels are hidden
-    And Nelim's Pickle Tools: I frame the cell (178, 127) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (178, 128) at zoom 3.5
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "gallery-3-red-pandas-cloister"
     And Nelim's Pickle Tools: the decor is removed
