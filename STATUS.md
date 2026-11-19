@@ -102,9 +102,11 @@ Eighth run, 2026-11-17 (`sync-nsb-npt`, Check-Status `npt-sync`): NSB commits si
 
 Ninth run, 2026-11-18 (`sync-nsb-npt`, Check-Status `nsb-sync`, diff-only): NSB commits since 2026-11-15 (10, all 2026-11-17) touch `IORI-PROFIL.md`, `VALIDE.md`, `NEUTRES-TETE.md`, `TESTING.md`, `VTW-BODYTYPES.md`: Iori (horns, beard), Miel, Daichi, Dalia, Quo, Quaren validated, body types verdict (Male, Female, Hulk Female, Thin Female, Child Female OK as temporary go), BiB gene renames, a `wsl-deps` note on PickleTools lines. Nelim's validated look is unchanged (skin, hair `Roo_HD_Hair_Highpony`, `Face_Love`, `Body_Heart`), her sex stable over five loads, the save holds only her. No place, animal or catalogue entry moved, no `VALIDE.md` row of a place we use. Profiles and place docs not opened. NPT: two commits to `face-parts.md` (the vanilla head has no mouth, the straight mouth comes from Facial Animation, which this mod's scenarios already load); `docs/steps.md` unchanged. Nothing renamed or removed that a scenario calls. Rule 5 unchanged: 35 of 35 kinds have a shot. No owner question. Rule 3 note: the scenarios dress Nelim by the roster (no property changed beyond the smile validated 2026-11-06).
 
+Tenth run, 2026-11-19 (`sync-nsb-npt`, Check-Status `npt-sync`, diff-only): NSB: no commit to `docs` since 2026-11-18, nothing to read. NPT: seven commits to `Docs/steps.md` since 2026-11-18 (mouth framing, plants removed in an area, backstory steps, clothes logged, interface shown, selection steps, builds blueprint standing at), all added for other mods; none replaces a hand-made setup of this gallery and nothing was renamed or removed that a scenario calls. Rule 5 unchanged: 35 of 35 kinds have a shot. Rules 1 to 5 stand, no owner question.
+
 Places read: 2026-11-07 (unchanged)
 Tribe read: 2026-11-18 (diff-only, Nelim and the animals catalogue untouched)
-Steps read: 2026-11-18
+Steps read: 2026-11-19
 
 | Place | Shots that use it | Changes made for the gallery | Last read |
 |---|---|---|---|
