@@ -33,7 +33,7 @@ code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
 updated:      2026-11-19 (STATUS.md trimmed to the current state; shots 2 to 10 all accepted and subtitled; sync-nsb-npt tenth run; protocols read 2765e673)
-protocols_read_sha: 2765e67352ffc4febdf076b271e3f0ce73d912ed
+protocols_read_sha: 4778b712108a584d43f2593c33f20830fb1dd2d2
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
