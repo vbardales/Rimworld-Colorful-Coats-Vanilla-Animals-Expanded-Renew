@@ -22,6 +22,7 @@ workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-
 remaining:
   - feature: attend VTW, corps (Audit ruling 2026-11-19: Virginie order of 2026-11-18 stands; stage stays shootGallery[1.0.0]; when VTW body types are OK the whole gallery is redone, then mountPreview, which builds the echo and Preview-source.png from the accepted gallery, AUDIT 10.a bis); meanwhile only work that does not depend on the gallery (texts, tests, cleanup)
   - feature: gallery 2026-11-19: all of shots 2 to 10 are accepted, subtitled candidates (Art/Gallery-clean and Art/Gallery; shot 2 final take ticket 7c48, shot 8 final take ticket 0786, both read and opened). Rule 2026-11-19 (AUDIT 9.a, GALLERY): Virginie validates no image, the session decides alone. Kept flags, not defects: Nelim smile unverified (face half hidden by the carried item), blue brazier touches the right poodle on 2, burrow hole at the top edge and grey murk on 7, grey murk on 6, chihuahuas about 10 px at 268 px on 9. Open: nothing before VTW; a gallery change reopens mountPreview (AUDIT 10), so the Preview is redone after any redo
+  - feature: AUDIT 9.f (2026-11-20): before mountPreview Virginie validates the whole gallery once; after her explicit oui write gallery_validated_sha (scripts/Get-GalleryHash.ps1 -ModRoot .), stale after any gallery change
   - feature: optional, only if Virginie asks: railings on the shot 6 bridge (none today, "pas disqualificatif"): CATALOG-REQUEST to Cat for a railing def
   - feature: TM missions list Rimworld-Ticket-Dispatcher/docs/sessions/tm-missions-2026-11-12.md (items 0 to 39; 34 superseded by 34c, 36d NOT yet, 39 Steam change notes in BBCode with a [list], read the dry-run note before publish, post nothing), sent 2026-11-17, not yet read or applied
   - defect: audit replay 2026-11-17 (ledger ../.replays/ColorfulCoatsVAERenew-20261117.tsv): records of 4.g written (workshop_required_items, Dependencies, Settings audit, Translation audit); rerun /audit-replay to advance, then replay the whole chain for 1 to 4 after the stage moves
@@ -35,7 +36,7 @@ code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
 updated:      2026-11-20 (NPT sync, Steps read 2026-11-20; audit replay 2026-11-20: stage unchanged shootGallery, first open 9.a gallery redo after VTW; ecosystem_line 1.0; protocols read 9df07503)
-protocols_read_sha: 9df075039c4b6cad38c1712f690172bd481b083f
+protocols_read_sha: 393c87b8fe36e0f6d37f01649690c297b9d44edc
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
