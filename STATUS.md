@@ -34,7 +34,7 @@ remaining:
 code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-20 (audit replay 2026-11-20: stage unchanged shootGallery, first open 9.a gallery redo after VTW; ecosystem_line 1.0; protocols read 9df07503)
+updated:      2026-11-20 (NPT sync, Steps read 2026-11-20; audit replay 2026-11-20: stage unchanged shootGallery, first open 9.a gallery redo after VTW; ecosystem_line 1.0; protocols read 9df07503)
 protocols_read_sha: 9df075039c4b6cad38c1712f690172bd481b083f
 ---
 
@@ -56,11 +56,11 @@ PiI 2026-11-13 (`../docs/inventory/ecosystem-steam/ColorfulCoatsVAERenew.md`): o
 
 ## NSB
 
-Synced ten times since 2026-11-06 (`sync-nsb-npt`; latest 2026-11-19, diff-only). State: nothing the mod uses was renamed or removed; every place of the shotlist is validated in `VALIDE.md` with a frame (ours differ on purpose: close zooms); no NSB animal is one this mod recolours (Tama is `akaNEKO_N_Forest_Cat`, Let's Have a Cat!); Nelim is the only colonist, her look unchanged (skin, hair `Roo_HD_Hair_Highpony`, `Face_Love`, `Body_Heart`). NPT steps added since 2026-11-07 serve other mods or a cleaner capture (decor burns, bars hidden, plant pot, mouth framing); none is renamed or removed where a scenario calls it. Rules 1 to 5 of the skill stand, no owner question open.
+Synced eleven times since 2026-11-06 (`sync-nsb-npt`; latest 2026-11-20, NPT part only: two new ScreenshotStudio lighting steps, sun ceiling and lamp glow, none used by this mod, none renamed or removed; NSB unchanged since 2026-11-19). State: nothing the mod uses was renamed or removed; every place of the shotlist is validated in `VALIDE.md` with a frame (ours differ on purpose: close zooms); no NSB animal is one this mod recolours (Tama is `akaNEKO_N_Forest_Cat`, Let's Have a Cat!); Nelim is the only colonist, her look unchanged (skin, hair `Roo_HD_Hair_Highpony`, `Face_Love`, `Body_Heart`). NPT steps added since 2026-11-07 serve other mods or a cleaner capture (decor burns, bars hidden, plant pot, mouth framing); none is renamed or removed where a scenario calls it. Rules 1 to 5 of the skill stand, no owner question open.
 
 Places read: 2026-11-15
 Tribe read: 2026-11-18
-Steps read: 2026-11-19
+Steps read: 2026-11-20
 
 | Place | Shots that use it | Changes made for the gallery |
 |---|---|---|
