@@ -1,5 +1,6 @@
 ---
 settings_audit: not_applicable
+ecosystem_line: 1.0
 localization: not_applicable
 translation_en: not_applicable
 translation_fr: not_applicable
@@ -33,8 +34,8 @@ remaining:
 code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-19 (STATUS.md trimmed to the current state; shots 2 to 10 all accepted and subtitled; sync-nsb-npt tenth run; protocols read 2765e673)
-protocols_read_sha: 4778b712108a584d43f2593c33f20830fb1dd2d2
+updated:      2026-11-20 (audit replay 2026-11-20: stage unchanged shootGallery, first open 9.a gallery redo after VTW; ecosystem_line 1.0; protocols read 9df07503)
+protocols_read_sha: 9df075039c4b6cad38c1712f690172bd481b083f
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
