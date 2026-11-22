@@ -186,21 +186,21 @@ Mods loaded by the gallery scenes (`Tests/Pickle/wsl-deps.gallery-decor.map`) th
 | Yuran Shrine Japanese Architecture (`Caoyuanfei.YuranShrineJapaneseArchitecture`) | see Workshop page | 3671664434 |
 | Yuran Race Mod (`RooAndGloomy.YuranRaceMod`) | see Workshop page | 2844129100 |
 | Erin's Japanese Furniture (`Erin.JapaneseFurniture`) | see Workshop page | 2354938860 |
-| Korean Style Furniture (`milple.KoreanStyleFurniture`) | see Workshop page | 3733695302 |
-| Erin's Decorations (`erin.decorations`) | see Workshop page | 2463358089 |
-| RimLife Ex STF (`daylight.RimLifeExSTFMod`) | see Workshop page | 2289110791 |
-| RimLife Ex Fur (`daylight.RimLifeExFurMod`) | see Workshop page | 2309537905 |
-| Potting Deco (`kcb.pottingdeco`) | see Workshop page | 3575201181 |
-| Spidercamp's Decorative Plants (`Mlie.SpidercampsDecorativePlants`) | see Workshop page | 2453107898 |
-| Decorative Trees (`Mlie.DecorativeTrees`) | see Workshop page | 2670019924 |
-| Decorative Trees, `hd.pashka.Mlie.DecorativeTrees` | see Workshop page | 2729580051 |
+| Korean Style Furniture (`milple.KoreanStyleFurniture`) | Milk Apple (밀크애플) | 3733695302 |
+| Erin's Decorations (`erin.decorations`) | Erin, Sarg Bjornson | 2463358089 |
+| RimLife Ex STF (`daylight.RimLifeExSTFMod`) | daylight | 2289110791 |
+| RimLife Ex Fur (`daylight.RimLifeExFurMod`) | daylight | 2309537905 |
+| Potting Deco (`kcb.pottingdeco`) | Kimchibok | 3575201181 |
+| Spidercamp's Decorative Plants (`Mlie.SpidercampsDecorativePlants`) | Spidercamp (continued version) | 2453107898 |
+| Decorative Trees (`Mlie.DecorativeTrees`) | cattleya (continued version) | 2670019924 |
+| Decorative Trees, `hd.pashka.Mlie.DecorativeTrees` | pashka | 2729580051 |
 | Wall vitals monitor (`zal.wallvitalsmonitor`) | see Workshop page | 3283745385 |
 | Wall Mounted Function Furniture (`WallMounted.FunctionFurniture`) | see Workshop page | 3807382130 |
 | House Decor (`mgatwood.housedecor`) | see Workshop page | 3535047810 |
 | Decorative Painting (`KindSeal.DecorativePainting`) | see Workshop page | 3587440566 |
 | AKN Decorations (`AKN.Decorations`) | see Workshop page | 2755025925 |
-| Fishing Decorative (`mingtuwuxiang.FishingDecorative`) | see Workshop page | 2981211719 |
-| Fishing Deco Retex (`draegon.FishingDecoRetex`) | see Workshop page | 3256420234 |
+| Fishing Decorative (`mingtuwuxiang.FishingDecorative`) | elun982697019 | 2981211719 |
+| Fishing Deco Retex (`draegon.FishingDecoRetex`) | Draegon1993 | 3256420234 |
 | Vanilla Animals Expanded - Endangered (`VanillaExpanded.VAEEndAndExt`) | Oskar Potocki, Sarg Bjornson | 2366589898 |
 | Facial Animation (`Nals.FacialAnimation`) | Nals | 1635901197 |
 | Facial Animation Experimentals (`nals.facialanimationexperimentals`) | Nals | 2581693737 |

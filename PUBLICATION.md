@@ -137,10 +137,16 @@ Register: `WORKSHOP_COMMENTS.md`, keyed by the recipient's Workshop id. Drafted 
 | Vanilla Animals Expanded - Endangered (Oskar Potocki) | 2366589898 | drafted, new row (page author to read before posting) |
 | Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | posted 2026-11-18: this mod joins `Covers`, nothing to post |
 | Vanilla Expanded Framework | 2023507013 | posted 2026-09-22: joins `Covers` |
+| Yuran Shrine Japanese Architecture (Caoyuanfei) | 3671664434 | drafted, new row |
+| Korean Style Furniture (milple, 밀크애플) | 3733695302 | drafted, new row |
+| RimLife Expansion Terrain and Floor (daylight) | 2289110791 | drafted, new row |
+| [KCB] Plant Pot Deco (Kimchibok) | 3575201181 | drafted, new row |
+| Spidercamp's Decorative Plants (Continued) (Spidercamp) | 2453107898 | drafted, new row |
+| Fishing Decorative (elun982697019) | 2981211719 | drafted, new row |
 
 Gallery set mods already `posted` in the register (body, clothes, hair, face and Facial Animation stack): this mod joins their `Covers` and posts nothing (register updated 2026-11-22): 3798082132, 3799726535, 3527486510, 2986402536, 3559870636, 3751997843, 3214172563, 1635901197, 2581693737, 2816938779, 2889716301, 3745223213, 3790129900, 3694711465, 3753978140, 3685072616, 3609895011, 3721489042. Ponpeco Accessories (3298397484) and Cuter Kids (3807706870) are `not_applicable` (comments closed, or page creator unread): they only join `Covers`.
 
-**Open, owner's decision:** the decorated Sanctuary set (Yuran shrine and race, Japanese and Korean furniture, decorations, RimLife Ex, potting deco, decorative plants and trees, wall monitor and function furniture, house decor, decorative painting, AKN decorations, fishing decor, UnderWhere, Humanoid Alien Races, Simple Camera Setting: about 22 pages, none in the register) is credited in `ATTRIBUTION.md` ("Gallery set") but has no comment drafted. Thanking each page is her call (volume, and the set may belong to the Sanctuary's own credits).
+**Decorated Sanctuary set (owner decision 2026-11-22: only the mods used in this gallery).** Used in the captures, read from the NSB decor plan (`SanctuaryBacklot/Docs/EMBELLISSEMENT-LIEUX.md`) and checked on the images: Yuran Shrine (3671664434), Korean Style Furniture (3733695302), RimLife Terrain and Floor (2289110791), [KCB] Plant Pot Deco (3575201181), Spidercamp's Decorative Plants (Continued) (2453107898), Fishing Decorative (2981211719). Six new rows `drafted` in the register, six drafts below. Staged by the map but not visible in these ten images (credited in `ATTRIBUTION.md`, no comment): Erin's Decorations, Erin's Japanese Furniture, RimLife Furniture, Decorative trees (both), Wall Mounted Function Furniture, Wall Vitals Monitor, House Decor, Decorative painting, Akeron Decorations, Fishing Decorative Retexture, Humanoid Alien Races and the Yuran race (Yuran Shrine requirements), Simple Camera Setting (camera tool). Authors read in the mods' About.xml; the page maintainer of a (Continued) mod and the exact pseudos are to check on each page before posting.
 
 Draft, purpleyam's original (`@` to the pseudo as it shows on the page, to check before posting):
 
@@ -152,4 +158,40 @@ Draft, Vanilla Animals Expanded - Endangered:
 
 ```text
 A black rhino, a moa and a pangolin stand in my gallery, each wearing a couple of spare coats, and the rhino looks very pleased about it xD Thank you for the endangered ones :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, Yuran Shrine Japanese Architecture (3671664434):
+
+```text
+@Caoyuanfei the terrace in my gallery is floored with your sandstone slabs, and five dogs crowd it at noon for one pile of kibble xD Your wooden cloister floor is under three red pandas in another shot. Thank you for the shrine :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, Korean Style Furniture (3733695302):
+
+```text
+Your stone lanterns stand at both ends of the bridge in my gallery, where a tiger, a jaguar and a hyena cross in single file lol And your low table and stool made the tea room look lived in. Thank you @밀크애플 :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, RimLife Expansion Terrain and Floor (2289110791):
+
+```text
+@daylight your tatami is the floor of my tea room picture: four poodles in four coats, a pile of kibble, and a very serious colonist :) It turns a bare room into somewhere you want to sit down. Thank you! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, [KCB] Plant Pot Deco (3575201181):
+
+```text
+Two of your green flower pots sit at the edge of my terrace shot, and five dogs ignored them completely for the kibble xD Thank you @Kimchibok, they made the stone yard look looked after :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, Spidercamp's Decorative Plants (Continued) (2453107898):
+
+```text
+Your lavender and your flower bushes line the plaza where a giraffe, a rhino and a muskox queue in my gallery, and the lavender is the best-looking thing in frame lol Thank you @Spidercamp, and whoever keeps this page alive :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, Fishing Decorative (2981211719):
+
+```text
+Your little boat and the fish crate are on the riverbank in my bridge picture, where the hunters cross in file :) Without them it was just a very brown bridge xD Thank you @elun982697019! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
 ```
