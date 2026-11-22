@@ -171,6 +171,59 @@ has content of its own.
 Both are declared in `<incompatibleWith>`: purpleyam's original of this mod, and the Cats and Dogs
 mod, which would patch the same 14 breeds a second time.
 
+## Gallery set
+
+Mods loaded by the gallery scenes (`Tests/Pickle/wsl-deps.gallery-decor.map`) that shape what Nelim and the set look like in the captures: body, clothes, hair, face, furniture, plants and decor, the camera, and the framework behind Vanilla Animals Expanded. None is a dependency of this mod and none is needed to play it; nothing of theirs is copied. The scenes show the ones that appear in the images; the rest are staged by the same map. An author not named here is on the Workshop page.
+
+| Mod | Author | Workshop id |
+|---|---|---|
+| Female Body Variants (`tiagocc0.FemaleBodyVariants`) | tiagocc0 | 3798082132 |
+| Female Apparel Variants (`tiagocc0.FemaleApparelVariants`) | tiagocc0 | 3799726535 |
+| UnderWhere (`Malistaticy.UnderWhere`) | see Workshop page | 1870010563 |
+| Realistic Bodies (`wdi.realistic.bodies`) | see Workshop page | 3527486510 |
+| AB's Visible Pants (`ab.vplrf`) | see Workshop page | 2986402536 |
+| Humanoid Alien Races (`erdelf.HumanoidAlienRaces`) | erdelf | 839005762 |
+| Yuran Shrine Japanese Architecture (`Caoyuanfei.YuranShrineJapaneseArchitecture`) | see Workshop page | 3671664434 |
+| Yuran Race Mod (`RooAndGloomy.YuranRaceMod`) | see Workshop page | 2844129100 |
+| Erin's Japanese Furniture (`Erin.JapaneseFurniture`) | see Workshop page | 2354938860 |
+| Korean Style Furniture (`milple.KoreanStyleFurniture`) | see Workshop page | 3733695302 |
+| Erin's Decorations (`erin.decorations`) | see Workshop page | 2463358089 |
+| RimLife Ex STF (`daylight.RimLifeExSTFMod`) | see Workshop page | 2289110791 |
+| RimLife Ex Fur (`daylight.RimLifeExFurMod`) | see Workshop page | 2309537905 |
+| Potting Deco (`kcb.pottingdeco`) | see Workshop page | 3575201181 |
+| Spidercamp's Decorative Plants (`Mlie.SpidercampsDecorativePlants`) | see Workshop page | 2453107898 |
+| Decorative Trees (`Mlie.DecorativeTrees`) | see Workshop page | 2670019924 |
+| Decorative Trees, `hd.pashka.Mlie.DecorativeTrees` | see Workshop page | 2729580051 |
+| Wall vitals monitor (`zal.wallvitalsmonitor`) | see Workshop page | 3283745385 |
+| Wall Mounted Function Furniture (`WallMounted.FunctionFurniture`) | see Workshop page | 3807382130 |
+| House Decor (`mgatwood.housedecor`) | see Workshop page | 3535047810 |
+| Decorative Painting (`KindSeal.DecorativePainting`) | see Workshop page | 3587440566 |
+| AKN Decorations (`AKN.Decorations`) | see Workshop page | 2755025925 |
+| Fishing Decorative (`mingtuwuxiang.FishingDecorative`) | see Workshop page | 2981211719 |
+| Fishing Deco Retex (`draegon.FishingDecoRetex`) | see Workshop page | 3256420234 |
+| Vanilla Animals Expanded - Endangered (`VanillaExpanded.VAEEndAndExt`) | Oskar Potocki, Sarg Bjornson | 2366589898 |
+| Facial Animation (`Nals.FacialAnimation`) | Nals | 1635901197 |
+| Facial Animation Experimentals (`nals.facialanimationexperimentals`) | Nals | 2581693737 |
+| `VanillaExpanded.VTEXE.FacialAnims` | see Workshop page | 2816938779 |
+| `Newton.AKNExtras.FacialAnimations` | see Workshop page | 2889716301 |
+| EyeGenes3 (`lucius.eyegenes3`) | Lucius | 3745223213 |
+| `astryl.FacialAnimationPerformancePatch` | see Workshop page | 3790129900 |
+| `vk.addeyes.EX` | see Workshop page | 3694711465 |
+| `sd.fa.movingvanillaeyes` | see Workshop page | 3753978140 |
+| Visual beauty for Facial Animation (`SleepyFrieren.beautygenefa`) | SleepyFrieren | 3685072616 |
+| Cuter Kids for Facial Animation (`ria.cuterkidsforfacialanimation`) | ria | 3807706870 |
+| `Moshii.NLFA.InitFix` | see Workshop page | 3609895011 |
+| `ccj.nlfaloadfix` | see Workshop page | 3721489042 |
+| Simple Camera Setting (`ray1203.SimpleCameraSetting`) | see Workshop page | 3232415388 |
+| Roo's HD Hairstyles, continued (`rooboid.hdhair.continued`) | Qux, continuing Rooboid's mods | 3559870636 |
+| [LTS] Raiments (`limetreesnake.raiments`) | LimeTreeSnake | 3751997843 |
+| Ponpeco Accessories (`ponpeco.PonpecoAccessories`) | ponpeco | 3298397484 |
+| Genes Expanded - Skin Colors (`LazyFridayStudio.GenesExpandedSkin`) | Lazy Friday Studio | 3214172563 |
+| Vanilla Expanded Framework (`OskarPotocki.VanillaFactionsExpanded.Core`, required by Vanilla Animals Expanded) | Oskar Potocki, Sarg Bjornson | 2023507013 |
+| Vanilla Animals Expanded (`VanillaExpanded.VanillaAnimalsExpanded`, the dependency) | Oskar Potocki, Sarg Bjornson, Erin | 2871933948 |
+
+The Sanctuary itself (places, colonists, fixtures) is Nelim's own set, `SanctuaryBacklot`, and the steps that stage it are PickleTools'.
+
 ## Thanks
 
 - **purpleyam**, for the coats.
