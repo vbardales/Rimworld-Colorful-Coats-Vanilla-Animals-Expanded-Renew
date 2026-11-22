@@ -127,6 +127,29 @@ The note is written at the moment of upload. First line is `[b]<version>[/b]` wi
 
 Commit nothing by hand for the tag or release: the CI creates them after a successful upload. `Mod/About/PublishedFileId.txt` is already committed. Steam creates every item private; the owner switches it public herself.
 
-## Thank-you messages
+## Thank-you comments (one per page, after the item is public)
 
-**Open, not drafted yet** (`WORKSHOP_COMMENTS.md`, "Writing a comment"; posted after the item is public; under 1000 characters, BBCode links, owner's voice). Recipients: purpleyam, author of the original (2398446130, not in the register yet, the original is apparently abandoned so this is not a request for permission); the authors of Vanilla Animals Expanded (2871933948, already `posted` 2026-11-18 by another mod: this mod only joins `Covers`); and the gallery set mods of `ATTRIBUTION.md` that the register does not hold yet. Check the register first, so no one is thanked twice.
+Register: `WORKSHOP_COMMENTS.md`, keyed by the recipient's Workshop id. Drafted 2026-11-22; posted by the owner under her own account, after the item is public (the link to a private item opens for nobody) and after reading the last comments of each page. Draft line: `thanks_drafted_line: 1.0`.
+
+| Recipient | Id | State |
+|---|---|---|
+| Colorful Coats - Vanilla Animals Expanded! (purpleyam, original) | 2398446130 | drafted, new row |
+| Vanilla Animals Expanded - Endangered (Oskar Potocki) | 2366589898 | drafted, new row (page author to read before posting) |
+| Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | posted 2026-11-18: this mod joins `Covers`, nothing to post |
+| Vanilla Expanded Framework | 2023507013 | posted 2026-09-22: joins `Covers` |
+
+Gallery set mods already `posted` in the register (body, clothes, hair, face and Facial Animation stack): this mod joins their `Covers` and posts nothing (register updated 2026-11-22): 3798082132, 3799726535, 3527486510, 2986402536, 3559870636, 3751997843, 3214172563, 1635901197, 2581693737, 2816938779, 2889716301, 3745223213, 3790129900, 3694711465, 3753978140, 3685072616, 3609895011, 3721489042. Ponpeco Accessories (3298397484) and Cuter Kids (3807706870) are `not_applicable` (comments closed, or page creator unread): they only join `Covers`.
+
+**Open, owner's decision:** the decorated Sanctuary set (Yuran shrine and race, Japanese and Korean furniture, decorations, RimLife Ex, potting deco, decorative plants and trees, wall monitor and function furniture, house decor, decorative painting, AKN decorations, fishing decor, UnderWhere, Humanoid Alien Races, Simple Camera Setting: about 22 pages, none in the register) is credited in `ATTRIBUTION.md` ("Gallery set") but has no comment drafted. Thanking each page is her call (volume, and the set may belong to the Sanctuary's own credits).
+
+Draft, purpleyam's original (`@` to the pseudo as it shows on the page, to check before posting):
+
+```text
+@purpleyam I took your coats from the old version to the latest one and almost nothing needed fixing, so your 222 textures were in very good shape :) Odyssey made five of the animals vanilla, so there is a fourth patch for those. Thank you for the coats, and tell me if you ever want it gone lol [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
+
+Draft, Vanilla Animals Expanded - Endangered:
+
+```text
+A black rhino, a moa and a pangolin stand in my gallery, each wearing a couple of spare coats, and the rhino looks very pleased about it xD Thank you for the endangered ones :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+```
