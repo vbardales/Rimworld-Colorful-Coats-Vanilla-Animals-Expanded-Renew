@@ -2,12 +2,9 @@
 
 All notable changes to this mod are documented here.
 
-## [Unreleased]
+## [1.0.0] - 2026-11-22
 
-Everything below was written as `1.0.0`, dated `2026-09-05`, before this repository adopted the
-publishing chain's version discipline: `1.0.0` is the version that ships with `published`, not
-with the port work being finished, and it stays `Unreleased` until that tag and its GitHub release
-exist. Renamed on 2026-09-28 rather than rewritten; nothing below changed except its heading.
+Written as `1.0.0` during the port (first dated `2026-09-05`), held as `Unreleased` until the release, dated at its dry-run.
 
 First release. Port of purpleyam's **Colorful Coats - Vanilla Animals Expanded!** to RimWorld 1.6.
 
