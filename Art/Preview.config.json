@@ -1,6 +1,7 @@
 {
   "panel": {
     "panelBare": true,
+    "panelAnchor": "bottom-left",
     "title": "Colorful Coats - Vanilla Animals Expanded! Renew (unofficial)",
     "titleParts": [
       { "text": "Colorful Coats - Vanilla Animals Expanded!" },
