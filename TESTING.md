@@ -1,20 +1,20 @@
 # Test scenarios
 
-Four patch files, 222 textures, no assembly, no def of its own. Little here to
+Four patch files, 222 textures, no assembly, no def of own. Little here to
 break, and **everything that can break breaks silently** — twice over, more than
 other mods of this family.
 
-**No errors in log not a pass.** Two mechanisms in this mod swallow
+**No errors in log not a pass.** Two mechanisms in mod swallow
 own failures:
 
 - `PatchOperationFindMod` compares **display name**. Guard not matching not an
   error: `match` branch skipped, operation returns true, nothing written. Mod
   installs, loads, says nothing, does nothing.
 - Each of 51 sequenced `PatchOperationAdd` operations carries `<success>Always</success>` — 14
-  added by this port. Operation finding no animal reports success, writes
-  nothing. Flag buys other animals their coats when one defName moves, and buys
-  them by making loss invisible. Five conditional operations of Odyssey file silent
-  for same reason without needing flag.
+  added by port. Operation finding no animal reports success, writes
+  nothing. Flag keeps other animals' coats when one defName moves, but
+  makes loss invisible. Five conditional operations of Odyssey file silent
+  same reason, no flag needed.
 
 Only animals on screen settle it.
 
@@ -38,7 +38,7 @@ applicable: mod owns no in-game text.
 
 ## Manual scenarios: what remains to look at
 
-`AUDIT.md` asks that no manual test stay to validate at `tested`: each automated
+`AUDIT.md` asks no manual test stay to validate at `tested`: each automated
 and green, or listed not applicable with reason. State on 2026-09-28, nothing yet run green:
 
 | Scenario | Status | Reason |
@@ -47,7 +47,7 @@ and green, or listed not applicable with reason. State on 2026-09-28, nothing ye
 | B far end of the sequence | Automated, green | `always-patched.feature` covers all 25 animals, giraffe first, shih tzu last. |
 | C the two rarities | Automated, green | `rare-jaguar`, `rare-tiger-odyssey`: 100 animals, at least one carries 5% coat. `rare-tiger-plain`: 100 on new colony (NewColony, map 150) since 2026-10-02; fixture save does not play without Odyssey (red 2026-10-01 at save load, not at placement); needs `-Extra '-pickle-scenario-timeout=400'`, own ticket. |
 | D Endangered | Automated, green | `endangered.feature`; guard name proven by animals being patched. |
-| E 74 coats, three rotations | Offline plus `@review` | `Check-Textures.ps1` proves every rotation file ships (2026-11-06); the shared `Check-ModBasics.ps1` and the Pickle features now cover it; north view is capture a person looks at. |
+| E 74 coats, three rotations | Offline plus `@review` | `Check-Textures.ps1` proves every rotation file ships (2026-11-06); shared `Check-ModBasics.ps1` and Pickle features now cover it; north view is capture person looks at. |
 | F survives a reload | Automated, green | `coats.feature`, note and still-has-coat steps. |
 | G added to, removed from a save | Not applicable | Decided 2026-10-02 (Virginie), as in other Colorful Coats ports: existing animals recolour on adding, revert on removing; nothing stored in save; game's reaction to missing mod not ours. |
 | H no Vanilla Animals Expanded | Not applicable | Warning is game's reaction to declaration; declaration checked in sources (`Check-ModBasics.ps1`). |
@@ -56,35 +56,35 @@ and green, or listed not applicable with reason. State on 2026-09-28, nothing ye
 | L mod list entry | Offline plus a look | Name and metadata checked offline; banner and icon inspected as images. |
 | M five Odyssey animals | Automated, green | `with-odyssey.feature`, `without-odyssey.feature`. Smaller draw size is `@review` look at `coats.feature` capture. |
 
-Green means the trajectory ran (`AUDIT.md` 8.c), nothing more.
+Green means trajectory ran (`AUDIT.md` 8.c), nothing more.
 
 ## What is settled before the game starts
 
-The shared `Check-ModBasics.ps1` (run from the protocols repository) does the standalone XML and metadata checks; `scripts/Check-Patches.ps1` was retired with `scripts/` (commit 1a505e7), its coat checks are now the shared `Check-Textures.ps1`, `Check-PatchTargets.ps1` and `Check-AlternateGraphics.ps1`, plus `Tests/Rule-OwnValues.ps1` (2026-11-06):
+Shared `Check-ModBasics.ps1` (run from protocols repository) does standalone XML and metadata checks; `scripts/Check-Patches.ps1` retired with `scripts/` (commit 1a505e7), its coat checks now shared `Check-Textures.ps1`, `Check-PatchTargets.ps1` and `Check-AlternateGraphics.ps1`, plus `Tests/Rule-OwnValues.ps1` (2026-11-06):
 parsing, operation classes, XPath syntax, probabilities, coat entries, package identity,
 unofficial suffix, GitHub description link, dependency, identical licence copies.
-The old `Check-Coats.ps1` passed on 2026-09-12, no installed-target checks skipped; the shared checks and `Rule-OwnValues.ps1` passed on 2026-11-06 (Check-PatchTargets skips 16 operations whose VAE module is not installed).
+Old `Check-Coats.ps1` passed 2026-09-12, no installed-target checks skipped; shared checks and `Rule-OwnValues.ps1` passed 2026-11-06 (Check-PatchTargets skips 16 operations whose VAE module not installed).
 Checks do not execute RimWorld's patch engine or replace scenarios A–M.
 
-Five questions need no running RimWorld. Shared checks answer four (run from the protocols repository with `-ModRoot`):
+Five questions need no running RimWorld. Shared checks answer four (run from protocols repository with `-ModRoot`):
 
-1. Every `texPath` has its three rotation files shipped, and every shipped texture is referenced (`Check-Textures.ps1`).
-2. Every defName still exists in its owning mod (`Check-PatchTargets.ps1`).
-3. No target animal carries `alternateGraphics` of its own, and a chance has a list (`Check-AlternateGraphics.ps1`).
+1. Every `texPath` has three rotation files shipped, every shipped texture referenced (`Check-Textures.ps1`).
+2. Every defName still exists in owning mod (`Check-PatchTargets.ps1`).
+3. No target animal carries own `alternateGraphics`, and a chance has a list (`Check-AlternateGraphics.ps1`).
 
 `Tests/Rule-OwnValues.ps1 -ModRoot .` holds what only this mod knows (exit 1 naming file or animal):
 
-4. 16 animals patched twice carry same chance and same coats in both files, which makes scenario J harmless.
+4. 16 animals patched twice carry same chance and same coats in both files, making scenario J harmless.
 5. Five animals of Odyssey file get same coats and chances as `AEXP_` counterparts, matched on coat lists since defNames deliberately differ.
 
-It also checks that every sequenced operation carries `<success>Always</success>`.
+Also checks every sequenced operation carries `<success>Always</success>`.
 
 Run 2026-09-11 and again 2026-09-12, same result: 74 coats, 222 textures, nothing missing,
 nothing orphaned, all 51 flagged, all 40 defNames present across three targets, no
 `alternateGraphics` on any, both agreement checks clean.
 
-Four shared checkers live in monorepo this mod detached from, one directory up; this
-mod passes all four:
+Four shared checkers live in monorepo mod detached from, one directory up; mod
+passes all four:
 
 ```
 powershell -File ..\scripts\Check-XmlFields.ps1  -ModPath .
@@ -102,7 +102,7 @@ powershell -File ..\scripts\Check-TypeRefs.ps1   -ModPath .
 
 ## The five animals Odyssey took over
 
-Found by check 3 on 2026-09-11, why there is a fourth patch file.
+Found by check 3 on 2026-09-11, why fourth patch file exists.
 
 Vanilla Animals Expanded splits 1.6 content in two. `LoadFolders.xml` loads `1.6` always,
 `1.6NotOdyssey` only `IfModNotActive="Ludeon.RimWorld.Odyssey"`, because **Odyssey made five of
@@ -112,20 +112,20 @@ and `Tiger`.
 
 So with Odyssey installed, `AEXP_Badger`, `AEXP_Muskox`, `AEXP_Otter`,
 `AEXP_Walrus`, `AEXP_Tiger` do not exist, five core file operations match nothing.
-Ten coats used to go missing there, tiger's among them, nothing in log to say so.
+Ten coats used to go missing there, tiger's included, nothing in log saying so.
 
 `ColorfulCoats_VAEodyssey.xml` hands those ten coats to Ludeon's five defs instead, purpleyam's
 chances unchanged. One `PatchOperationConditional` per animal, keyed on def's own
 existence: true exactly when Odyssey active, false and silently successful when not, and
 one renamed def cannot cost other four their coats. Not guarded by
 `PatchOperationFindMod`, which compares display name, because Odyssey's `About.xml` declares no
-`<name>` at all, and not by `MayRequire`, which an `<Operation>` ignores.
+`<name>` at all, and not by `MayRequire`, which `<Operation>` ignores.
 
-**Two halves exclusive by construction**, what to check rather than trust: def
+**Two halves exclusive by construction**, check rather than trust: def
 exists in one folder or other, never both, so no animal receives coats twice.
 
 **Sweep run 2026-09-12, nothing conflicts.** Five conditionals key on bare
-defName - `Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` - names generic enough that
+defName - `Tiger`, `Badger`, `Otter`, `Walrus`, `Muskox` - names generic enough
 another animal mod could declare one, handing that mod's animal purpleyam's coat. One
 `grep -rInE --include='*.xml'` for `<defName>(Tiger|Badger|Otter|Walrus|Muskox)</defName>` over
 9,726 Workshop folders and 240 local ones answers it: 41 matching lines, all in
@@ -141,13 +141,13 @@ Workshop, spread over five mods, none a live conflict.
 
 Nothing declares `Muskox` or `Walrus` as `PawnKindDef` at all. Legacy Ark's `LoadFolders` loads
 exactly one version folder, so under 1.6 its `Badger` gone, renamed for the very reason this
-file exists. **Two real duplicates already duplicate Odyssey's own defNames**, which settles
-them: RimWorld keeps one def per defName and reports the other, so install running
+file exists. **Two real duplicates already duplicate Odyssey's own defNames**, settling
+them: RimWorld keeps one def per defName and reports other, so install running
 either mod broken before this one patches anything. Duck's tiger even draws from
 `Things/Pawn/Animal/Tiger/Tiger`, path purpleyam's coats drawn against, so coat would
-land on sprite it was made for.
+land on sprite made for it.
 
-**Conditionals left as they are.** No field separates the two tigers: Duck's carries
+**Conditionals left as they are.** No field separates two tigers: Duck's carries
 same `<race>Tiger</race>` and same texture path as Ludeon's, so narrowing predicate would be
 guess dressed as guard.
 
@@ -164,7 +164,7 @@ differ is `drawSize`:
 | Otter | 1 | 0.75 |
 | Walrus | 1 | 1.05 |
 
-Ludeon draws four of five a little smaller, so alternate coat rendered smaller than
+Ludeon draws four of five a little smaller, so alternate coat renders smaller than
 authored. Nothing stretched: whole sprite scaled, base coat included, so coloured
 animal and plain one always same size as each other. Scenario M is where that gets
 looked at.
@@ -178,7 +178,7 @@ nelim.colorfulcoats.vae                 this mod                                
 ```
 
 `<loadAfter>` names both, plus `VanillaExpanded.VAECD`. **`<modDependencies>` names Vanilla Animals
-Expanded alone**, added 2026-09-12 to match Megafauna port: player enabling this mod
+Expanded alone**, added 2026-09-12 to match Megafauna port: player enabling mod
 without target now sees red line in mod list, where before nothing said a word.
 Endangered stays out on purpose — mod works without it, 30 of 35 animals never
 needed it. See scenario H.
@@ -200,7 +200,7 @@ needed it. See scenario H.
 | 0.3 | Great Dane, rottweiler (1 each) |
 | 0.05 | **Jaguar, tiger** (1 each) |
 
-Two at `0.05` deliberate, best thing in mod. Everything else between
+Two at `0.05` deliberate, best thing in mod. All others between
 0.3 and 0.8.
 
 **Five of 35 change hands on Odyssey install** — badger and muskox, otter and walrus, and
@@ -215,7 +215,7 @@ Order inside `ColorfulCoats_VAEcore.xml` matters for scenario B: giraffe first o
 `Player.log` sits in
 `%USERPROFILE%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Player.log`.
 
-Each string below searched for in 1.6's own `Assembly-CSharp.dll` on 2026-09-11 rather than
+Each string below searched in 1.6's own `Assembly-CSharp.dll` on 2026-09-11 rather than
 remembered. Method matters, getting it wrong cost this file two rows on first pass:
 **strings are UTF-16, not all begin on even byte.** Decoding whole file from
 offset 0 reads only half the heap, every string starting on odd byte comes out as
@@ -226,17 +226,17 @@ $b = [IO.File]::ReadAllBytes($dll)
 foreach ($off in 0,1) { [Text.Encoding]::Unicode.GetString($b, $off, $b.Length-$off).IndexOf($s) }
 ```
 
-String being in assembly **not** same claim as code path reaching it. Last
+String in assembly **not** same claim as code path reaching it. Last
 row of table makes distinction concrete.
 
 | String in the log | Written by | What it would mean here |
 |---|---|---|
 | `in any active mod or in base resources` | `ContentFinder<T>.Get` | `texPath` with nothing behind it. Line quotes path, so names coat and rotation. |
 | `Failed to find any textures at … while constructing` | `Graphic_Multi.Init` | Same fault one level up: no rotation at all found for coat. |
-| `XML error: … doesn't correspond to any field in type` | `DirectXmlToObject` | Failure port was checked against: would name `alternateGraphics` or `alternateGraphicChance`, mean 1.6 renamed field under us. Animals would still load and walk, simply wrong colour. |
+| `XML error: … doesn't correspond to any field in type` | `DirectXmlToObject` | Failure port checked against: would name `alternateGraphics` or `alternateGraphicChance`, mean 1.6 renamed field under us. Animals would still load and walk, simply wrong colour. |
 | `Patch operation … failed` | `PatchOperation.Complete` | Expected count from this mod: **zero**, and zero says nothing at all. Every operation carries `<success>Always</success>`. |
 | `Could not find type named` | the XML loader | Only four `Class=` values used, all vanilla patch operations. Would mean 1.6 renamed one. |
-| `Adding duplicate` | `DefDatabase<T>.Add` | **Never, and not because missing.** String is in assembly; path reaching it is not. `AddAllInMods` removes previous def before adding new one, so error inside `Add` unreachable, last mod loaded wins in silence. Disassembled from 1.6, recorded in repository's own notes. |
+| `Adding duplicate` | `DefDatabase<T>.Add` | **Never, and not because missing.** String in assembly; path reaching it not. `AddAllInMods` removes previous def before adding new one, so error inside `Add` unreachable, last mod loaded wins in silence. Disassembled from 1.6, recorded in repository's own notes. |
 
 **Two things then produce no log line at all, worth knowing which:**
 
@@ -246,7 +246,7 @@ row of table makes distinction concrete.
   says so. Flag this port added, price of protection it buys.
 
 Neither reachable from `DefDatabase` at all, incidentally: mod declares no def of
-its own, so nothing it does can collide there. What two conflicting copies of it actually do
+own, so nothing it does can collide there. What two conflicting copies actually do
 is in scenario K.
 
 Lines naming other mods not ours to fix, worth leaving in whatever gets pasted back.
@@ -279,7 +279,7 @@ cost its coats to every breed listed after, in silence.
   first.
 - Both must show extra coats. Shih tzu rolls `0.5` with one coat, so 20 all-original about
   one run in a million.
-- If giraffe has coats and shih tzu does not, something between failing and
+- If giraffe has coats and shih tzu not, something between failing and
   sequence stopping there — should now be impossible, would mean flag lost.
 
 ## C — the two rarities
@@ -293,7 +293,7 @@ mistaken for bug: at one in twenty, absent and rare look identical.
 - Then same with **tigers**, mind which tiger you look at. With Odyssey animal
   is Ludeon's `Tiger`, coat from `ColorfulCoats_VAEodyssey.xml`; without Odyssey it is
   `AEXP_Tiger` from core file. **Both must show roughly five in a hundred**, whole
-  point of fourth patch file is answer no longer depends on which of two the
+  point of fourth patch file is answer no longer depends on which of two
   player has.
 - Do not "fix" rarity by raising chance. One in twenty is purpleyam's design, port
   keeps it untouched.
@@ -348,14 +348,14 @@ born with.
 
 ## H — the mod alone, with no Vanilla Animals Expanded at all
 
-- Enable this mod with Vanilla Animals Expanded switched off.
+- Enable mod with Vanilla Animals Expanded switched off.
 - **RimWorld now warns**, because `<modDependencies>` names Vanilla Animals Expanded. Check
   wording names that mod, not this one, and warning goes away once target on.
-  This changed 2026-09-12; before it mod list said nothing at all.
+  Changed 2026-09-12; before, mod list said nothing at all.
 - Behind warning, nothing else changed: all three guards find no mod by their names, skip
   sequences, report success, write nothing.
 - Game must still load, log must stay clean. Intended behaviour of texture patch.
-  Warning only thing now telling player why they see no coats.
+  Warning only thing now telling player why no coats.
 
 ## I — the old Cats and Dogs module, and the guard that stops at the first name
 
@@ -377,13 +377,13 @@ eight standalone Vanilla Animals Expanded modules — Arid Shrubland, Australia,
 Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stopped at 1.3.
 
 - On 1.6 whole file inert, nothing to see. Expected result.
-- Reason to keep it is player on older game, where it is only thing giving those 16
+- Reason to keep it: player on older game, where it is only thing giving those 16
   animals coats.
 - If any module revived, player running **both** it and merged mod gets those 16
   animals patched twice, since two files guard on different names. **Compared today, two
   copies identical** — same chance, same `texPath` list, all 16 animals — so def ends up
   with element twice, loader assigns field twice with same content, last
-  one wins. Nothing changes, nothing logged. Worth knowing this harmless
+  one wins. Nothing changes, nothing logged. Worth knowing harmless
   rather than assuming it doubles anything.
 
 ## K — the original enabled alongside
@@ -405,11 +405,11 @@ Desert, Ice Sheet, Temperate Forest, Tropical Rainforest, Tundra. All eight stop
   says `Renew` rather than `1.6`.
 - Approved icon shipped at 128 × 128 (12,938 bytes), from
   `Art/ModIcon-source.png`. At about 32 px in mod list, verify central
-  winking mascot remains recognizable, no clipping. Surrounding
-  animals represent this mod's VAE coverage; fine detail not expected at 32 px.
+  winking mascot stays recognizable, no clipping. Surrounding
+  animals represent mod's VAE coverage; fine detail not expected at 32 px.
 ## M — the five Odyssey animals, on both kinds of install
 
-Fourth patch file exists so this scenario has same answer twice. Run once with Odyssey
+Fourth patch file exists so scenario has same answer twice. Run once with Odyssey
 enabled, once without, on colony where those animals spawn.
 
 - **With Odyssey**, spawn dozen each **badger**, **muskox**, **otter**, **walrus**. They
@@ -436,6 +436,6 @@ operation, no visible error** — only animals quietly stopped having coats. Sce
 and D exist because nothing else would ever tell us.
 
 One did get caught, though, worth saying which: five animals Odyssey took
-over found by the offline coat check (now `Check-PatchTargets.ps1`), not in game. Reading target's `LoadFolders.xml`
+over found by offline coat check (now `Check-PatchTargets.ps1`), not in game. Reading target's `LoadFolders.xml`
 cheap, nobody would ever have noticed tiger by playing — rarity at `0.05` looks
 exactly same whether rare or absent.
