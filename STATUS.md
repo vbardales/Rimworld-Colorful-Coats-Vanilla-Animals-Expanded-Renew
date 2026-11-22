@@ -20,8 +20,7 @@ showcase:     complete
 tested_on:    "RimWorld 1.6, kept proofs in Tests/Pickle/Evidence (Mod/ defs, patches and textures unchanged since 2026-09-11; later Mod/ commits touch About text and images only): 2026-09-28 odyssey-v2 2/2, endangered-v2 1/1, no-odyssey-v2 1/1, rare-odyssey; 2026-10-02 coats-v2 3/3, rare-plain-4; 2026-10-18 loadaudit-2 1/1 (ticket 20261017-215813-717-6411); 2026-10-23 loadaudit-3 2/2 (ticket 20261019-231033-626-9492, mod-list entry, exitReason passed); all green, English; see Docs/runs/pickle.md. Scenario G not applicable"
 workshop:     3806766686 (private; item created by a 0.1.0 prepublication, 2026-09-23)
 remaining:
-  - feature: VTW wait lifted 2026-11-20 (Virginie "oui" then "refaire celles qui manquent, c'est toi qui sait"; VTW answered not yet, 3D bodies parked; Nelim female, provisional OK body). Session decision 2026-11-20 after opening shots 2, 6, 7, 9: redo shots 2 (face hidden by the carried item, brazier on the right poodle), 6 (Nelim cut at the left edge, heavy murk), 9 (face hidden, chihuahuas tiny); keep 1, 3, 4, 5, 7, 8, 10. A gallery change reopens mountPreview; then 9.f validation by Virginie
-  - feature: redo plan 2026-11-20 (score-gallery, plan only, GALLERY.md criteria section not reread this run, scores carried from 2026-11-07 with the edits checked a to g and j): shot 2 5 (Nelim profile hands free, Kibble at her feet, right poodles one cell in, zoom 3), shot 6 5 (frame (135, 124)), shot 9 5 (hands free, zoom 3.5); Check-ShotlistVsScenario OK; ticket 6164 filed 2026-11-20 (-List shows tests=22 for a 3-scenario filter: if the run is killed 137 or plays all, refile smaller; reported to Audit; DepMap needs the full file name wsl-deps.gallery-decor.map) (label gallery redo shots 2 6 9 3ffe9dc, evidence Tests/Pickle/Inbox/gallery-redo-2-6-9), then rate the captures against the old ones
+  - feature: gallery redo of shots 2, 6, 9 DONE 2026-11-22 (ticket 6164, 3/3 passed, run minified in Tests/Pickle/Evidence/gallery-redo-2-6-9; VTW wait lifted 2026-11-20). Read against the old: 2 Nelim face visible, brazier apart from the poodles; 6 Nelim whole in frame, murk still heavy; 9 face visible, chihuahuas larger but still small. All three kept as candidates (clean in Art/Gallery-clean, subtitled in Art/Gallery). Gallery changed: mountPreview reopens (redo Preview if it uses a shot), then 9.f validation by Virginie
   - feature: gallery 2026-11-19: all of shots 2 to 10 are accepted, subtitled candidates (Art/Gallery-clean and Art/Gallery; shot 2 final take ticket 7c48, shot 8 final take ticket 0786, both read and opened). Rule 2026-11-19 (AUDIT 9.a, GALLERY): Virginie validates no image, the session decides alone. Kept flags, not defects: Nelim smile unverified (face half hidden by the carried item), blue brazier touches the right poodle on 2, burrow hole at the top edge and grey murk on 7, grey murk on 6, chihuahuas about 10 px at 268 px on 9. Open: nothing before VTW; a gallery change reopens mountPreview (AUDIT 10), so the Preview is redone after any redo
   - feature: AUDIT 9.f (2026-11-20): before mountPreview Virginie validates the whole gallery once; after her explicit oui write gallery_validated_sha (scripts/Get-GalleryHash.ps1 -ModRoot .), stale after any gallery change
   - feature: optional, only if Virginie asks: railings on the shot 6 bridge (none today, "pas disqualificatif"): CATALOG-REQUEST to Cat for a railing def
@@ -36,8 +35,8 @@ remaining:
 code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-20 (NPT sync, Steps read 2026-11-20; audit replay 2026-11-20: stage unchanged shootGallery, first open 9.a gallery redo after VTW; ecosystem_line 1.0; protocols read 9df07503)
-protocols_read_sha: 393c87b8fe36e0f6d37f01649690c297b9d44edc
+updated:      2026-11-22 (gallery redo 2, 6, 9 accepted, ticket 6164 3/3; NPT sync 2026-11-22: only Miel and Soren roster steps added, not used here; protocols read d34b4b84)
+protocols_read_sha: d34b4b84ede088040bc0aefeef95fcdb864427c1
 ---
 
 # Colorful Coats - Vanilla Animals Expanded! Renew — status
@@ -62,7 +61,7 @@ Synced eleven times since 2026-11-06 (`sync-nsb-npt`; latest 2026-11-20, NPT par
 
 Places read: 2026-11-15
 Tribe read: 2026-11-18
-Steps read: 2026-11-20
+Steps read: 2026-11-22
 
 | Place | Shots that use it | Changes made for the gallery |
 |---|---|---|
