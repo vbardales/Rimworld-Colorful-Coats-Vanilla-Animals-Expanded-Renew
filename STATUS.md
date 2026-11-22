@@ -33,6 +33,7 @@ remaining:
   - decided 2026-10-02 (Virginie): manual scenario G is not applicable, as in the other Colorful Coats ports; existing animals recolour on adding the mod and revert on removing it. Recorded in TEST_SCENARIOS.md
   - feature: PUBLICATION.md open points: gallery order (after the gallery is played), thank-you messages (owner voice, after the item is public)
 code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
+gallery_validated_sha: 6665bc979d2df0498c6dc1b3ffaeda29ea053069  # 2026-11-22 oui de Virginie
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
 updated:      2026-11-22 (audit replay 2026-11-22: stage unchanged shootGallery, first open 9.f gallery validation by Virginie; gallery redo 2, 6, 9 accepted, ticket 6164 3/3; NPT sync 2026-11-22: only Miel and Soren roster steps added, not used here; protocols read d34b4b84)
