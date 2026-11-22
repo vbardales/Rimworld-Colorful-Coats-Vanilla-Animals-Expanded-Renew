@@ -35,7 +35,7 @@ remaining:
 code_review_sha: 3276682f550affb707a1670403b2f474edea2c1e
 social_preview_sha256: 59faba60037a2f05b68b45d38acadc89718ffd32f182111627db557fce26d7ee
 session:      local_c65c6b29-02cc-4259-aea8-4a072cdc5267
-updated:      2026-11-22 (gallery redo 2, 6, 9 accepted, ticket 6164 3/3; NPT sync 2026-11-22: only Miel and Soren roster steps added, not used here; protocols read d34b4b84)
+updated:      2026-11-22 (audit replay 2026-11-22: stage unchanged shootGallery, first open 9.f gallery validation by Virginie; gallery redo 2, 6, 9 accepted, ticket 6164 3/3; NPT sync 2026-11-22: only Miel and Soren roster steps added, not used here; protocols read d34b4b84)
 protocols_read_sha: d34b4b84ede088040bc0aefeef95fcdb864427c1
 ---
 
@@ -45,9 +45,9 @@ Read by sweep across every mod, not by asking each thread in turn. Lives at root
 
 Vocabulary: `licence` open | silent | alive | forbidden | original; `remaining` feature | defect | unverified; `dependencies` declared | to check | none. State chain and criteria live in `../AUDIT.md`.
 
-## Gallery table (2026-11-19)
+## Gallery table (2026-11-22)
 
-`Art/Gallery/` holds `0-preview.png`, `1-kangaroos.png` (accepted 2026-10-12) and the subtitled shots 2 to 10 (2 poodles, 3 red pandas, 4 Bengal cats, 5 giants, 6 hunters, 7 waterside, 8 barn yard, 9 dogs, 10 cats; lines in `PUBLICATION.md`); originals without subtitle in `Art/Gallery-clean/`. All accepted by the session (rule 2026-11-19: Virginie validates no image). Details in `remaining` and the shotlist below.
+`Art/Gallery/` holds `0-preview.png`, `1-kangaroos` (accepted 2026-10-12) and the subtitled shots 2 to 10 (2, 6, 9 retaken 2026-11-22, ticket 6164) (2 poodles, 3 red pandas, 4 Bengal cats, 5 giants, 6 hunters, 7 waterside, 8 barn yard, 9 dogs, 10 cats; lines in `PUBLICATION.md`); originals without subtitle in `Art/Gallery-clean/`. All accepted by the session (rule 2026-11-19: Virginie validates no image). Details in `remaining` and the shotlist below.
 
 ## Ecosystem
 
