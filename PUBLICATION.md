@@ -151,7 +151,7 @@ Gallery set mods already `posted` in the register (body, clothes, hair, face and
 Draft, purpleyam's original (`@` to the pseudo as it shows on the page, to check before posting):
 
 ```text
-@purpleyam I took your coats from the old version to the latest one and almost nothing needed fixing, so your 222 textures were in very good shape :) Odyssey made five of the animals vanilla, so there is a fourth patch for those. Thank you for the coats, and tell me if you ever want it gone lol [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+@purpleyam I took your coats from the old version to the latest one and almost nothing needed fixing, so your 222 textures were in very good shape :) Odyssey made five of the animals vanilla, so there is a fourth patch for those. Thank you for the coats, and tell me if you ever want it gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
 ```
 
 Draft, Vanilla Animals Expanded - Endangered:
@@ -169,7 +169,7 @@ Draft, Yuran Shrine Japanese Architecture (3671664434):
 Draft, Korean Style Furniture (3733695302):
 
 ```text
-Your stone lanterns stand at both ends of the bridge in my gallery, where a tiger, a jaguar and a hyena cross in single file lol And your low table and stool made the tea room look lived in. Thank you @밀크애플 :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+Your stone lanterns stand at both ends of the bridge in my gallery, where a tiger, a jaguar and a hyena cross in single file :) And your low table and stool made the tea room look lived in. Thank you @밀크애플 :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
 ```
 
 Draft, RimLife Expansion Terrain and Floor (2289110791):
@@ -187,7 +187,7 @@ Two of your green flower pots sit at the edge of my terrace shot, and five dogs 
 Draft, Spidercamp's Decorative Plants (Continued) (2453107898):
 
 ```text
-Your lavender and your flower bushes line the plaza where a giraffe, a rhino and a muskox queue in my gallery, and the lavender is the best-looking thing in frame lol Thank you @Spidercamp, and whoever keeps this page alive :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
+Your lavender and your flower bushes line the plaza where a giraffe, a rhino and a muskox queue in my gallery, and the lavender is the best-looking thing in frame :) Thank you @Spidercamp, and whoever keeps this page alive :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806766686]Colorful Coats - Vanilla Animals Expanded! Renew[/url]
 ```
 
 Draft, Fishing Decorative (2981211719):
